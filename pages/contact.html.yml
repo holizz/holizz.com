@@ -1,0 +1,19 @@
+---
+title: Contact
+---
+%h2 Broadcast media
+%ul
+  %li
+    %a{:href=>'http://twitter.com/holizz'} @holizz
+    on Twitter
+  %li
+    %a{:href=>'http://holizz.tumblr.com/'} Tumblr
+  %li
+    %a{:href=>'http://holizz.livejournal.com/'} LiveJournal
+
+%h2 Private messaging
+%ul
+  %li
+    %a{:href=>'mailto:tom@holizz.com'} tom@holizz.com
+  %li
+    XMPP/Jabber: holizz@gmail.com, holizz@jabber.org
