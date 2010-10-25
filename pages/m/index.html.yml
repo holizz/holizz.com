@@ -1,0 +1,14 @@
+---
+layout: null
+---
+!!!
+%title holizz.com/m
+%ul
+  %li
+    %a{:href=>'http://twitter.com/'} Twitter
+  %li
+    %a{:href=>'http://m.delicious.com/holizz'} Delicious
+%hr
+%ul
+  %li
+    %a{:href=>'http://holizz.ath.cx/'} holizz.ath.cx
