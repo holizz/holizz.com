@@ -5,9 +5,26 @@ layout: null
 %title holizz.com/m
 %ul
   %li
-    %a{:href=>'http://twitter.com/'} Twitter
+    %a{:href=>'http://m.twitter.com/'} Twitter
+    %ul
+      %li
+        %form{:action=>'http://mobile.twitter.com/searches'}
+          %input{:type=>'search',:name=>'q'}
+          %input{:type=>'submit',:value=>'Search'}
   %li
     %a{:href=>'http://m.delicious.com/holizz'} Delicious
+  %li
+    %a{:href=>'http://en.wikipedia.org/wiki/Main_Page'} Wikipedia
+    %ul
+      %li
+        %form{:action=>'http://en.wikipedia.org/w/index.php'}
+          %input{:type=>'hidden',:name=>'title',:value=>'Special:Search'}
+          %input{:type=>'search',:name=>'search'}
+          %input{:type=>'submit',:name=>'go',:value=>'Go'}
+          %input{:type=>'submit',:name=>'fulltext',:value=>'Search'}
+
+
+/ Test things
 %hr
 %ul
   %li
