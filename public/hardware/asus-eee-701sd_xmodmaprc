@@ -1,0 +1,7 @@
+keycode 159 = XF86TaskPane
+keycode 160 = XF86AudioMute
+keycode 174 = XF86AudioLowerVolume
+keycode 176 = XF86AudioRaiseVolume
+keycode 214 = XF86Display
+keycode 223 = XF86Sleep
+keycode 243 = XF86WLAN

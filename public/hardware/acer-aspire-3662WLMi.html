@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang=en>
+<title>Acer Aspire 3662WLMi</title>
+
+<h1>Acer Aspire 3662WLMi</h1>
+<p>Updated: 2008-05-16
+
+<h2>Overview</h2>
+
+<p>As of <a href="http://kernel.org/">Linux</a> 2.6.24, everything I care about
+works.
+
+<p>As of <a href="http://openbsd.org/40.html">OpenBSD 4.0</a>, everything
+besides <a href="#wifi">wireless networking</a> and <a href="#sound">sound</a>
+works, with an <a href="#nic">odd networking bug</a>.
+
+<p>As of <a href="http://openbsd.org/43.html">OpenBSD 4.3</a>, the sound is
+still broken, but the wifi card is certainly recognised as <a
+href="http://www.openbsd.org/cgi-bin/man.cgi?query=bwi&apropos=0&sektion=0&manpath=OpenBSD+Current&arch=i386&format=html">bwi(4)</a>.
+I'm not entirely sure whether or not the networking bug is gone.
+
+<p><a href="acer-aspire-3662WLMi_dmesg.txt">dmesg</a> on OpenBSD 4.3-RELEASE.
+
+<h2>Hardware list</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Hardware Components
+      <th>Status under Linux
+      <th>Notes
+  <tbody>
+    <tr>
+      <td>Intel(R) Celeron(R) M CPU 420  @ 1.60GHz (533 MHz FSB, 1 MB L2 cache)
+      <td>Works
+      <td>No special procedure required during installation
+    <tr>
+      <td>RC410 [Radeon Xpress 200M]
+      <td>Works*
+      <td>See <a href="#gfx">note below</a>
+    <tr>
+      <td>15.4" WXGA CrystalBRite LCD (16ms)
+      <td>Works
+      <td>No special procedure required during installation
+    <tr>
+      <td>VGA-out
+      <td>Works
+      <td>No special procedure required during installation
+    <tr>
+      <td>512MB DDR2
+      <td>Works
+      <td>No special procedure required during installation
+    <tr>
+      <td>80GB (74GiB) ATA HDD (TOSHIBA MK8032GAX)
+      <td>Works
+      <td>No special procedure required during installation
+    <tr>
+      <td>Slimtype DVDRW SSM-8515S
+      <td>Works (writes CD-Rs and DVD-Rs - DVD+R untested)
+      <td>No special procedure required during installation
+    <tr>
+      <td>88E8038 PCI-E Fast Ethernet Controller
+      <td>Works*
+      <td>See <a href="#nic">note below</a>
+    <tr>
+      <td>Internal 56k Modem
+      <td>Not tested
+      <td>
+    <tr>
+      <td>BCM4318 [AirForce One 54g] 802.11g Wireless LAN Controller
+      <td>Works*
+      <td>See <a href="#wifi">note below</a>
+    <tr>
+      <td>Battery
+      <td>Works
+      <td>No special procedure required during installation
+    <tr>
+      <td>ATI Technologies Inc SB450 HDA Audio
+      <td>Works*
+      <td>See <a href="#sound">note below</a>
+    <tr>
+      <td>Multimedia keys
+      <td>Works*
+      <td>See <a href="#mm">note below</a>
+    <tr>
+      <td>Ctrl key
+      <td>Works*
+      <td>See <a href="#ctrl">note below</a>
+  </tbody>
+</table>
+
+<h2>Problematic areas</h2>
+
+<h3 id=wifi>Wireless networking</h3>
+
+<p>Works fine in Ubuntu, with the default restricted drivers. Not tested in
+OpenBSD.
+
+<h3 id=nic>Networking</h3>
+
+<p>Before Linux 2.6.19, networking was fine apart from <em>uploading</em> large
+amounts of data (simply cuts out). OpenBSD 4.0 also has this bug.
+
+<p>Currently, networking very occasionally cuts out under heavy and sustained
+usage and rebooting seems to be the only cure (still occurring with Linux
+2.6.22-rc1).
+
+<h3 id=sound>Sound</h3>
+
+<p>Somewhere between Linux 2.6.20 and 2.6.22-rc1, support for the sound card
+was added. OpenBSD 4.3-RELEASE does not have support for this sound card.
+
+<h3 id=mm>Multimedia keys</h3>
+
+<p>By default, the Internet and Email keys bring up the Web browser and Email
+client, and the play/pause key works in most applications. The volume up and
+down keys also work.
+
+<p>The P, e (Acer), stop, back, and forward keys have no keysym in the default
+installation and so do nothing, but they <em>do</em> generate events and so can
+be set as shortcuts.
+
+<p>The euro and dollar keys do not, however, generate events and so only serve
+to confuse the keyboard user. When using the laptop's keyboard - not often in
+my case - I tended to have my fingers on the wrong keys due to a lack of
+tactile feedback (that is to say, there is no gap between the inverted-T and
+the surrounding keys). I could go on for days about the differences between the
+laptop's keyboard and my Happy Hacking Lite II.
+
+<p>Also, the email button seems to have a back-light. I've never seen it on,
+and I haven't really tried to make it work.
+
+<h3 id=gfx>Graphics</h3>
+
+<p>Some Linux distributions have problems with getting X up and running. The
+vast majority of distributions work fine without any effort (Ubuntu, openSUSE,
+Debian, dyne:bolic, etc.). I haven't yet managed to get OpenBSD 4.0 running X,
+although I'm not so familiar with OpenBSD. Update: X works on OpenBSD 4.3
+without any effort on my part.
+
+<p>Update: 3D acceleration works on Ubuntu with the default restricted driver.
+
+<h3 id=ctrl>Ctrl key</h3>
+
+<p>Like most computer keyboards these days, the Ctrl key is in the wrong place.
+Thankfully though, the position is the only problem and can be easily fixed by
+software (<code>kbd us.dvorak.swapctrlcaps</code>, etc.). (i.e. there isn't a
+funny hole cut out of the caps lock to make pressing it harder).
+
+<h3 id=card>5-in-1 card reader</h3>
+
+<p>The 5-in-1 card reader works with SD, but not XD. I have not tried any other
+cards with it.
+
+<h2>Links</h2>
+<ul>
+  <li><a href="http://www.linux-on-laptops.com/">Linux on Laptops</a>
+  <li><a href="http://acer.co.uk/">Acer</a>
+</ul>
+
+<h2>Contact information</h2>
+<ul>
+  <li>Homepage: <a href="http://holizz.com/">holizz.com</a>
+  <li>Email: <a href="mailto:tom@holizz.com">tom@holizz.com</a>
+</ul>

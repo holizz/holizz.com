@@ -1,0 +1,97 @@
+OpenBSD 4.3 (GENERIC) #698: Wed Mar 12 11:07:05 MDT 2008
+    deraadt@i386.openbsd.org:/usr/src/sys/arch/i386/compile/GENERIC
+cpu0: Intel(R) Celeron(R) M CPU 420 @ 1.60GHz ("GenuineIntel" 686-class) 1.61 GHz
+cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,CFLUSH,DS,ACPI,MMX,FXSR,SSE,SSE2,SS,TM,SBF,SSE3,MWAIT,TM2,xTPR
+real mem  = 467824640 (446MB)
+avail mem = 444174336 (423MB)
+mainbus0 at root
+bios0 at mainbus0: AT/286+ BIOS, date 06/14/06, BIOS32 rev. 0 @ 0xfd49d, SMBIOS rev. 2.4 @ 0xdf810 (34 entries)
+bios0: vendor Acer version "v0.3310" date 06/14/06
+bios0: Acer Inc. Aspire 3660
+acpi0 at bios0: rev 0
+acpi0: tables DSDT FACP APIC MCFG BOOT SSDT SSDT
+acpi0: wakeup devices PB2_(S4) PB3_(S4) PB4_(S4) PB5_(S4) PB6_(S4) PB7_(S4) OHC1(S3) OHC2(S3) EHCI(S3) P2P_(S4) AZLA(S4)
+acpitimer0 at acpi0: 3579545 Hz, 32 bits
+acpiprt0 at acpi0: bus 0 (PCI0)
+acpiprt1 at acpi0: bus -1 (PB2_)
+acpiprt2 at acpi0: bus -1 (PB3_)
+acpiprt3 at acpi0: bus -1 (PB4_)
+acpiprt4 at acpi0: bus 5 (PB5_)
+acpiprt5 at acpi0: bus -1 (PB6_)
+acpiprt6 at acpi0: bus -1 (PB7_)
+acpiprt7 at acpi0: bus 9 (P2P_)
+acpiprt8 at acpi0: bus 1 (AGP_)
+acpiec0 at acpi0
+acpicpu0 at acpi0: C3, C2, C1
+acpitz0 at acpi0: critical temperature 97 degC
+acpibtn0 at acpi0: PWRB
+acpiac0 at acpi0: AC unit online
+acpibat0 at acpi0: BAT1 not present
+acpibtn1 at acpi0: LID_
+acpibtn2 at acpi0: SLPB
+bios0: ROM list: 0xc0000/0xd000 0xd0000/0x1c00! 0xd4000/0x1000 0xdf800/0x800!
+cpu0 at mainbus0
+pci0 at mainbus0 bus 0: configuration mode 1 (no bios)
+pchb0 at pci0 dev 0 function 0 vendor "ATI", unknown product 0x5a31 rev 0x01
+ppb0 at pci0 dev 1 function 0 "ATI RS480 PCIE" rev 0x00
+pci1 at ppb0 bus 1
+vga1 at pci1 dev 5 function 0 "ATI Radeon XPRESS 200M" rev 0x00
+wsdisplay0 at vga1 mux 1: console (80x25, vt100 emulation)
+wsdisplay0: screen 1-5 added (80x25, vt100 emulation)
+ppb1 at pci0 dev 5 function 0 "ATI RS480 PCIE" rev 0x00
+pci2 at ppb1 bus 5
+mskc0 at pci2 dev 0 function 0 "Marvell Yukon 88E8038" rev 0x14, Yukon-2 FE (0x1): irq 11
+msk0 at mskc0 port A: address 00:16:36:6f:df:3e
+eephy0 at msk0 phy 0: Marvell 88E3082 10/100 PHY, rev. 3
+ohci0 at pci0 dev 19 function 0 "ATI IXP400 USB" rev 0x80: irq 11, version 1.0, legacy support
+ohci1 at pci0 dev 19 function 1 "ATI IXP400 USB" rev 0x80: irq 11, version 1.0, legacy support
+ehci0 at pci0 dev 19 function 2 "ATI IXP400 USB2" rev 0x80: irq 11
+usb0 at ehci0: USB revision 2.0
+uhub0 at usb0 "ATI EHCI root hub" rev 2.00/1.00 addr 1
+piixpm0 at pci0 dev 20 function 0 "ATI IXP400 SMBus" rev 0x83: SMI
+iic0 at piixpm0
+spdmem0 at iic0 addr 0x52: 512MB DDR2 SDRAM non-parity PC2-4200CL5 SO-DIMM
+pciide0 at pci0 dev 20 function 1 "ATI IXP400 IDE" rev 0x80: DMA, channel 0 configured to compatibility, channel 1 wired to compatibility
+wd0 at pciide0 channel 0 drive 0: <TOSHIBA MK8032GAX>
+wd0: 16-sector PIO, LBA48, 76319MB, 156301488 sectors
+atapiscsi0 at pciide0 channel 0 drive 1
+scsibus0 at atapiscsi0: 2 targets
+cd0 at scsibus0 targ 0 lun 0: <Slimtype, DVDRW SSM-8515S, GRS2> SCSI0 5/cdrom removable
+wd0(pciide0:0:0): using PIO mode 4, DMA mode 2, Ultra-DMA mode 5
+cd0(pciide0:0:1): using PIO mode 4, DMA mode 2, Ultra-DMA mode 4
+azalia0 at pci0 dev 20 function 2 "ATI IXP450 HD Audio" rev 0x01: irq 10
+azalia0: RIRB time out
+azalia0: codec[s]: AT&T/Lucent/0x3026, Realtek ALC883, 0x0000/0x0000, using Realtek ALC883
+audio0 at azalia0
+pcib0 at pci0 dev 20 function 3 "ATI IXP400 ISA" rev 0x80
+ppb2 at pci0 dev 20 function 4 "ATI IXP400 PCI" rev 0x80
+pci3 at ppb2 bus 9
+cbb0 at pci3 dev 1 function 0 "TI PCIXX12 CardBus" rev 0x00: irq 11
+"TI PCIXX12 Multimedia Card Reader" rev 0x00 at pci3 dev 1 function 2 not configured
+sdhc0 at pci3 dev 1 function 3 "TI PCIXX12 Secure Data" rev 0x00: irq 11
+sdmmc0 at sdhc0
+bwi0 at pci3 dev 4 function 0 "Broadcom BCM4318" rev 0x02: irq 10, address 00:16:cf:1b:11:0e
+cardslot0 at cbb0 slot 0 flags 0
+cardbus0 at cardslot0: bus 10 device 0 cacheline 0x8, lattimer 0x20
+pcmcia0 at cardslot0
+usb1 at ohci0: USB revision 1.0
+uhub1 at usb1 "ATI OHCI root hub" rev 1.00/1.00 addr 1
+usb2 at ohci1: USB revision 1.0
+uhub2 at usb2 "ATI OHCI root hub" rev 1.00/1.00 addr 1
+isa0 at pcib0
+isadma0 at isa0
+pckbc0 at isa0 port 0x60/5
+pckbd0 at pckbc0 (kbd slot)
+pckbc0: using irq 1 for kbd slot
+wskbd0 at pckbd0: console keyboard, using wsdisplay0
+pms0 at pckbc0 (aux slot)
+pckbc0: using irq 12 for aux slot
+wsmouse0 at pms0 mux 0
+pcppi0 at isa0 port 0x61
+midi0 at pcppi0: <PC speaker>
+spkr0 at pcppi0
+npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+biomask e9fd netmask edfd ttymask ffff
+mtrr: Pentium Pro MTRR support
+softraid0 at root
+root on wd0a swap on wd0b dump on wd0b
