@@ -1,0 +1,52 @@
+---
+title: SCH-r100
+---
+%h1 SCH-r100
+%h2 Samsung r100 from MetroPCS
+%p At $29.99, this is one of MetroPCS's cheapest phones, and it certainly feels cheap.
+
+%hr
+
+%h3 General Tips
+
+%ul
+  %li Locking the keypad - hold the <kbd>*</kbd> key. Press <kbd>Unlock</kbd> followed by <kbd>*</kbd> to unlock again.
+
+%hr
+
+%h3 Web browser
+
+%p This is <a href="http://www.myriadgroup.com/Device-Manufacturers/Mobile-Browsing/Browser-V6.aspx">Myriad Browser V6</a>. A typical request looks like this:
+
+%pre
+  GET / HTTP/1.1
+  Proxy-Authorization: Basic MTIzNDU2Nzg5MEBteW1ldHJvcGNzLmNvbTptZXRyb3Bjcwo=
+  User-Agent: sam-r100 UP.Browser/6.2.3.8 (GUI) MMP/2.0
+  Accept-Charset: iso-8859-1
+  Accept-Language: en; q=0.9, es-ve; q=0.9
+  x-wap-profile: "http://uaprof.metropcs.net/UAProf/sam-r100.xml"
+  Referer: http://example.com/
+  Accept: application/vnd.oma.drm.content, application/vnd.oma.drm.message, application/vnd.oma.drm.rights+wbxml, application/vnd.oma.drm.rights+xml, application/vnd.phonecom.mmc-xml, application/vnd.wap.wmlc;type=4365, application/vnd.wap.wmlscriptc, application/vnd.wap.xhtml+xml, application/xhtml+xml;profile="http://www.wapforum.org/xhtml", image/bmp, image/gif, image/jpeg, image/png, image/vnd.wap.wbmp, image/x-up-wpng, multipart/mixed, multipart/related, text/html, text/plain, text/vnd.wap.wml;type=4365, application/x-smaf, application/vnd.smaf, audio/mid, application/vnd.wap.co, application/vnd.wap.si, application/vnd.wap.sia, application/vnd.wap.sl, application/vnd.oma.dd+xml, application/vnd.oma.drm.message, application/vnd.oma.drm.rights+xml, image/bmp, image/gif, image/png, image/jpeg, image/vnd.wap.wbmp, image/x-up-wpng, text/vnd.wap.wml, text/plain, text/html
+  Cache-Control: cache-on
+  Pragma: cache-on
+  Host: example.com:8080
+  Cache-Control: max-age=43200
+  Connection: keep-alive
+
+%p Features:
+%ul
+  %li Accesskeys - on all the numeric keys plus the <kbd>*</kbd>/<kbd>#</kbd> keys
+  %li HTML, CSS, HTTP Basic auth, cookies
+
+%p Note the following idiosyncrasies:
+%ul
+  %li The Proxy-Authorization header gives out your phone number: (it's base64 encoded) "<code>1234567890@mymetropcs.com:metropcs</code>"
+  %li Due to the poorly-chosen Accept* headers, some Web servers will reply with 406 Not Acceptable
+  %li The phone doesn't use an HTML parser. This is evidenced by the fact that it will not respond to stylesheets unless there is an opening HEAD tag (which is an optional tag)
+  %li When an erroneous status is returned, the browser displays "HTTP Error: %s" where %s is the full number and name of the error. It will not display the body of the response
+
+%p Mysteries of the Web browser include (if you solve a mystery, please get in touch):
+%ul
+  %li Holding down the 1 key causes some kind of request to happen, which results in "HTTP Error: 502 Bad Gateway"
+
+%address Tom Adams: <a href="http://holizz.com/">holizz.com</a>, <a href="http://twitter.com/holizz">@holizz</a>
