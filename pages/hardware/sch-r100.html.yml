@@ -44,6 +44,7 @@ title: SCH-r100
   %li Due to the poorly-chosen Accept* headers, some Web servers will reply with 406 Not Acceptable
   %li The phone doesn't use an HTML parser. This is evidenced by the fact that it will not respond to stylesheets unless there is an opening HEAD tag (which is an optional tag)
   %li When an erroneous status is returned, the browser displays "HTTP Error: %s" where %s is the full number and name of the error. It will not display the body of the response
+  %li The alarm function does not work. Sometimes it goes off, sometimes it doesn't
 
 %p Mysteries of the Web browser include (if you solve a mystery, please get in touch):
 %ul
