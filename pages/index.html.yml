@@ -2,4 +2,10 @@
 # vim: ft=haml
 title: Tom Adams
 ---
-%p Lorem ipsum
+%header
+  %h1 Tom Adams
+
+  %p Web development is a hobby and a career. Other hobbies include knots, firearms, politics, street art, and TV.
+
+%footer
+  %a{href: '/index_old.html'} Retro
