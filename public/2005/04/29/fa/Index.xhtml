@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="style"?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fun With Finite Automata</title>
+</head>
+<body>
+
+<h1>Fun With Finite Automata</h1>
+
+<h2>Task 1</h2>
+
+<table class="fig">
+<caption>Transition table for FA<sub><strong>aa</strong></sub></caption>
+<thead>
+<tr>
+	<th rowspan="2">Type</th>
+	<th rowspan="2">State</th>
+	<th colspan="2">Read</th>
+</tr>
+<tr>
+	<th><strong>a</strong></th>
+	<th><strong>b</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>-</td>
+	<td>1</td>
+	<td>2</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td></td>
+	<td>2</td>
+	<td>3</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>+</td>
+	<td>3</td>
+	<td>4</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td></td>
+	<td>4</td>
+	<td>4</td>
+	<td>4</td>
+</tr>
+</tbody>
+</table>
+
+<p class="fig">
+	<div class="caption">Transition table for FA<sub><strong>aa</strong></sub></div>
+	<img src="fa-aa" alt="" class="dia"/>
+</p>
+
+<table class="fig">
+<caption>Test table for FA<sub><strong>aa</strong></sub></caption>
+<thead>
+<tr>
+<th>String</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><code>&#x39b;</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>a</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>b</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>aa</code></td>
+	<td>Accept</td>
+</tr>
+<tr>
+	<td><code>ab</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>ba</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>bb</code></td>
+	<td>Reject</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Task 2</h2>
+
+<table class="fig">
+<caption>Transition table for FA<sub><strong>ba</strong></sub></caption>
+<thead>
+<tr>
+	<th rowspan="2">Type</th>
+	<th rowspan="2">State</th>
+	<th colspan="2">Read</th>
+</tr>
+<tr>
+	<th><strong>a</strong></th>
+	<th><strong>b</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>-</td>
+	<td>1</td>
+	<td>4</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td></td>
+	<td>2</td>
+	<td>3</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>+</td>
+	<td>3</td>
+	<td>4</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td></td>
+	<td>4</td>
+	<td>4</td>
+	<td>4</td>
+</tr>
+</tbody>
+</table>
+
+<p class="fig">
+	<div class="caption">Transition table for FA<sub><strong>ba</strong></sub></div>
+	<img src="fa-ba" alt="" class="dia"/>
+</p>
+
+<table class="fig">
+<caption>Test table for FA<sub><strong>ba</strong></sub></caption>
+<thead>
+<tr>
+<th>String</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><code>&#x39b;</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>a</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>b</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>aa</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>ab</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>ba</code></td>
+	<td>Accept</td>
+</tr>
+<tr>
+	<td><code>bb</code></td>
+	<td>Reject</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Task 3</h2>
+
+<table class="fig">
+<caption>Transition table for FA<sub><strong>aa+ba</strong></sub></caption>
+<thead>
+<tr>
+	<th rowspan="2">Type</th>
+	<th rowspan="2">State</th>
+	<th colspan="2">Read</th>
+</tr>
+<tr>
+	<th><strong>a</strong></th>
+	<th><strong>b</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>-</td>
+	<td>1</td>
+	<td>2</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td></td>
+	<td>2</td>
+	<td>3</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td>+</td>
+	<td>3</td>
+	<td>4</td>
+	<td>4</td>
+</tr>
+<tr>
+	<td></td>
+	<td>4</td>
+	<td>4</td>
+	<td>4</td>
+</tr>
+</tbody>
+</table>
+
+<p class="fig">
+	<div class="caption">Transition table for FA<sub><strong>aa+ba</strong></sub></div>
+	<img src="fa-aa+ba" alt="" class="dia"/>
+</p>
+
+<table class="fig">
+<caption>Test table for FA<sub><strong>aa+ba</strong></sub></caption>
+<thead>
+<tr>
+<th>String</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><code>&#x39b;</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>a</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>b</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>aa</code></td>
+	<td>Accept</td>
+</tr>
+<tr>
+	<td><code>ab</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>ba</code></td>
+	<td>Accept</td>
+</tr>
+<tr>
+	<td><code>bb</code></td>
+	<td>Reject</td>
+</tr>
+
+<tr>
+	<td><code>aab</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>bba</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>aaba</code></td>
+	<td>Reject</td>
+</tr>
+</tbody>
+</table>
+
+<h2>Task 4</h2>
+
+<table class="fig">
+<caption>Transition table for FA<sub><strong>(aa+ba)*</strong></sub></caption>
+<thead>
+<tr>
+	<th rowspan="2">Type</th>
+	<th rowspan="2">State</th>
+	<th colspan="2">Read</th>
+</tr>
+<tr>
+	<th><strong>a</strong></th>
+	<th><strong>b</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td>&#xb1;</td>
+	<td>1</td>
+	<td>2</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td></td>
+	<td>2</td>
+	<td>1</td>
+	<td>3</td>
+</tr>
+<tr>
+	<td></td>
+	<td>3</td>
+	<td>3</td>
+	<td>3</td>
+</tr>
+</tbody>
+</table>
+
+<p class="fig">
+	<div class="caption">Transition table for FA<sub><strong>(aa+ba)*</strong></sub></div>
+	<img src="fa-aa+ba*" alt="" class="dia"/>
+</p>
+
+<h2>Task 5</h2>
+
+<table class="fig">
+<caption>Test table for FA<sub><strong>(aa+ba)*</strong></sub></caption>
+<thead>
+<tr>
+<th>String</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td><code>&#x39b;</code></td>
+	<td>Accept</td>
+</tr>
+<tr>
+	<td><code>a</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>b</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>aa</code></td>
+	<td>Accept</td>
+</tr>
+<tr>
+	<td><code>ab</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>ba</code></td>
+	<td>Accept</td>
+</tr>
+<tr>
+	<td><code>bb</code></td>
+	<td>Reject</td>
+</tr>
+
+<tr>
+	<td><code>aab</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>bba</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>bbab</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>aaab</code></td>
+	<td>Accept</td>
+</tr>
+<tr>
+	<td><code>bbbb</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>aaaabaaba</code></td>
+	<td>Reject</td>
+</tr>
+<tr>
+	<td><code>baaaaabaaabaaa</code></td>
+	<td>Accept</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:dcterms="http://purl.org/dc/terms/"
+	>
+
+	<rdf:Description about="http://holizz.com/2005/03/11/fa#">
+		<dc:description xml:lang="en-GB">A vocabulary for describing finate automata in RDF.</dc:description>
+	</rdf:Description>
+
+	<!-- CLASSES -->
+
+	<rdfs:Class about="http://holizz.com/2005/03/11/fa#FA">
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:label xml:lang="en-GB">FA</rdfs:label>
+		<rdfs:comment xml:lang="en-GB"></rdfs:comment>
+		<dcterms:issued>2005-03-13</dcterms:issued>
+		<dcterms:modified>2005-03-13</dcterms:modified>
+	</rdfs:Class>
+
+	<rdfs:Class about="http://holizz.com/2005/03/11/fa#State">
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:label xml:lang="en-GB">State</rdfs:label>
+		<rdfs:comment xml:lang="en-GB"></rdfs:comment>
+		<dcterms:issued>2005-03-13</dcterms:issued>
+		<dcterms:modified>2005-03-13</dcterms:modified>
+	</rdfs:Class>
+
+	<rdfs:Class about="http://holizz.com/2005/03/11/fa#NextState">
+		<rdfs:subClassOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+		<rdfs:label xml:lang="en-GB">NextState</rdfs:label>
+		<rdfs:comment xml:lang="en-GB"></rdfs:comment>
+		<dcterms:issued>2005-03-13</dcterms:issued>
+		<dcterms:modified>2005-03-13</dcterms:modified>
+	</rdfs:Class>
+
+	<!-- PROPERTIES -->
+
+	<rdf:Property rdf:about="http://holizz.com/2005/03/11/fa#next">
+		<!-- rename? -->
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+		<rdfs:domain rdf:resource="http://holizz.com/2005/03/11/fa#State"/>
+		<rdfs:range rdf:resource="http://holizz.com/2005/03/11/fa#NextState"/>
+		<rdfs:label xml:lang="en-GB">next</rdfs:label>
+		<rdfs:comment xml:lang="en-GB"></rdfs:comment>
+		<dcterms:issued>2005-03-13</dcterms:issued>
+		<dcterms:modified>2005-03-13</dcterms:modified>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="http://holizz.com/2005/03/11/fa#goto">
+		<!-- rename? -->
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+		<rdfs:domain rdf:resource="http://holizz.com/2005/03/11/fa#NextState"/>
+		<rdfs:range rdf:resource="http://holizz.com/2005/03/11/fa#State"/>
+		<rdfs:label xml:lang="en-GB">goto</rdfs:label>
+		<rdfs:comment xml:lang="en-GB"></rdfs:comment>
+		<dcterms:issued>2005-03-13</dcterms:issued>
+		<dcterms:modified>2005-03-13</dcterms:modified>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="http://holizz.com/2005/03/11/fa#type">
+		<!-- rename? -->
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+		<rdfs:domain rdf:resource="http://holizz.com/2005/03/11/fa#State"/>
+		<!--<rdfs:range rdf:resource="http://holizz.com/2005/03/11/fa#"/>-->
+		<rdfs:label xml:lang="en-GB">type</rdfs:label>
+		<rdfs:comment xml:lang="en-GB"></rdfs:comment>
+		<dcterms:issued>2005-03-13</dcterms:issued>
+		<dcterms:modified>2005-03-13</dcterms:modified>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="http://holizz.com/2005/03/11/fa#string">
+		<!-- rename? symbol, accept -->
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+		<rdfs:domain rdf:resource="http://holizz.com/2005/03/11/fa#NextState"/>
+		<!--<rdfs:range rdf:resource="http://holizz.com/2005/03/11/fa#"/>-->
+		<rdfs:label xml:lang="en-GB">string</rdfs:label>
+		<rdfs:comment xml:lang="en-GB"></rdfs:comment>
+		<dcterms:issued>2005-03-13</dcterms:issued>
+		<dcterms:modified>2005-03-13</dcterms:modified>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="http://holizz.com/2005/03/11/fa#states">
+		<!-- rename? -->
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+		<rdfs:domain rdf:resource="http://holizz.com/2005/03/11/fa#FA"/>
+		<rdfs:range rdf:resource="http://holizz.com/2005/03/11/fa#State"/>
+		<rdfs:label xml:lang="en-GB">states</rdfs:label>
+		<rdfs:comment xml:lang="en-GB"></rdfs:comment>
+		<dcterms:issued>2005-03-13</dcterms:issued>
+		<dcterms:modified>2005-03-13</dcterms:modified>
+	</rdf:Property>
+
+	<rdf:Property rdf:about="http://holizz.com/2005/03/11/fa#initial">
+		<!-- rename? -->
+		<rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
+		<rdfs:domain rdf:resource="http://holizz.com/2005/03/11/fa#FA"/>
+		<rdfs:range rdf:resource="http://holizz.com/2005/03/11/fa#State"/>
+		<rdfs:label xml:lang="en-GB">initial</rdfs:label>
+		<rdfs:comment xml:lang="en-GB"></rdfs:comment>
+		<dcterms:issued>2005-03-13</dcterms:issued>
+		<dcterms:modified>2005-03-13</dcterms:modified>
+	</rdf:Property>
+
+</rdf:RDF>
+

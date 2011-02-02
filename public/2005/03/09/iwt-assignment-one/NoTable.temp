@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='US-ASCII'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.1//EN' 'http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd'>
+<html xml:lang='en-GB' xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+	<title><$title$></title>
+	<link href='/Favicon' rel='shortcut icon' />
+	<link href='../Style' rel='stylesheet' media='screen' />
+</head>
+<body>
+	<h1 id="header"><$title$></h1>
+	<ul id="main-nav">
+		<li><a href="./">Home</a></li>
+		<li><a href="Me">Me</a></li>
+		<li><a href="Family">Family</a></li>
+	</ul>
+	<div id="content">
+		<$content$>
+	</div>
+</body>
+</html>
+

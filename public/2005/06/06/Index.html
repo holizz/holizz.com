@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+  <head profile="http://gmpg.org/xfn/1 http://dublincore.org/documents/dcq-html/">
+    <title>2005-06-06 Archive | Holizz versus the Web</title>
+    <link href="/Favicon" rel="shortcut icon" />
+    <link href="/Style/TR/" title="TR" rel="stylesheet" media="screen" />
+    <link href="/Style/Fant/" title="Fant" rel="alternate stylesheet" media="screen" />
+    <link href="/Style/Classic/Classic" title="Classic" rel="alternate stylesheet" media="screen" />
+    <link href="/Holizz/Index.rdf" title="FOAF" rel="meta" type="application/rdf+xml" />
+    <link href="/About/Copyright" title="Copyright" rel="DC.rights" />
+    <link href="/About/Copyright" title="Copyright" rel="copyright" />
+    <link href="http://www.gnu.org/licenses/gpl" rel="DC.license" />
+    <link href="http://purl.org/dc/elements/1.1/" rel="schema.DC" />
+    <link href="http://xmlns.com/foaf/0.1/" rel="schema.FOAF" />
+    <link href="/Holizz/" rel="FOAF.maker" />
+    <link href="/Holizz/" rel="DC.rightsHolder" />
+    <link href="/Search" rel="search" />
+    <link href="/Holizz/PublicKey" rel="pgpkey" type="application/pgp-keys" />
+    <meta name="DC.language" content="en-GB" />
+    <meta name="author" content="Tom Adams" />
+    <meta name="DC.title" content="2005-06-06 Archive | Holizz versus the Web" />
+  </head>
+  <body id="holizz-com">
+    <div id="header">
+      <h1>
+        <a href="http://holizz.com/">Holizz versus the Web</a>
+      </h1>
+      <p id="tagline">A journal about my life with a little XML thrown in for good favour.</p>
+    </div>
+    <ul id="main-nav">
+      <li id="skip">
+        <a href="#content">Skip to content</a>
+      </li>
+      <li>
+        <a href="/">Weblog</a>
+      </li>
+      <li>
+        <a href="/Feed">Feed</a>
+      </li>
+      <li>
+        <a href="/Archives">Archives</a>
+      </li>
+      <li>
+        <a href="/Holizz/">Holizz</a>
+      </li>
+      <li>
+        <a href="/About/">About</a>
+      </li>
+    </ul>
+    <div id="content">
+      <div class="section">
+      <p>Archive of 2005-06-06.</p>
+</div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/06/user-script-to-fix-ipac">User script to fix iPac</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>I finally found a useful purpose for JavaScript: fixing crappy sites.</p>
+
+<p>As you may know, <a href="http://www.brad.ac.uk/">Bradford University</a> has a library. What you may not know is that there is a <a href="http://ipac.brad.ac.uk/">web-based interface to that library</a> based on some terrible software known only as iPac (no, I have no useful link, I&#x2019;m not sure it even has a site). <ins datetime="2005-06-06T12:30:44+01:00">Apparently it&#x2019;s been renamed and it does have a website: <a href="http://www.epixtech.com/products/hip/">Horizon Information Portal</a>.</ins>
+        </p>
+
+<p>So what I did tonight was write a <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a> user script (although I&#x2019;m sure it would be trivial to port it to Opera&#x2019;s UserJS) that would fix iPac. I covered my two main gripes: firstly, a search field is always focused when the page loads making me tab twice before I can use <a href="http://users.tkk.fi/~psillanp/hah_hp/">Hit-a-Hint</a> or navigate; secondly, the site uses javascript: links for no good reason (tip: there is no good reason). Using javascript: links is evil because it means I can&#x2019;t do anything useful with the link like open it in a new tab.</p>
+
+<p>Here it is: <a href="http://holizz.com/2005/06/06/ipac.user.js">iPac Fixer</a>.</p>
+
+<p>Bug reports and patches appreciated (to <a href="mailto:userjs@holizz.com">userjs@holizz.com</a>).</p>
+
+<p>The user script basically sets the <code>body</code>&#x2019;s <code>onload</code> attribute to an empty string to prevent the focus being set. Then it looks through all <code>a</code> elements and finds any with a <code>href</code> attribute starting with <code>javascript:</code> with single quotes, it then gets what&#x2019;s between the first two single quotes and replaces the <code>href</code> with that.</p>
+</div>
+        <div class="meta">
+          <p>2005-06-06T02:43:12+01:00</p>
+          <p>Modified: 2005-06-06T12:32:57+01:00</p>
+        </div>
+      </div>
+    </div>
+    <address id="meta" class="meta vcard">
+	  By <a href="/Holizz/" class="fn">Tom Adams</a> (<a href="/Holizz/Contact">contact</a>).
+	  <a href="/About/Copyright">(K) All rights reversed</a>.
+	  <a href="/About/Conformance">Valid Everything 1.0</a>.
+	</address>
+  </body>
+</html>

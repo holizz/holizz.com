@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+  <head profile="http://gmpg.org/xfn/1 http://dublincore.org/documents/dcq-html/">
+    <title>IRIs in Firefox | Holizz versus the Web</title>
+    <link href="/Favicon" rel="shortcut icon"/>
+    <link href="/Style/TR/" title="TR" rel="stylesheet" media="screen"/>
+    <link href="/Style/Fant/" title="Fant" rel="alternate stylesheet" media="screen"/>
+    <link href="/Style/Classic/Classic" title="Classic" rel="alternate stylesheet" media="screen"/>
+    <link href="/Holizz/Index.rdf" title="FOAF" rel="meta" type="application/rdf+xml"/>
+    <link href="/About/Copyright" title="Copyright" rel="DC.rights"/>
+    <link href="/About/Copyright" title="Copyright" rel="copyright"/>
+    <link href="http://www.gnu.org/licenses/gpl" rel="DC.license"/>
+    <link href="http://purl.org/dc/elements/1.1/" rel="schema.DC"/>
+    <link href="http://xmlns.com/foaf/0.1/" rel="schema.FOAF"/>
+    <link href="/Holizz/" rel="FOAF.maker"/>
+    <link href="/Holizz/" rel="DC.rightsHolder"/>
+    <link href="/Search" rel="search"/>
+    <link href="/Holizz/PublicKey" rel="pgpkey" type="application/pgp-keys"/>
+    <meta name="DC.language" content="en-GB"/>
+    <meta name="author" content="Tom Adams"/>
+    <meta name="DC.title" content="IRIs in Firefox | Holizz versus the Web"/>
+  </head>
+  <body id="holizz-com">
+    <div id="header">
+      <h1>
+        <a href="http://holizz.com/">Holizz versus the Web</a>
+      </h1>
+      <p id="tagline">A journal about my life with a little XML thrown in for good favour.</p>
+    </div>
+    <ul id="main-nav">
+      <li id="skip">
+        <a href="#content">Skip to content</a>
+      </li>
+      <li>
+        <a href="/">Weblog</a>
+      </li>
+      <li>
+        <a href="/Feed">Feed</a>
+      </li>
+      <li>
+        <a href="/Archives">Archives</a>
+      </li>
+      <li>
+        <a href="/Holizz/">Holizz</a>
+      </li>
+      <li>
+        <a href="/About/">About</a>
+      </li>
+    </ul>
+    <div id="content">
+      <div class="section entry">
+        <h2>
+          <a href="/2005/03/16/iris-in-firefox">IRIs in Firefox</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>(All this blogging lately, maybe I should call this a blurnal or a jourlog or some amusing <a href="http://en.wikipedia.org/wiki/Portmanteu">portmanteau</a>.)</p>
+
+<p>I&#x2019;ve been fiddling with a few options (i.e. the options found in <a href="about:config">about:config</a>) in <a href="http://getfirefox.com/">Firefox</a> today as I had to <a href="http://holizz.com/2005/03/16/firefox-chrome">re-chrome it earlier</a>. You know, tweak the accept-string (<code>network.http.accept.default</code>) so that it prefers XHTML over XML and XML over HTML, etc.. While I was doing that I came across a couple of options and I wondered what they did.</p>
+
+<p>So I tested them. Turns out they effect <abbr title="Internationalised Resource Identifier">IRI</abbr>s (see <cite>
+            <a href="http://www.w3.org/International/articles/idn-and-iri/">An Introduction to Multilingual Web Addresses</a>
+          </cite>).</p>
+
+<p>So I figure I&#x2019;d tell you how to enable IRIs in Firefox.</p>
+
+<p>But first, an explanation of what IRIs are:</p>
+
+<dl>
+<dt>
+            <abbr title="Internationalised Domain Name">IDN</abbr>
+          </dt>
+<dd>Allows Unicode in domain names (i.e. caf&#xE9;.example.com).</dd>
+
+<dt>
+            <abbr title="Internationalised Resource Identifier">IRI</abbr>
+          </dt>
+<dd>A <abbr title="Uniform Resource Identifier">URI</abbr> with Unicode in it. I.e. in the domain name, in the path, etc. (http://caf&#xE9;.example.com/ is an IRI and so is http://example.com/caf&#xE9;/).</dd>
+</dl>
+
+<p>Yes, I know that sucked but it was just a simple introduction. Anne <a href="http://annevankesteren.nl/archives/2005/02/iri" title="IRI">explains it better</a>.</p>
+
+<dl>
+<dt>
+            <code>network.enableIDN</code>
+          </dt>
+<dd>This is <code>false</code> by default in the official 1.0.1, I believe. Set it to <code>true</code> to allow IDNs.</dd>
+
+<dt>
+            <code>network.IDN_show_punycode</code>
+          </dt>
+<dd>If this is <code>true</code> an IDN is displayed in Unicode (caf&#xE9;.example.com), if not it displays IDNs in a scary way (xn&#x2013;0trv4xfvn8el34t.w3.mag.keio.ac.jp &#x2026; not the same domain name).</dd>
+
+<dt>
+            <code>network.standard-url.encode-utf8</code>
+          </dt>
+<dd>If this is <code>false</code> then Unicode in the path of the resource just won&#x2019;t work.</dd>
+
+<dt>
+            <code>network.standard-url.escape-utf8</code>
+          </dt>
+<dd>If this is <code>false</code>, IRIs will be escaped (like so: %E7%B4%8D), if <code>true</code> it will look lovely.</dd>
+</dl>
+
+<p>If you&#x2019;re worried about <a href="http://www.shmoo.com/idn/">IDN spoofing</a>, I recommend the <a href="http://4t2.cc/mozilla/idn">IDN Info</a> extension. It sticks a little icon in the address bar when you&#x2019;re looking at an IDN.</p>
+
+<p>Want to test it? The W3C has some <a href="http://www.w3.org/International/tests/#iri">IDN and IRI test pages</a>.</p>
+
+<p>And that&#x2019;s all a Firefox user has to do to get it working. Enjoy your IRIs.</p>
+</div>
+        <div class="meta">
+          <p>2005-03-16T20:47:50+00:00</p>
+        </div>
+      </div>
+    </div>
+    <address id="meta" class="meta vcard">
+	  By <a href="/Holizz/" class="fn">Tom Adams</a> (<a href="/Holizz/Contact">contact</a>).
+	  <a href="/About/Copyright">(K) All rights reversed</a>.
+	  <a href="/About/Conformance">Valid Everything 1.0</a>.
+	</address>
+  </body>
+</html>

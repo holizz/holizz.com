@@ -7,5 +7,29 @@ title: Tom Adams
 
   %p Web development is a hobby and a career. Other hobbies include knots, firearms, politics, street art, and TV.
 
+%nav
+  %h2 Blogs and <abbr title="Social Networking Site">SNS</abbr>
+  %ul
+    %li
+      %a{href: 'http://twitter.com/holizz'} Twitter
+    %li
+      %a{href: 'http://holizz.tumblr.com/'} Tumblr
+    %li
+      %a{href: 'http://holizz.livejournal.com/'} LiveJournal
+    %li
+      %a{href: 'http://www.facebook.com/holizz'} Facebook
+
+%nav
+  %h2 Messaging
+  %ul
+    %li
+      Email:
+      %a{href: 'mailto:tom@holizz.com'} tom@holizz.com
+    %li
+      XMPP:
+      %a{href: 'xmpp:holizz@jabber.org'} holizz@jabber.org
+      +
+      %a{href: 'xmpp:holizz@gmail.com'} holizz@gmail.com
+
 %footer
   %a{href: '/index_old.html'} Retro

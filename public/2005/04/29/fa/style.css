@@ -1,0 +1,13 @@
+table.fig
+{
+  width: 30%;
+}
+
+table.fig, .dia
+{
+  border: 2px solid black;
+}
+
+td, th
+{ text-align: center; }
+

@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+  <head profile="http://gmpg.org/xfn/1 http://dublincore.org/documents/dcq-html/">
+    <title>2005-02-09 Archive | Holizz versus the Web</title>
+    <link href="/Favicon" rel="shortcut icon"/>
+    <link href="/Style/TR/" title="TR" rel="stylesheet" media="screen"/>
+    <link href="/Style/Fant/" title="Fant" rel="alternate stylesheet" media="screen"/>
+    <link href="/Style/Classic/Classic" title="Classic" rel="alternate stylesheet" media="screen"/>
+    <link href="/Holizz/Index.rdf" title="FOAF" rel="meta" type="application/rdf+xml"/>
+    <link href="/About/Copyright" title="Copyright" rel="DC.rights"/>
+    <link href="/About/Copyright" title="Copyright" rel="copyright"/>
+    <link href="http://www.gnu.org/licenses/gpl" rel="DC.license"/>
+    <link href="http://purl.org/dc/elements/1.1/" rel="schema.DC"/>
+    <link href="http://xmlns.com/foaf/0.1/" rel="schema.FOAF"/>
+    <link href="/Holizz/" rel="FOAF.maker"/>
+    <link href="/Holizz/" rel="DC.rightsHolder"/>
+    <link href="/Search" rel="search"/>
+    <link href="/Holizz/PublicKey" rel="pgpkey" type="application/pgp-keys"/>
+    <meta name="DC.language" content="en-GB"/>
+    <meta name="author" content="Tom Adams"/>
+    <meta name="DC.title" content="2005-02-09 Archive | Holizz versus the Web"/>
+  </head>
+  <body id="holizz-com">
+    <div id="header">
+      <h1>
+        <a href="http://holizz.com/">Holizz versus the Web</a>
+      </h1>
+      <p id="tagline">A journal about my life with a little XML thrown in for good favour.</p>
+    </div>
+    <ul id="main-nav">
+      <li id="skip">
+        <a href="#content">Skip to content</a>
+      </li>
+      <li>
+        <a href="/">Weblog</a>
+      </li>
+      <li>
+        <a href="/Feed">Feed</a>
+      </li>
+      <li>
+        <a href="/Archives">Archives</a>
+      </li>
+      <li>
+        <a href="/Holizz/">Holizz</a>
+      </li>
+      <li>
+        <a href="/About/">About</a>
+      </li>
+    </ul>
+    <div id="content">
+      <div class="section">
+      <p>Archive of 2005-02-09.</p>
+</div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/02/09/search-engines">Search engines</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>I was meant to go to the IWT (Introduction to Web Technologies) but I set my alarm thinking it was Thursday so I woke up just as the lab started and the following lab was in an hour so I didn&#x2019;t bother with either.</p>
+
+<p>In IWT we were meant to be comparing search engines in &#x201C;relevancy of results, and ease of use&#x201D; (according to Niall).</p>
+
+<p>So anyway I had some breakfast and lunch then I went to town to see Summer. We had fun and she bought lots of pink stuff to wear to Kulu. It shall be fun. It was also decided that I should dye my hair purple before we go to the <a href="http://www.thewendyhouse.org/">Wendy House</a> on my birthday.</p>
+
+<p>So we come back to my room. We have a chat and eat toast (Summer didn&#x2019;t like my peanut butter). What awaits me in my inbox? Why it&#x2019;s an email from the fellow who did the <a href="http://www.ivor.it/goog/">Google and MSN search comparison</a> which showed that MSN Search gives more results for IIS-based servers than Google Search does.</p>
+
+<p>It would appear that <a href="http://www.ivor.it/">Ivor</a> saw hits coming from <a href="http://holizz.com/2005/01/27/google-and-msn-search" title="Google and MSN Search">my article on Google/MSN search</a> (or so one would expect) and compiled some results for <a href="http://www.ivor.it/goog/big1000/holizz.html">holizz</a> and <a href="http://www.ivor.it/goog/big1000/Tom+Adams.html">Tom+Adams</a>.</p>
+
+<p>I expect the vast amount of Apache for &#x201C;holizz&#x201D; is due to the fact that I tend to use geek sites. And I was impressed to see that <a href="http://www.teoma.com/">Teoma</a> already has holizz.com as number one. That was the first time I&#x2019;ve used Teoma. Really.</p>
+
+<p>So thank you very much Ivor.</p>
+</div>
+        <div class="meta">
+          <p>2005-02-09T19:19:06+00:00</p>
+        </div>
+      </div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/02/09/the-site">The site</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>I believe IE is being given <code>application/rdf+xml</code> when it visits my home page (or so I&#x2019;ve been told) because it&#x2019;s a moron. For that, I apologise. As far as I can tell only IE is stupid enough to fetch RDF instead of something more useful.</p>
+
+<p>I&#x2019;m not sure I can change the behaviour since I can only edit <code>.htaccess</code>.</p>
+
+<p>I tried</p>
+
+<blockquote>
+<p>
+            <code>AddType text/html .html; qs=0.9<br/>
+AddType application/xhtml+xml .xhtml; qs=0.8<br/>
+AddType application/rdf+xml .rdf; qs=0.7</code>
+          </p>
+</blockquote>
+
+<p>(<a href="http://www.w3.org/2003/01/xhtml-mimetype/content-negotiation" title="Content-Negotiation Techniques to serve XHTML 1.0 as text/html and application/xhtml+xml">see also</a>) but it doesn&#x2019;t seem to work when using</p>
+
+<blockquote>
+<p>
+            <code>HEAD / HTTP/1.1<br/>
+Host: holizz.com<br/>
+Connection: close<br/>
+<br/>
+</code>
+          </p>
+</blockquote>
+
+<p>as it just gives me <code>application/rdf+xml</code>. Maybe IE would work with it. Maybe not.</p>
+
+<p>Getting rid of <code>Index.rdf</code> isn&#x2019;t really an option as I want RDF-capable agents to be fed RDF if they choose.</p>
+
+<p>If IE is badly-behaved and I can&#x2019;t make it behave well, I will not lose sleep. Just readers. But ah well.</p>
+
+<p>Next up: a new style.</p>
+
+<p>Yes, look at my lovely stylesheet. I was going to go for a sea theme, but the sky looked better than the sea in the <a href="http://www.confusticate.com/photos/gallery.php/photos/Cruise2004/Day5/Images/15.jpg?path=/photos/Cruise2004/Day5">photo I used</a>. I found it via <a href="http://search.creativecommons.org/">Creative Commons Search</a>.</p>
+
+<p>It&#x2019;s surprisingly hard to find nice graphics to use. And no, I am not an 1337 GIMPerz so I can&#x2019;t make my own.</p>
+
+<p>If you&#x2019;ll notice, the <code>div#header</code> element has been instructed <code>overflow: auto</code> to stop it from overflowing and making the rest of the page unreadable if it&#x2019;s scrolled up. You may also notice that the font is 120% (well over the 100% the <a href="http://www.w3.org/QA/Tips/font-size" title="Care With Font Size">W3C advises</a>) thus facilitating readability. For the same end there is no junk like a <a href="/About/Copyright">copyright statement</a> and <a href="/About/Blogroll">blogroll</a> to clutter up the pages.</p>
+
+<p>An finally: my email address.</p>
+
+<p>As you may have noticed, my <a href="/Holizz/Contact">contact page</a> includes my incomplete email address for spam concerns. I had a thought which involved embedding the agent&#x2019;s IP address in the address (since I get email to all at this domain). Thus it would give <code>mailto:127.0.0.1@<var>this_domain</var>
+          </code> (I&#x2019;m still not brave enough), for example. And each person or harvester would get a different address. Humans and machines well-versed in English will be informed that they can just email <code>holizz@&#x2026;</code> if they prefer.</p>
+
+<p>I&#x2019;m not sure about the idea though as I don&#x2019;t know if it would be very useful in practice. It would allow me to give real URIs out (which is nice) yet it could just result in a lot of spam to a lot of different email addresses.</p>
+</div>
+        <div class="meta">
+          <p>2005-02-09T19:26:18+00:00</p>
+        </div>
+      </div>
+    </div>
+    <address id="meta" class="meta vcard">
+	  By <a href="/Holizz/" class="fn">Tom Adams</a> (<a href="/Holizz/Contact">contact</a>).
+	  <a href="/About/Copyright">(K) All rights reversed</a>.
+	  <a href="/About/Conformance">Valid Everything 1.0</a>.
+	</address>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Entities stolen from XHTML 1.0 strict -->
+
+<!ENTITY % HTMLlat1 PUBLIC
+"-//W3C//ENTITIES Latin 1 for XHTML//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml-lat1.ent">
+%HTMLlat1;
+
+<!ENTITY % HTMLsymbol PUBLIC
+"-//W3C//ENTITIES Symbols for XHTML//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml-symbol.ent">
+%HTMLsymbol;
+
+<!ENTITY % HTMLspecial PUBLIC
+"-//W3C//ENTITIES Special for XHTML//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml-special.ent">
+%HTMLspecial;
+
+<!-- Maybe I'll extend the entities one day... or maybe not -->
+
+
+<!-- The DTD which used to live here: -->
+
+<!--
+<!ENTITY % sunc-prefix "">
+<!ENTITY % sunc-colon "">
+-->
+
+<!-- Data types -->
+<!--
+<!ENTITY % Text "PCDATA">
+-->
+
+<!-- Major structural elements -->
+<!--
+<!ENTITY % sunc-page "%sunc-prefix;%sunc-colon;page">
+<!ENTITY % sunc-head "%sunc-prefix;%sunc-colon;head">
+<!ENTITY % sunc-body "%sunc-prefix;%sunc-colon;body">
+<!ENTITY % sunc-entries "%sunc-prefix;%sunc-colon;entries">
+<!ENTITY % sunc-entry "%sunc-prefix;%sunc-colon;entry">
+-->
+
+<!-- Data elements -->
+<!--
+<!ENTITY % sunc-title "%sunc-prefix;%sunc-colon;title">
+<!ENTITY % sunc-tagline "%sunc-prefix;%sunc-colon;tagline">
+<!ENTITY % sunc-base "%sunc-prefix;%sunc-colon;base">
+<!ENTITY % sunc-description "%sunc-prefix;%sunc-colon;description">
+<!ENTITY % sunc-type "%sunc-prefix;%sunc-colon;type">
+<!ENTITY % sunc-perma "%sunc-prefix;%sunc-colon;perma">
+<!ENTITY % sunc-date "%sunc-prefix;%sunc-colon;date">
+<!ENTITY % sunc-meta "%sunc-prefix;%sunc-colon;meta">
+-->
+
+<!-- Major structural elements -->
+<!--
+<!ELEMENT %sunc-page; (head, entries)>
+<!ELEMENT %sunc-head; (title | tagline | base | description | type | perma | date | meta)*>
+<!ELEMENT %sunc-body; (%Text;)>
+<!ELEMENT %sunc-entries; (body?, entry*)>
+<!ELEMENT %sunc-entry; (head, body)>
+-->
+
+<!-- Data elements -->
+<!--
+<!ELEMENT %sunc-title; (%Text;)>
+<!ELEMENT %sunc-tagline; (%Text;)>
+<!ELEMENT %sunc-base; (%Text;)>
+<!ELEMENT %sunc-description; (%Text;)>
+<!ELEMENT %sunc-type;  (%Text;)>
+<!ELEMENT %sunc-perma; (%Text;)>
+<!ELEMENT %sunc-date; (%Text;)>
+<!ELEMENT %sunc-meta; (%Text;)>
+-->
+

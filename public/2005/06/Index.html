@@ -1,0 +1,612 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+  <head profile="http://gmpg.org/xfn/1 http://dublincore.org/documents/dcq-html/">
+    <title>2005-06 Archive | Holizz versus the Web</title>
+    <link href="/Favicon" rel="shortcut icon" />
+    <link href="/Style/TR/" title="TR" rel="stylesheet" media="screen" />
+    <link href="/Style/Fant/" title="Fant" rel="alternate stylesheet" media="screen" />
+    <link href="/Style/Classic/Classic" title="Classic" rel="alternate stylesheet" media="screen" />
+    <link href="/Holizz/Index.rdf" title="FOAF" rel="meta" type="application/rdf+xml" />
+    <link href="/About/Copyright" title="Copyright" rel="DC.rights" />
+    <link href="/About/Copyright" title="Copyright" rel="copyright" />
+    <link href="http://www.gnu.org/licenses/gpl" rel="DC.license" />
+    <link href="http://purl.org/dc/elements/1.1/" rel="schema.DC" />
+    <link href="http://xmlns.com/foaf/0.1/" rel="schema.FOAF" />
+    <link href="/Holizz/" rel="FOAF.maker" />
+    <link href="/Holizz/" rel="DC.rightsHolder" />
+    <link href="/Search" rel="search" />
+    <link href="/Holizz/PublicKey" rel="pgpkey" type="application/pgp-keys" />
+    <meta name="DC.language" content="en-GB" />
+    <meta name="author" content="Tom Adams" />
+    <meta name="DC.title" content="2005-06 Archive | Holizz versus the Web" />
+  </head>
+  <body id="holizz-com">
+    <div id="header">
+      <h1>
+        <a href="http://holizz.com/">Holizz versus the Web</a>
+      </h1>
+      <p id="tagline">A journal about my life with a little XML thrown in for good favour.</p>
+    </div>
+    <ul id="main-nav">
+      <li id="skip">
+        <a href="#content">Skip to content</a>
+      </li>
+      <li>
+        <a href="/">Weblog</a>
+      </li>
+      <li>
+        <a href="/Feed">Feed</a>
+      </li>
+      <li>
+        <a href="/Archives">Archives</a>
+      </li>
+      <li>
+        <a href="/Holizz/">Holizz</a>
+      </li>
+      <li>
+        <a href="/About/">About</a>
+      </li>
+    </ul>
+    <div id="content">
+      <div class="section">
+      <p>Archive of 2005-06.</p>
+</div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/05/spring-cleaning">Spring Cleaning</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>Yesterday I was bored so I decided to clean up a bit. Then I found (dum dum DUM) carpet beetle larvae. So I vacuumed them all up. In the end I managed to vacuum the whole side of the room they were on. So now under my computer it&#x2019;s all clean and the wires almost look lonely. It&#x2019;s also very clean under my bed (they were mostly under my bed, I think they came in from under the carpet in the corner). There&#x2019;s still a whole load of dead ones, mostly under my bed. I don&#x2019;t think they&#x2019;ll be coming out of the carpet. I also cleaned out my cupboard in the kitchen, I still have to wash up and such, but that can wait.</p>
+
+<p>Today I am going to clean the other side of the room and wash all the clothes I&#x2019;d left there. I doubt there&#x2019;ll be much in the way of carpet beetle larvae on that side but it&#x2019;s best to clean it anyway, to make sure the ones I missed don&#x2019;t go make a new home over there.</p>
+
+<p>As far as housekeeping goes, I&#x2019;ve learnt my lesson.</p>
+
+</div>
+        <div class="meta">
+          <p>2005-06-05T14:23:18+01:00</p>
+        </div>
+      </div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/06/user-script-to-fix-ipac">User script to fix iPac</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>I finally found a useful purpose for JavaScript: fixing crappy sites.</p>
+
+<p>As you may know, <a href="http://www.brad.ac.uk/">Bradford University</a> has a library. What you may not know is that there is a <a href="http://ipac.brad.ac.uk/">web-based interface to that library</a> based on some terrible software known only as iPac (no, I have no useful link, I&#x2019;m not sure it even has a site). <ins datetime="2005-06-06T12:30:44+01:00">Apparently it&#x2019;s been renamed and it does have a website: <a href="http://www.epixtech.com/products/hip/">Horizon Information Portal</a>.</ins>
+        </p>
+
+<p>So what I did tonight was write a <a href="http://greasemonkey.mozdev.org/">Greasemonkey</a> user script (although I&#x2019;m sure it would be trivial to port it to Opera&#x2019;s UserJS) that would fix iPac. I covered my two main gripes: firstly, a search field is always focused when the page loads making me tab twice before I can use <a href="http://users.tkk.fi/~psillanp/hah_hp/">Hit-a-Hint</a> or navigate; secondly, the site uses javascript: links for no good reason (tip: there is no good reason). Using javascript: links is evil because it means I can&#x2019;t do anything useful with the link like open it in a new tab.</p>
+
+<p>Here it is: <a href="http://holizz.com/2005/06/06/ipac.user.js">iPac Fixer</a>.</p>
+
+<p>Bug reports and patches appreciated (to <a href="mailto:userjs@holizz.com">userjs@holizz.com</a>).</p>
+
+<p>The user script basically sets the <code>body</code>&#x2019;s <code>onload</code> attribute to an empty string to prevent the focus being set. Then it looks through all <code>a</code> elements and finds any with a <code>href</code> attribute starting with <code>javascript:</code> with single quotes, it then gets what&#x2019;s between the first two single quotes and replaces the <code>href</code> with that.</p>
+</div>
+        <div class="meta">
+          <p>2005-06-06T02:43:12+01:00</p>
+          <p>Modified: 2005-06-06T12:32:57+01:00</p>
+        </div>
+      </div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/10/symphonyos">SymphonyOS</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>Yesterday I went swimming in the morning (well, early in the afternoon). A whole 30 lengths. It made me feel good.</p>
+<p>Today I tried out <a href="http://www.symphonyos.com/">SymphonyOS</a>. It&#x2019;s certainly a step in the right direction. Usability is something seriously lacking in Linux and open source.</p>
+<p>I just have two suggestions: when I&#x2019;m on a different menu in Mezzo and I click something, I would expect the menu to stay rather than switch back to the main desktop; and there should be a keyboard switching tool somewhere (because I don&#x2019;t want to have to plug in my PS/2 keyboard at boot and type <kbd>knoppix26 xkeyboard=dvorak</kbd>).</p>
+<p>But definitely very good. When I convince my mum that she <em>does</em> want Linux on her old computer SymphonyOS will be considered (it&#x2019;s Symphony or Ubuntu, at the moment). I definitely can&#x2019;t wait for Mezzo and Orchestra to check into the new testing distribution of <a href="http://www.debian.org/">Debian</a>.</p>
+</div>
+        <div class="meta">
+          <p>2005-06-10T11:15:52+01:00</p>
+        </div>
+      </div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/11/mediawiki-bug-reporting">MediaWiki bug-reporting</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>Today I filed two bug reports with <a href="http://wikipedia.sourceforge.net/">MediaWiki</a>, the popular wiki engine that powers great projects like the famous <a href="http://wikipedia.org/">Wikipedia</a> and the infamous <a href="http://quake.swe.net/~crimson/wiki/">BrafordCompski Wiki</a>.</p>
+
+<p>They also happen to be my first two bug reports ever! I am no longer a bug-report virgin!</p>
+
+<p>They&#x2019;re both related to the <a href="http://atomenabled.org/">Atom</a> syndication format and <abbr title="Multipart Internet Message Extensions">MIME</abbr> types.</p>
+
+<p>The first, <a href="http://bugzilla.wikimedia.org/show_bug.cgi?id=2392">Bug 2392: Atom items given text/plain MIME type</a>, is an annoying bug that means when I read the Recentchanges Atom feed, I see the HTML source of the items rather than formatted data in HTML. Not a major idiocy, it just shows nobody actually uses the Atom feed (this would make sense as the RSS feed is listed first and thus would be chosen over Atom by most readers which autodiscover feeds).</p>
+
+<p>The second, <a href="http://bugzilla.wikimedia.org/show_bug.cgi?id=2393">Bug 2393: Incorrect MIME type used to advertise Atom feed in Recentchanges</a>, made me giggle when I first noticed it. Again, nothing serious but it could cause autodiscovery problems if the software looks for <code>application/atom+xml</code> specifically.</p>
+</div>
+        <div class="meta">
+          <p>2005-06-11T23:04:39+01:00</p>
+        </div>
+      </div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/12/nostalgia">Nostalgia</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>Well, I&#x2019;m just doing some last-minute packing (I&#x2019;m taking some stuff to Davina&#x2019;s tomorrow so I don&#x2019;t have to take all my stuff to Longside when I move there next Saturday), and the nostalgia got the better of me after looking inside my pencil case from last year and then looking at my current calendar and seeing how little there is on it (about of a third of the dates marked are exams, of which I had three) compared to my 2004 calendar.</p>
+
+<p>Whenever I do any amount of moving of my stuff (the older the better!) I get nostalgic, and often I miss living with Davina. I like living on my own, but it&#x2019;s just when I recall living with Davina that I miss it. Maybe I&#x2019;m just too distracted all the time to think about it.</p>
+
+<p>I also feel guilty about not reading or using things Davina gives me. Like this empty 2004&#x2013;2005 diary, or all those animal rights booklets and magazines she&#x2019;s given me.</p>
+
+<p>Yup, I&#x2019;m done for tonight. I have plenty to fill Davina&#x2019;s car with. I also have five hours of sleep (I <em>think</em> she&#x2019;s coming round at 10, but I can&#x2019;t check now).</p>
+</div>
+        <div class="meta">
+          <p>2005-06-12T03:01:45+01:00</p>
+        </div>
+      </div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/14/today-i-woke-up">Today I woke up</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>Today I woke up, had breakfast while watching Daria, read my feeds. Then I did 30 lengths in the pool, went to the last book sale of the academic year and got a second book on Italian. Off home with increased circulation and a new book (that book sale will be my financial downfall) for half an hour of meditation and now yummy lunch.</p>
+
+<p>I went swimming for the first time in ages on Thursday mainly because I felt so atrophied having been sitting here most of the year.</p>
+
+<p>On Friday was my last exam, Formal Foundations. I think I did quite well, it was certainly the better of the three. After the exam I was invited to Biko, where all the other post-exam woes would be discussed. But I had forgotten to submit my <abbr title="Key Skills for Computing Professionals">KSCP</abbr>5 coursework, so I rushed off to the library thinking I could SSH home, copy it to my user space and print it, but I couldn&#x2019;t find an SSH client so I had to run home, make one symlink, then go back and print it. I got it in with minutes to spare (note: I did literally run). At some point that day I handed my form in and paid so I can stay in Longside for a couple of weeks. Later that night I went to Rios with Will and John. It was good fun but that&#x2019;s the last I&#x2019;ll be seeing of John for a good long while as he left for home in Wales the next day.</p>
+
+<p>Saturday I don&#x2019;t think I did much.</p>
+
+<p>Sunday I took some boxes of things I shan&#x2019;t be needing for a while and put them in Davina&#x2019;s studio (so when I move twice in as many weeks we can do it in one carload each time). I also did some photos for Davina (i.e. sticking kids&#x2019; photos in albums which will then be sent to their parents) while watching The Graduate and then Enterprise (which happened to be the last one I watched at Cult TV).</p>
+
+<p>Monday I paid lots of money to the Student Reception.</p>
+
+<p>I have yet to start looking for a Summer job and tell Mr Awan that I would like to move in come the first of July.</p>
+
+<p>In terms of Lisp, I&#x2019;m still wondering what I&#x2019;m missing to make all attempts at getting either <a href="http://portableaserve.sourceforge.net/">Portable AllegroServe</a> or <a href="http://www.cliki.net/Araneida">Araneida</a> to work fail (yes, I was reading the tutorials). I&#x2019;ve also had no luck at using any other slightly complex Common Lisp package, like <a href="http://www.cliki.net/CLIM">CLIM</a>. I keep getting all sorts of errors about packages not being made, name collisions, and scary things I can&#x2019;t fix.</p>
+
+<p>Also, I want to be able to compile Common Lisp to <abbr title="Executable and Linkable Format">ELF</abbr> (I&#x2019;d settle for a.out) so I can run Lisp programmes on computers that don&#x2019;t have Lisp (i.e. my host&#x2019;s web server).</p>
+</div>
+        <div class="meta">
+          <p>2005-06-14T19:06:50+01:00</p>
+        </div>
+      </div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/19/moving">Moving</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>Yesterday was spent moving from Bradford hall to Longside hall. It was relatively painless, I had my computer up and connected pretty much immediately (once I figured out the reason X wouldn&#x2019;t start was because the mouse wasn&#x2019;t plugged in&#x2014;that will have to be fixed).</p>
+
+<p>It was also the hottest day in the world ever!</p>
+
+<p>Then I, Davina, and Barbara went to see <a href="http://www.brad.ac.uk/theatre/cleaners.php">The Cleaners</a> at the <a href="http://www.brad.ac.uk/theatre/">Theatre in the Mill</a>. It was very good, but they could do with some ventilation due to it being hot and people smoking on- and off-stage.</p>
+
+<p>Today I was going to hand in my keys, swim, then lay on the amphitheatre in the shade and read. The reception was closed, there was too little chlorine; so I lay on the grass under a pine tree with pine cones and learned some irregular verbs (<span xml:lang="it">io ho, tu hai, lei ha</span>, etc.) and read <a href="http://en.wikipedia.org/wiki/Feed_%28novel%29">Feed</a>.</p>
+</div>
+        <div class="meta">
+          <p>2005-06-19T23:53:11+01:00</p>
+        </div>
+      </div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/25/books">Books</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>A good while ago I decided that I wanted continue studying <abbr title="Psychology">&#x3A8;</abbr> after I finished my A-level in the subject. Just the other day I was scouring the library for L 681.31.015 (apparently the code for user interface books&#x2014;I assume it&#x2019;s specific to J.B. Priestly since the only place I can find that term is in the brad.ac.uk domain). I was reading <a href="http://www.persuasivetech.info/">Persuasive Technology</a> and it dawned on me that I was reading about &#x3A8; (to my shame, it dawned on me <em>after</em> I&#x2019;d read the preface by Zimbardo (yes, <em>the</em> Zimbardo)).</p>
+
+<p>It&#x2019;s a very interesting book. I think I may be able to do good things with the knowledge it holds.</p>
+
+<p>I finished Feed. I do love a good tragedy, especially when it&#x2019;s so complete. I love to be moved to such immense catharsis by a thing, uh, book.</p>
+
+<p>I certainly think it&#x2019;s one of the more concievable dystopic novels. Especially with the current increase in nasty things like laws designed to protect businesses at the cost of people and software patents and the <abbr title="Digital Millenium Copyright Act">DMCA</abbr> and various copyright extensions (like the one which may prevent the Beetles&#x2019; music becoming public domain very soon).</p>
+
+<p>I also got Languages for Developing User Interfaces from the library and I plan to get <a href="http://www.joelonsoftware.com/uibook/chapters/fog0000000057.html">User Interface Design For Programmers</a> out soon.</p>
+</div>
+        <div class="meta">
+          <p>2005-06-25T02:36:03+01:00</p>
+          <p>Modified: 2005-06-25T03:20:39+01:00</p>
+        </div>
+      </div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/28/questionnaire">Questionnaire</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>This questionnaire was received via email, from <a href="http://niallfleming.co.uk/">Niall</a>.</p>
+
+<dl>
+<dt>What time did you get up this morning?</dt>
+<dd>Just before half past nine. I was scared I&#x2019;d turned off my alarm and then forgotten about it, but I woke up and I was up before my alarm. Early nights are great.</dd>
+<dt>Diamonds or pearls?</dt>
+<dd>Diamonds because they&#x2019;re not an animal product.</dd>
+<dt>What was the last film you saw at the cinema?</dt>
+<dd>Sin City. About an hour ago.</dd>
+<dt>What is your favourite TV show at the moment?</dt>
+<dd>At the moment the only TV show I&#x2019;m watching is Sliders and I only have one episode left before I run out.</dd>
+<dt>What did you have for breakfast?</dt>
+<dd>I missed breakfast due to swimming and then having to run off to Thornton.</dd>
+<dt>What is your middle name?</dt>
+<dd>There&#x2019;s a flawed assumption in that question.</dd>
+<dt>What is your favourite cuisine?</dt>
+<dd>I don&#x2019;t have one. I love a great many foods.</dd>
+<dt>What do you dislike?</dt>
+<dd>Now there&#x2019;s an essay question.</dd>
+<dt>What is your favourite crisp flavour?</dt>
+<dd>I rarely eat crisps.</dd>
+<dt>What is your favourite CD at the moment?</dt>
+<dd>I&#x2019;m quite happy with the couple of FreeBSD CDs I burnt the other day and subsequently used to install FreeBSD.</dd>
+<dt>What kind of car do you drive?</dt>
+<dd>The kind that doesn&#x2019;t pollute, doesn&#x2019;t have the potential to kill if my concentration slips for a second. In other words, I don&#x2019;t drive.</dd>
+<dt>Favourite sandwich?</dt>
+<dd>Peanut butter, jam, cashew nuts. I ran out of cashew nuts yesterday.</dd>
+<dt>What characteristic do you despise?</dt>
+<dd>Selfishness.</dd>
+<dt>Favourite item of clothing?</dt>
+<dd>I do love my boots very much.</dd>
+<dt>If you could go anywhere in the world on holiday where would you go?</dt>
+<dd>I would like to visit Italy when I speak Italian semi-fluently.</dd>
+<dt>What colour is your bathroom?</dt>
+<dd>White, probably.</dd>
+<dt>Favourite brand of clothing?</dt>
+<dd>Pink Pineapple. But they don&#x2019;t make clothing any more. I don&#x2019;t even know if it&#x2019;s still going.</dd>
+<dt>Where would you retire to?</dt>
+<dd>Who says I&#x2019;m going to retire?</dd>
+<dt>Favourite time of the day?</dt>
+<dd>Who knows? I like crazy times when nobody&#x2019;s awake.</dd>
+<dt>What was your most memorable birthday?</dt>
+<dd>My 17th and 18th were both very memorable.</dd>
+<dt>Where were you born?</dt>
+<dd>Bradford Royal Infirmary.</dd>
+<dt>Favourite sport to watch?</dt>
+<dd>I don&#x2019;t watch sport except when I rest my eyes and there are people playing in the amphitheatre.</dd>
+<dt>Person you expect to send it back first?</dt>
+<dd>Please. Cut the clich&#xE9;s.</dd>
+<dt>Coke or Pepsi?</dt>
+<dd>I despise Coke more but I&#x2019;d drink neither.</dd>
+<dt>Are you a morning or a night person?</dt>
+<dd>I used to be a night person, but I&#x2019;m becoming a morning person thanks to swimming.</dd>
+<dt>What is your shoe size?</dt>
+<dd>My boots say 11, my sandals say 12.</dd>
+<dt>Do you have any pets?</dt>
+<dd>No.</dd>
+<dt>Any new and exciting news you&#x2019;d like to share with your friends?</dt>
+<dd>No.</dd>
+<dt>What did you want to be when you were little?</dt>
+<dd>At one point I wanted to be an aerodynamic engineer.</dd>
+</dl>
+</div>
+        <div class="meta">
+          <p>2005-06-28T00:03:46+01:00</p>
+          <p>Modified: 2005-06-28T00:08:41+01:00</p>
+        </div>
+      </div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/06/30/second-questionnaire-of-the-week">Second questionnaire of the week</a>
+        </h2>
+        <div class="section entrycontent">
+        <h3>You</h3>
+<dl>
+<dt>What time is it now?</dt>
+<dd>11:39:28+0100</dd>
+
+<dt>What is your full name?</dt>
+<dd>Thomas Malcolm John Adams.</dd>
+
+<dt>Single or taken?</dt>
+<dd>Single.</dd>
+
+<dt>What does your name mean?</dt>
+<dd>
+            <a href="http://en.wikipedia.org/wiki/Thomas">Thomas</a>, from the Aramaic &#x5EA;&#x5D5;&#x5DD; or T&#xF4;m. It means twin.</dd>
+
+<dt>Who picked out your name?</dt>
+          <dd />
+<dd>Davina.</dd>
+
+<dt>What&#x2019;s your nickname?</dt>
+<dd>Holizz.</dd>
+
+<dt>How old are you?</dt>
+<dd>19.</dd>
+
+<dt>What colour are your eyes?</dt>
+<dd>Brown.</dd>
+
+<dt>Do you have an innie or an outie belly button?</dt>
+<dd>Innie.</dd>
+
+<dt>What size are your shoes?</dt>
+<dd>11 or 12</dd>
+
+<dt>How tall (or short) are you?</dt>
+<dd>Quite tall.</dd>
+
+<dt>Honestly what do you like about yourself?</dt>
+<dd>I think my chest&#x2019;s looking quite good at the moment.</dd>
+
+<dt>What is your worst quality?</dt>
+<dd>Isn&#x2019;t that an oxymoron?</dd>
+
+<dt>What are the last 4 digits of your phone number?</dt>
+<dd>1-800-SUCK-ME</dd>
+
+<dt>Do you think you&#x2019;re cute?</dt>
+<dd>Maybe not cute, but I sure do look good.</dd>
+
+<dt>Hair colour?</dt>
+<dd>Brown, mostly.</dd>
+
+<dt>Do you wear contacts?</dt>
+<dd>Nope.</dd>
+
+<dt>Living arrangements?</dt>
+<dd>University accommodation until Saturday.</dd>
+</dl>
+
+<h3>Favourites</h3>
+<dl>
+<dt>Favourite drink?</dt>
+<dd>Robinsons&#x2019; squash.</dd>
+
+<dt>Alcoholic drink?</dt>
+<dd>No.</dd>
+
+<dt>Favourite month?</dt>
+<dd>Nope.</dd>
+
+<dt>Favourite food?</dt>
+<dd>There&#x2019;s nothing quite like Southern Asian cuisine.</dd>
+
+<dt>Favourite board game?</dt>
+<dd>I haven&#x2019;t played any in a while.</dd>
+
+<dt>Favourite website?</dt>
+<dd>I don&#x2019;t have one.</dd>
+
+<dt>Favourite clothing brand?</dt>
+<dd>Pink Pineapple. See <a href="http://holizz.com/2005/06/28/questionnaire">previous questionnaire</a>.</dd>
+
+<dt>Favourite day of the year?</dt>
+<dd>What a silly question.</dd>
+
+<dt>Favourite colour?</dt>
+<dd>The colour of intellectual challenge.</dd>
+
+<dt>Favourite animal?</dt>
+<dd>Some humans are pretty swell.</dd>
+</dl>
+
+<h3>Family and Friends</h3>
+<dl>
+<dt>Do you have more girl or boy friends?</dt>
+<dd>More girl friends.</dd>
+
+<dt>Who&#x2019;s your best friend?</dt>
+<dd>Now, now, let&#x2019;s not play favourites.</dd>
+
+<dt>How often do you to get together with the family?</dt>
+<dd>I see the only family that really matters three or four times a week.</dd>
+
+<dt>Do you tell your family or your friends more?</dt>
+<dd>Friends.</dd>
+
+<dt>Anything special about your parent(s)?</dt>
+<dd>Sure.</dd>
+
+<dt>Siblings and their ages?</dt>
+<dd>No.</dd>
+</dl>
+
+<h3>Yes or No</h3>
+<dl>
+<dt>You&#x2019;re a flirt?</dt>
+<dd>Only when I want to be.</dd>
+
+<dt>You&#x2019;re slutty?</dt>
+<dd>Not at all.</dd>
+
+<dt>You&#x2019;re mean?</dt>
+<dd>Very rarely.</dd>
+
+<dt>You like someone?</dt>
+<dd>I like lots of people.</dd>
+
+<dt>You can keep secrets?</dt>
+<dd>Of course.</dd>
+
+<dt>You dance in front of the mirror?</dt>
+<dd>Generally no, not much room.</dd>
+
+<dt>You sing in the shower?</dt>
+<dd>Never.</dd>
+
+<dt>You like Britney Spears?</dt>
+<dd>I don&#x2019;t know her.</dd>
+
+<dt>You&#x2019;ve liked a cousin?</dt>
+<dd>I like most of my family.</dd>
+
+<dt>You&#x2019;ve been in the opposite sexes bathroom?</dt>
+<dd>Of course. They have more stalls.</dd>
+
+<dt>You&#x2019;ve seriously hurt some?</dt>
+<dd>Not seriously.</dd>
+
+<dt>Been hurt seriously?</dt>
+<dd>Yes. All accidental and self-inflicted.</dd>
+
+<dt>You swear?</dt>
+<dd>Sometimes.</dd>
+
+<dt>You get your way?</dt>
+<dd>I&#x2019;d be pretty damn depressed if I never did. Generally I don&#x2019;t want for much and as a result I tend to get it.</dd>
+
+<dt>You&#x2019;ve cheated on a test?</dt>
+<dd>Nope.</dd>
+</dl>
+
+<h3>Right Now</h3>
+<dl>
+<dt>What are you wearing?</dt>
+<dd>Cut-offs from Old Navy died purple, underpants, piercing jewelry.</dd>
+
+<dt>What colour are your pants?</dt>
+<dd>White.</dd>
+
+<dt>What are you listening to?</dt>
+<dd>Cradle of Filth&#x2014;Cruelty Brought Thee Orchids.</dd>
+
+<dt>How are you feeling?</dt>
+<dd>I feel I should learn some Italian or Morse code when I&#x2019;m done with this quiz.</dd>
+
+<dt>What are you doing?</dt>
+<dd>Filling in this.</dd>
+
+<dt>What are you eating?</dt>
+<dd>Nothing.</dd>
+
+<dt>How many people are online?</dt>
+<dd>Probably a few million. Nine of which are on my contact list.</dd>
+
+<dt>How&#x2019;s the weather?</dt>
+<dd>Sunny, cloudy, not rainy.</dd>
+
+<dt>What&#x2019;s on your mouse pad?</dt>
+<dd>You&#x2019;re kidding, right?</dd>
+
+<dt>What books are you reading?</dt>
+<dd>
+            <a href="http://www.persuasivetech.info/">Persuasive Technology</a> by B.J. Fogg, and <a href="http://www.powells.com/cgi-bin/biblio?inkey=62-0471359610-0">Italian, A Self-teaching Guide</a> by Edoardo A. L&#xE8;bano.</dd>
+</dl>
+
+<h3>Girls Only</h3>
+<dl>
+<dt>How many lip glosses do you own?</dt>
+<dd>None.</dd>
+
+<dt>What&#x2019;s in your purse?</dt>
+<dd>Don&#x2019;t have one.</dd>
+
+<dt>Blonde or brunette?</dt>
+<dd>Brunette.</dd>
+
+<dt>Long hair or short hair on boys?</dt>
+<dd>Long.</dd>
+
+<dt>What&#x2019;s the first thing you notices about guys?</dt>
+<dd>Visible modifications.</dd>
+</dl>
+
+<h3>Boys Only</h3>
+<dl>
+<dt>What kind of cologne do you use?</dt>
+<dd>Isn&#x2019;t that a place in Germany?</dd>
+
+<dt>What&#x2019;s in your pockets?</dt>
+<dd>Three 20 pence pieces, lipbalm, flash drive, pen, sheet of paper, bobble.</dd>
+
+<dt>Boxers or Y-fronts?</dt>
+<dd>Briefs.</dd>
+
+<dt>Blonde or brunette?</dt>
+<dd>I&#x2019;m brunette.</dd>
+
+<dt>Tall or short girls?</dt>
+<dd>Height matters not.</dd>
+
+<dt>Piercing on girls?</dt>
+<dd>Oh yes.</dd>
+
+<dt>Long or short hair on girls?</dt>
+<dd>It matters not.</dd>
+
+<dt>Good or bad girls?</dt>
+<dd>Do you mean bad as in mass murderer?</dd>
+
+<dt>What do you find annoying about girls?</dt>
+<dd>You may as well ask what I find annoying about Chinese people because I&#x2019;m as sexist as I am racist.</dd>
+
+<dt>What&#x2019;s the first thing you notice about girls?</dt>
+<dd>Visible modifications.</dd>
+</dl>
+
+<h3>Other Questions</h3>
+<dl>
+<dt>What was the last movie you saw?</dt>
+<dd>Sin City.</dd>
+
+<dt>What did you have for dinner?</dt>
+<dd>I haven&#x2019;t had it yet. I may well have <abbr title="Peanut Butter &amp; Jam">PB&amp;J</abbr> sandwiches.</dd>
+
+<dt>What are you hoping for?</dt>
+<dd>I hope I find a pleasant job over the Summer.</dd>
+
+<dt>What movie do you really want to see?</dt>
+<dd>I&#x2019;d like to see La Vita &#xE8; Bella.</dd>
+
+<dt>Tell us about those scars?</dt>
+<dd>Just above right eyebrow: my pea-brained father let me climb on rocks and let go of me; between left little toe and second-littlest toe: kicked a little red chair (accidentally) and got a big hole in my foot; scrotum: got a torsion then I got a bilatteralorchidopexy.</dd>
+
+<dt>Where is your favourite place to travel?</dt>
+<dd>I don&#x2019;t travel much, and I haven&#x2019;t been anywhere enough to make it a favourite (apart from the <span xml:lang="cy">rheilffordd Talyllyn</span>. But I haven&#x2019;t been there for years.</dd>
+
+<dt>What did you last dream about?</dt>
+<dd>I shan&#x2019;t tell you.</dd>
+
+<dt>Last thing you ate?</dt>
+<dd>Malties + soy milk.</dd>
+
+<dt>If you were a crayon what colour would you be?</dt>
+<dd>If I were a crayon&#x2026; that&#x2019;s not hypothetical, that&#x2019;s just silly.</dd>
+
+<dt>Who was the last person you talked to on the phone?</dt>
+<dd>Davina.</dd>
+
+<dt>Do you like the person who sent this to you?</dt>
+<dd>Sure.</dd>
+
+<dt>Ever had a crush on a teacher?</dt>
+<dd>Yes.</dd>
+
+<dt>Are you too shy to ask someone out?</dt>
+<dd>I&#x2019;ve never been in that sort of situation.</dd>
+
+<dt>Scary movie or happy ending?</dt>
+<dd>As long as the film&#x2019;s good.</dd>
+
+<dt>Summer or Winter?</dt>
+<dd>They both have their distinct advantages.</dd>
+
+<dt>Relationships or one-night stands?</dt>
+<dd>Relationships.</dd>
+
+<dt>Chocolate or Vanilla?</dt>
+<dd>Chocolate.</dd>
+
+<dt>Do you want your friends to write back?</dt>
+<dd>Blah blah blah.</dd>
+
+<dt>Who is most likely to respond?</dt>
+<dd>You know, questionnaires don&#x2019;t <em>have</em> to include silly <q>who will write back?</q> crap.</dd>
+
+<dt>Who is least likely to respond?</dt>
+<dd>Suck me.</dd>
+
+<dt>What did you do last night?</dt>
+<dd>I had a curry at the Village for Pam&#x2019;s birthday.</dd>
+
+<dt>What time is it now?</dt>
+<dd>12:36:45+0100</dd>
+</dl>
+</div>
+        <div class="meta">
+          <p>2005-06-30T12:42:00+01:00</p>
+          <p>Modified: 2005-06-30T12:44:03+01:00</p>
+        </div>
+      </div>
+    </div>
+    <address id="meta" class="meta vcard">
+	  By <a href="/Holizz/" class="fn">Tom Adams</a> (<a href="/Holizz/Contact">contact</a>).
+	  <a href="/About/Copyright">(K) All rights reversed</a>.
+	  <a href="/About/Conformance">Valid Everything 1.0</a>.
+	</address>
+  </body>
+</html>

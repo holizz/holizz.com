@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:rec="http://donnafales.com/2002/07/28/recipe-schema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:wot="http://xmlns.com/wot/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<rec:Recipe rdf:about="http://holizz.com/2005/03/13/bhaji-burgers">
+	<rdfs:label>Bhaji Burgers</rdfs:label>
+	<rdfs:comment>Burgers that are made much in the same way as onion bhajis are.</rdfs:comment>
+
+	<rec:ingredients rdf:parseType="Resource">
+		<rec:Ingredient rdf:parseType="Resource">
+			<rdfs:label>&#189; onion, finely chopped</rdfs:label>
+		</rec:Ingredient>
+		<rec:Ingredient rdf:parseType="Resource">
+			<rdfs:label>1 chilli</rdfs:label>
+		</rec:Ingredient>
+		<rec:Ingredient rdf:parseType="Resource">
+			<rdfs:label>dried oregano</rdfs:label>
+		</rec:Ingredient>
+		<rec:Ingredient rdf:parseType="Resource">
+			<rdfs:label>ground coriander</rdfs:label>
+		</rec:Ingredient>
+		<rec:Ingredient rdf:parseType="Resource">
+			<rdfs:label>ground cumin</rdfs:label>
+		</rec:Ingredient>
+		<rec:Ingredient rdf:parseType="Resource">
+			<rdfs:label>ground turmeric</rdfs:label>
+		</rec:Ingredient>
+		<rec:Ingredient rdf:parseType="Resource">
+			<rdfs:label>2 cloves of garlic</rdfs:label>
+		</rec:Ingredient>
+		<rec:Ingredient rdf:parseType="Resource">
+			<rdfs:label>&#189; cup of self-raising flour</rdfs:label>
+		</rec:Ingredient>
+		<rec:Ingredient rdf:parseType="Resource">
+			<rdfs:label>1 tbsp soy flour</rdfs:label>
+		</rec:Ingredient>
+		<rec:Ingredient rdf:parseType="Resource">
+			<rdfs:label>water</rdfs:label>
+		</rec:Ingredient>
+	</rec:ingredients>
+
+	<rec:directions rdf:parseType="Resource">
+		<rec:first rdf:parseType="Resource">
+			<rdfs:label>Mix all ingredients and add water until it's slightly more solid than onion bhaji mixture</rdfs:label>
+		</rec:first>
+		<rec:rest rdf:parseType="Resource">
+			<rec:first rdf:parseType="Resource">
+				<rdfs:label>Fry</rdfs:label>
+			</rec:first>
+		</rec:rest>
+	</rec:directions>
+</rec:Recipe>
+
+</rdf:RDF>
+

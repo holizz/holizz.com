@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+  <head profile="http://gmpg.org/xfn/1 http://dublincore.org/documents/dcq-html/">
+    <title>2005-05-17 Archive | Holizz versus the Web</title>
+    <link href="/Favicon" rel="shortcut icon" />
+    <link href="/Style/TR/" title="TR" rel="stylesheet" media="screen" />
+    <link href="/Style/Fant/" title="Fant" rel="alternate stylesheet" media="screen" />
+    <link href="/Style/Classic/Classic" title="Classic" rel="alternate stylesheet" media="screen" />
+    <link href="/Holizz/Index.rdf" title="FOAF" rel="meta" type="application/rdf+xml" />
+    <link href="/About/Copyright" title="Copyright" rel="DC.rights" />
+    <link href="/About/Copyright" title="Copyright" rel="copyright" />
+    <link href="http://www.gnu.org/licenses/gpl" rel="DC.license" />
+    <link href="http://purl.org/dc/elements/1.1/" rel="schema.DC" />
+    <link href="http://xmlns.com/foaf/0.1/" rel="schema.FOAF" />
+    <link href="/Holizz/" rel="FOAF.maker" />
+    <link href="/Holizz/" rel="DC.rightsHolder" />
+    <link href="/Search" rel="search" />
+    <link href="/Holizz/PublicKey" rel="pgpkey" type="application/pgp-keys" />
+    <meta name="DC.language" content="en-GB" />
+    <meta name="author" content="Tom Adams" />
+    <meta name="DC.title" content="2005-05-17 Archive | Holizz versus the Web" />
+  </head>
+  <body id="holizz-com">
+    <div id="header">
+      <h1>
+        <a href="http://holizz.com/">Holizz versus the Web</a>
+      </h1>
+      <p id="tagline">A journal about my life with a little XML thrown in for good favour.</p>
+    </div>
+    <ul id="main-nav">
+      <li id="skip">
+        <a href="#content">Skip to content</a>
+      </li>
+      <li>
+        <a href="/">Weblog</a>
+      </li>
+      <li>
+        <a href="/Feed">Feed</a>
+      </li>
+      <li>
+        <a href="/Archives">Archives</a>
+      </li>
+      <li>
+        <a href="/Holizz/">Holizz</a>
+      </li>
+      <li>
+        <a href="/About/">About</a>
+      </li>
+    </ul>
+    <div id="content">
+      <div class="section">
+      <p>Archive of 2005-05-17.</p>
+</div>
+      <div class="section entry">
+        <h2>
+          <a href="/2005/05/17/utf">UTF</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>So I had this <abbr title="Key Skills for Computing Professionals">KSCP</abbr> coursework. It was mostly multiple-choice, based on content from the course text with a couple of fun questions at the end. And by fun I mean more than five possible answers.</p>
+
+<p>The first one asks: <q>Briefly, describe a topic from the book which you found interesting.</q>
+        </p>
+
+<p>My response to this was as follows; [the book being Computer Confluence (concise fifth edition) by George Beekman]</p>
+
+<blockquote>
+<p>The book wrongly claims: <q>The emerging international standard double-byte character set called Unicode<ins>&#x2026;</ins>
+              <del> is designed to facilitate multilingual computing</del>
+            </q>. My piece is on an encoding of Unicode which, unlike the one described in the book, exists<ins> (UTF-16 uses two bytes per character, except when it doesn&#x2019;t)</ins>.</p>
+
+<p>UTF-8, 8-bit Unicode Transformation Format (the most commonly used Unicode encoding), uses a variable number of bytes per character depending on the code point being depicted. One byte is used for code points in the range of U+0000 to U+007F. With one-byte characters, UTF-8 is identical to US-ASCII. UTF-8 characters may have from one to four bytes depending on their position in Unicode. One advantage of using UTF-8 is that it can represent characters in a way that&#x2019;s backwards compatible with US-ASCII using one byte per character but also represent any other character in Unicode. This is a large advantage in authoring texts which mostly use characters in Basic Latin (the section of Unicode which is equivalent to US-ASCII), such as English, French, Esperanto. However, in texts requiring more and higher code points (i.e. in Chinese or Japanese text) UTF-8 can produce larger files than other encodings such as UTF-16 or UTF-32.</p>
+</blockquote>
+
+<p>I completely neglected <em>how</em> UTF-8 works, but the question was only worth three marks so neh.</p>
+
+<p>I then go on to discover that one of the multiple choice questions is wrong (post submission, unfortunately):</p>
+
+<blockquote>
+<p>The Unicode coding system can provide how many different representations?</p>
+<ul>
+<li>2</li>
+<li>4</li>
+<li>16</li>
+<li>256</li>
+<li>about 65,000</li>
+</ul>
+</blockquote>
+
+<p>I thought 65,000 was a little low but it&#x2019;s the only one that makes the slightest bit of sense (it&#x2019;s also the answer the book gives) so I go ahead and circle the fifth answer.</p>
+
+<p>Later on in the day, inspired by the recent spate of UTF-related swoting (mostly on the Wikipedia article <a href="http://wikipedia.org/wiki/UTF-8">UTF-8</a>) I was reading an article called <a href="http://www.tbray.org/ongoing/When/200x/2003/04/26/UTF">UTF</a> (on the subject of UTF, strangely) by Sun-folk Tim Bray in which a few particular sentences caught my attention: [emphasis mine]</p>
+
+<blockquote cite="http://www.tbray.org/ongoing/When/200x/2003/04/26/UTF">
+<p>Unicode currently defines just under <strong>100,000</strong> characters, but has space for <strong>1,114,112</strong> code points. They are organised into 17 <q>planes</q> of 2<sup>16</sup> (<strong>65,536</strong>) characters, numbered 0 through 16.</p>
+</blockquote>
+
+<p>So there are <strong>100,000</strong> characters at the moment, with a possibility of <strong>1,114,112</strong> and <strong>65,536</strong> characters in each plane. So the actual answer is <strong>1,114,112</strong>.</p>
+
+<p>The moral of this story is that you should never trust what you read. Ever.</p>
+</div>
+        <div class="meta">
+          <p>2005-05-17T02:11:51+01:00</p>
+          <p>Modified: 2005-05-17T02:35:57+01:00</p>
+        </div>
+      </div>
+    </div>
+    <address id="meta" class="meta vcard">
+	  By <a href="/Holizz/" class="fn">Tom Adams</a> (<a href="/Holizz/Contact">contact</a>).
+	  <a href="/About/Copyright">(K) All rights reversed</a>.
+	  <a href="/About/Conformance">Valid Everything 1.0</a>.
+	</address>
+  </body>
+</html>

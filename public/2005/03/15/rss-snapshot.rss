@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns="http://purl.org/rss/1.0/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xml:lang="en-GB" xml:base="http://holizz.com/">
+  <channel rdf:about="http://holizz.com/Index.rss">
+    <title>Holizz versus the Web</title>
+    <link>http://holizz.com/</link>
+    <description>A journal about me and my life with a little XML thrown in for good luck.</description>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://holizz.com/2005/03/14/iwt-assignment"/>
+        <rdf:li rdf:resource="http://holizz.com/2005/03/13/vegan-burger"/>
+        <rdf:li rdf:resource="http://holizz.com/2005/03/11/university-stuff"/>
+        <rdf:li rdf:resource="http://holizz.com/2005/03/07/i-may-or-may-not-be-slightly-sleepy"/>
+        <rdf:li rdf:resource="http://holizz.com/2005/03/05/48"/>
+        <rdf:li rdf:resource="http://holizz.com/2005/03/05/to-the-anonymous-food-saboteur"/>
+        <rdf:li rdf:resource="http://holizz.com/2005/03/05/yesterday"/>
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="http://holizz.com/2005/03/14/iwt-assignment">
+    <title>IWT Assignment</title>
+    <link>http://holizz.com/2005/03/14/iwt-assignment</link>
+    <description rdf:parseType="Literal">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>I submitted my IWT assignment the other day as <a href="/2005/03/11/university-stuff">I mentioned</a>.</p>
+        <p>So <a href="/2005/03/09/iwt-assignment-one/">here&#8217;s the main directory</a> of all the stuff.</p>
+        <p>Soon after the post about <a href="/2005/03/02/a-cms-in-13-lines-of-shell">my 13-line CMS</a> I realised why people don&#8217;t tend to use BASH for writing CMSes. It was very broken. sed didn&#8217;t like all the slashes in my XHTML. So I wrote something similar in Ruby: <a href="/2005/03/14/cms.rb">cms.rb</a>, which compiles the files in my assignment. It&#8217;s about 30 lines. Sorry, no comments. But it&#8217;s very simple.</p>
+      </div>
+    </description>
+    <dc:date>2005-03-14T15:59:51+00:00</dc:date>
+    <dcterms:issued>2005-03-14T15:59:51+00:00</dcterms:issued>
+    <dcterms:modified>2005-03-14T15:59:51+00:00</dcterms:modified>
+  </item>
+  <item rdf:about="http://holizz.com/2005/03/13/vegan-burger">
+    <title>The Lesser-Spotted Home-Made Vegan Burger</title>
+    <link>http://holizz.com/2005/03/13/vegan-burger</link>
+    <description rdf:parseType="Literal">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>I&#8217;m not having much luck finding vegan burger recipes. Half of them contain about a hundred ingredients I haven&#8217;t got and half require a blender.</p>
+        <p>And I don&#8217;t feel like pasta + pesto again&#8230;</p>
+        <p>Well, that was a big success. I just went into the kitchen and found a load of ingredients and made some burgers.</p>
+        <p>I call them Bhaji Burgers, or Pakora Pattys (patty is the American word for the circular piece of cooked food in the burger bun).</p>
+        <p>I pretty much made onion bhajis but with finely-chopped onion and plopped it in the frying pan. Delicious!</p>
+        <dl>
+          <dt>Ingredients</dt>
+          <dd>
+            <ul>
+              <li>&#189; onion, chopped finely</li>
+              <li>1 chilli</li>
+              <li>dried oregano</li>
+              <li>ground coriander</li>
+              <li>ground cumin</li>
+              <li>ground turmeric</li>
+              <li>2 cloves of garlic</li>
+              <li>&#189; cup of self-raising flour</li>
+              <li>1 tbsp soy flour</li>
+              <li>water</li>
+            </ul>
+          </dd>
+          <dt>Method</dt>
+          <dd>
+            <ol>
+              <li>Mix all ingredients and add water until it&#8217;s slightly more solid than onion bhaji mixture</li>
+              <li>Fry</li>
+            </ol>
+          </dd>
+        </dl>
+        <p>And ooh, look, I made a copy of the recipe in <a href="http://donnafales.com/2002/07/28/recipe-schema#">recipe schema</a> (it&#8217;s an RDF schema for describing recipes): <a href="http://holizz.com/2005/03/13/bhaji-burgers">Bhaji Burgers</a>. If RDF doesn&#8217;t make much sense to you, try taking a look at <a href="http://www.w3.org/RDF/Validator/ARPServlet?URI=http://holizz.com/2005/03/13/bhaji-burgers&amp;TRIPLES_AND_GRAPH=PRINT_BOTH">the RDF validator&#8217;s output</a> (note the graph further down the page).</p>
+      </div>
+    </description>
+    <dc:date>2005-03-13T20:19:33+00:00</dc:date>
+    <dcterms:issued>2005-03-13T20:19:33+00:00</dcterms:issued>
+    <dcterms:modified>2005-03-13T20:19:33+00:00</dcterms:modified>
+  </item>
+  <item rdf:about="http://holizz.com/2005/03/11/university-stuff">
+    <title>University stuff</title>
+    <link>http://holizz.com/2005/03/11/university-stuff</link>
+    <description rdf:parseType="Literal">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>I got my mark for Foundations of <abbr title="Human&amp;#8211;Computer Interaction">HCI</abbr> yesterday. I got 40%, exactly the lower boundary for a pass. Woop!</p>
+        <p><a href="http://www.neilturner.me.uk/2005/Mar/11/roll_on_next_year.html">Neil didn&#8217;t get elected</a> but <a href="http://www.neilturner.me.uk/2005/Mar/09/going_further_in_higher.html">he&#8217;s planning on taking a masters</a>.</p>
+        <p>Today I, Will, Stuart and John did our presentation for <abbr title="Key Skills for Computing Professionals">KSCP</abbr>. It sucked, but it wasn&#8217;t so bad. My part went something like this:</p>
+        <blockquote>
+          <p>Mumble mumble, Usability on the Web, mumble, Wikipedia, mumble Flash bad, mumble, mumble mumble, frames, break the back button, mumble.</p>
+        </blockquote>
+        <p>At least that&#8217;s what it probably sounded like.</p>
+        <p>I submitted my assignment but he complained because it required content-negotiation. So I changed the links manually. Then I waited for at least another hour and he never got back to me. So I left. I was planning on having lunch then going to <abbr title="Software Development Tools and Design">SDTD</abbr> but at that point there was no time so I had lunch and then went to <abbr title="Software Development (Programming)">SD</abbr>.</p>
+        <p><abbr title="Unified Modelling Language">UML</abbr>, what&#8217;s that about? I thought I&#8217;d read <a href="http://www.omg.org/technology/documents/formal/uml.htm">the specification</a>. Two problems: first: it&#8217;s 736 pages (even the famously complicated SGML was only 150 pages); second: there&#8217;s only PDF and PS versions, no (X)HTML version. What idiots the <a href="http://www.omg.org/">OMG</a> are.</p>
+      </div>
+    </description>
+    <dc:date>2005-03-11T21:42:07+00:00</dc:date>
+    <dcterms:issued>2005-03-11T21:42:07+00:00</dcterms:issued>
+    <dcterms:modified>2005-03-11T21:42:07+00:00</dcterms:modified>
+  </item>
+  <item rdf:about="http://holizz.com/2005/03/07/i-may-or-may-not-be-slightly-sleepy">
+    <title>I may or may not be slightly sleepy</title>
+    <link>http://holizz.com/2005/03/07/i-may-or-may-not-be-slightly-sleepy</link>
+    <description rdf:parseType="Literal">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Today I have mostly been reading <a href="http://thedevilspanties.keenspace.com/">The Devil&#8217;s Panties</a> and talking to db.</p>
+        <p>I. Don&#8217;t. Think. I&#8217;ve eaten well, today.</p>
+        <p>Wait! Papaya chunks, breakfast, breakfast, coconut rice! I ate just fine.</p>
+        <blockquote>
+          <pre>01:49 &lt;holizz&gt; This sleep-deprivation thing is fun. Now all I need is dried and 
+               sugared fruit and I&#8217;ll be fine</pre>
+        </blockquote>
+        <p>I may need to sleep at some point. But not now. Reading. Web. Comic!</p>
+      </div>
+    </description>
+    <dc:date>2005-03-07T03:21:06+00:00</dc:date>
+    <dcterms:issued>2005-03-07T03:21:06+00:00</dcterms:issued>
+    <dcterms:modified>2005-03-07T03:21:06+00:00</dcterms:modified>
+  </item>
+  <item rdf:about="http://holizz.com/2005/03/05/48">
+    <title>48</title>
+    <link>http://holizz.com/2005/03/05/48</link>
+    <description rdf:parseType="Literal">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Join Tom Adams on the worst 48 hours of his life.</p>
+        <p>In the last episode Tom <a href="http://holizz.com/2005/03/04/i-was-physically-assaulted">was assaulted by a terrorist milkshake</a>, <a href="http://holizz.com/2005/03/05/yesterday">had to defuse a piece of coursework &#8230; badly, was sexed-up by a band of lonely evil dictators, walked into a trap set by a Nazi street sign</a>, and <a href="http://holizz.com/2005/03/05/to-the-anonymous-food-saboteur">had his food sabotaged by gang of who-knows-whats</a>.</p>
+        <p>Now we join Tom on his forty-first hour:</p>
+        <p>I just went to the toilet. I pulled my trousers down and the bead from the ring in my prince albert dropped into the toilet. So I put my hand in and got it out. What fun!</p>
+        <p>Tune in to the next episode of 48 to see Tom create an RDF schema to describe hitting Matt in the face repeatedly.</p>
+      </div>
+    </description>
+    <dc:date>2005-03-05T16:12:29+00:00</dc:date>
+    <dcterms:issued>2005-03-05T16:12:29+00:00</dcterms:issued>
+    <dcterms:modified>2005-03-05T16:12:29+00:00</dcterms:modified>
+  </item>
+  <item rdf:about="http://holizz.com/2005/03/05/to-the-anonymous-food-saboteur">
+    <title>To the Anonymous Food Saboteur</title>
+    <link>http://holizz.com/2005/03/05/to-the-anonymous-food-saboteur</link>
+    <description rdf:parseType="Literal">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Why?</p>
+        <p>Why did you rip open my pack of burger buns spilling them all over the freezer? And why did you rip up some of my bread (leaving it in the packet) and put the pack on the window sill?</p>
+        <p>If you don&#8217;t like me, don&#8217;t be a coward and throw my food about. Tell me. Failing that, just stop touching my food.</p>
+        <p>I have my suspicions about who it could be (i.e. a certain somebody who likes to throw pasta at the windows and be <a href="/2005/03/02/i-swear-down">overly loud</a>) and I may mention these suspicions when I report this on Monday depending on my mood at the time.</p>
+      </div>
+    </description>
+    <dc:date>2005-03-05T15:37:31+00:00</dc:date>
+    <dcterms:issued>2005-03-05T15:37:31+00:00</dcterms:issued>
+    <dcterms:modified>2005-03-05T15:37:31+00:00</dcterms:modified>
+  </item>
+  <item rdf:about="http://holizz.com/2005/03/05/yesterday">
+    <title>Yesterday</title>
+    <link>http://holizz.com/2005/03/05/yesterday</link>
+    <description rdf:parseType="Literal">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Yesterday was rather eventful. I started off as usual, reading blogs and eating breakfast. I did an absolutely terrible piece of coursework and handed it in with Will who had made more of an effort. It was a case of either saying &#8220;fuck it&#8221; and having done with it or doing it all day and getting very few more marks than I will get anyway.</p>
+        <p>Then we went to the book sale where I got <cite>XML in a Nutshell</cite> (mmm, cheap O&#8217;Reilly books). We went to town and I asked about <cite>Mind Hacks</cite> in Waterstones; vastly more expensive than at Amazon. We wondered around town a little more and I showed Will where the Market Tavern is then Will got some playing cards from W. H. Smith.</p>
+        <p>I missed SDTD by completing my coursework (&#8230; badly) and when we returned from town we&#8217;d missed SDP. So I went home and then went to Davina&#8217;s.</p>
+        <p>On the way to South Square from babysitting I was calling Davina (looking down at my phone) and I walked into a sign post telling me the hours I could park there. It was a square one so I have a small linear bruise on my left wrist, I also have a painful left big toe-nail and I hit my left nipple with the other side of my arm.</p>
+        <p>After South Square Davina took me shopping then home. I took my shopping with me to meet Summer as it was 10 and Summer had just called me. I took a nice picture of <a href="/2005/03/05/summers-new-dress">Summer&#8217;s new dress</a>.</p>
+        <p>We went to Rios. Will was 19. Some old pervert kept telling Summer she was gorgeous and some younger perverts were pretending to shag me while I was dancing.</p>
+      </div>
+    </description>
+    <dc:date>2005-03-05T12:44:24+00:00</dc:date>
+    <dcterms:issued>2005-03-05T12:44:24+00:00</dcterms:issued>
+    <dcterms:modified>2005-03-05T12:44:24+00:00</dcterms:modified>
+  </item>
+</rdf:RDF>
+
