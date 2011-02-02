@@ -4,4 +4,7 @@ title: Firearms
 %h1 Firearms
 %ul
   %li
-    %a{href: "p512mkiii.html"} Ruger 22/45 MK III Target (P512MKIII)
+    2011
+    %ul
+      %li
+        %a{href: "p512mkiii.html"} Ruger 22/45 MK III Target (P512MKIII)
