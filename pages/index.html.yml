@@ -31,5 +31,11 @@ title: Tom Adams
       +
       %a{href: 'xmpp:holizz@gmail.com'} holizz@gmail.com
 
+%nav
+  %h2 Bits and bobs
+  %ul
+    %li
+      %a{href: '/old-content.html'} Backups of old blogs, preserved for eternity
+
 %footer
   %a{href: '/index_old.html'} Retro

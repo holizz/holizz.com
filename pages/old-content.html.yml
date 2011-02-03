@@ -1,0 +1,15 @@
+---
+# vim: ft=haml
+title: Old Content
+---
+%header
+  %h1 Old Content
+
+  %p This is some old stuff I backed up that would otherwise fall off the Internet.
+
+%nav
+  %dl
+    %dt
+      2005-01 - 2005-07
+    %dd
+      %a{href: '/2005/'} Holizz versus the Web (2005 XSLT edition)
