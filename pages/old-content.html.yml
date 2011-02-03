@@ -10,6 +10,12 @@ title: Old Content
 %nav
   %dl
     %dt
+      Holizz versus the Web (2005 XSLT edition)
+    %dt
       2005-01 - 2005-07
     %dd
-      %a{href: '/2005/'} Holizz versus the Web (2005 XSLT edition)
+      %a{href: '/2005/'} Archive for the year 2005
+    %dd
+      %a{href: '/About/'} About the site
+    %dd
+      %a{href: '/Holizz/'} About myself

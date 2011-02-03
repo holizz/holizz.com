@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
+  <head profile="http://gmpg.org/xfn/1 http://dublincore.org/documents/dcq-html/">
+    <title>Document Conformance | Holizz versus the Web</title>
+    <link href="/Favicon" rel="shortcut icon"/>
+    <link href="/Style/TR/" title="TR" rel="stylesheet" media="screen"/>
+    <link href="/Style/Fant/" title="Fant" rel="alternate stylesheet" media="screen"/>
+    <link href="/Style/Classic/Classic" title="Classic" rel="alternate stylesheet" media="screen"/>
+    <link href="/Holizz/Index.rdf" title="FOAF" rel="meta" type="application/rdf+xml"/>
+    <link href="/About/Copyright" title="Copyright" rel="DC.rights"/>
+    <link href="/About/Copyright" title="Copyright" rel="copyright"/>
+    <link href="http://www.gnu.org/licenses/gpl" rel="DC.license"/>
+    <link href="http://purl.org/dc/elements/1.1/" rel="schema.DC"/>
+    <link href="http://xmlns.com/foaf/0.1/" rel="schema.FOAF"/>
+    <link href="/Holizz/" rel="FOAF.maker"/>
+    <link href="/Holizz/" rel="DC.rightsHolder"/>
+    <link href="/Search" rel="search"/>
+    <link href="/Holizz/PublicKey" rel="pgpkey" type="application/pgp-keys"/>
+    <meta name="DC.language" content="en-GB"/>
+    <meta name="author" content="Tom Adams"/>
+    <meta name="DC.title" content="Document Conformance | Holizz versus the Web"/>
+  </head>
+  <body id="holizz-com">
+    <div id="header">
+      <h1>
+        <a href="http://holizz.com/">Holizz versus the Web</a>
+      </h1>
+      <p id="tagline">A journal about my life with a little XML thrown in for good favour.</p>
+    </div>
+    <ul id="main-nav">
+      <li id="skip">
+        <a href="#content">Skip to content</a>
+      </li>
+      <li>
+        <a href="/">Weblog</a>
+      </li>
+      <li>
+        <a href="/Feed">Feed</a>
+      </li>
+      <li>
+        <a href="/Archives">Archives</a>
+      </li>
+      <li>
+        <a href="/Holizz/">Holizz</a>
+      </li>
+      <li>
+        <a href="/About/">About</a>
+      </li>
+    </ul>
+    <div id="content">
+      <div class="section entry">
+        <h2>
+          <a href="/About/Conformance">Document Conformance</a>
+        </h2>
+        <div class="section entrycontent">
+        <p>Valid Everything 1.0!</p>
+
+<ul>
+<li>
+            <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fholizz.com/Index.xhtml">Valid XHTML 1.1</a> served as <code>application/xhtml+xml</code>.</li>
+<li>
+            <a href="http://validator.w3.org/check?uri=http%3A%2F%2Fholizz.com/Index.html">Valid XHTML 1.0</a> (following most of the <a href="http://www.w3.org/TR/xhtml1/#guidelines">HTML Compatibility Guidelines</a>) served as <code>text/html</code>.</li>
+<li>
+            <a href="http://feedvalidator.org/check.cgi?url=http%3A%2F%2Fholizz.com%2FIndex.atom">Valid Atom</a> served as <code>application/atom+xml</code>.</li>
+<li>
+            <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fholizz.com%2F">Valid CSS</a> served as <code>text/css</code>.</li>
+</ul>
+
+<h3>Why?</h3>
+<div class="section">
+
+<h4>Why is it all valid?</h4>
+
+<p>Because I have nothing better to do, I like to implement things for the sake of doing so, and I want to live in a world where markup is valid and not tag soup.</p>
+
+<h4>Why XHTML 1.0 instead of HTML 4.01?</h4>
+
+<p>Lazyness. XHTML 1.0 is one line of <code>sed</code> and one line of <code>ed</code> away from XHTML 1.1.</p>
+
+<p>All the content on my site is XML. From the CMS with tables filled with XML external parsed entities to the XHTML or Atom the user sees. All XML. So I decided I&#x2019;d rather use the HTML-compatible XHTML 1.0 than use (gah) SGML.</p>
+
+<h4>Why Atom instead of RSS?</h4>
+
+<p>
+            <a href="http://diveintomark.org/archives/2004/02/04/incompatible-rss">
+              <q cite="http://diveintomark.org/archives/2004/02/04/incompatible-rss">[T]here are 7 different and incompatible versions of RSS</q>
+            </a>.</p>
+
+<p>So much choice! Which do I choose? I don&#x2019;t know&#x2026; Thus I chose none.</p>
+
+<p>Another factor was that I <a href="http://holizz.com/2005/03/16/problem-with-rss-1">tried RSS 1.0</a> (since I was rather into RDF at the time) and due to feed parsers using XML parsers when they should have been using RDF parsers (since RSS 1.0 is RDF) it worked very badly in most RSS readers and validators (and I wasn&#x2019;t planning on changing my valid feed to make it work with shitty XML-based RSS parsers). And so I decided Atom was the best way.</p>
+
+</div>
+</div>
+        <div class="meta">
+          <p>2005-04-10T03:51:06+01:00</p>
+          <p>Modified: 2005-04-10T03:55:25+01:00</p>
+        </div>
+      </div>
+    </div>
+    <address id="meta" class="meta vcard">
+	  By <a href="/Holizz/" class="fn">Tom Adams</a> (<a href="/Holizz/Contact">contact</a>).
+	  <a href="/About/Copyright">(K) All rights reversed</a>.
+	  <a href="/About/Conformance">Valid Everything 1.0</a>.
+	</address>
+  </body>
+</html>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:wot="http://xmlns.com/wot/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:bio="http://purl.org/vocab/bio/0.1/"
+	xmlns:srw="http://purl.org/net/inkel/rdf/schemas/lang/1.0#"
+	xmlns:lang="http://purl.org/net/inkel/rdf/schemas/lang/1.1#"
+	xmlns:rel="http://purl.org/vocab/relationship">
+
+	<foaf:FOAFWebDoc rdf:about="http://holizz.com/Holizz/Index.rdf">
+		<wot:assurance rdf:resource="http://holizz.com/Holizz/Index.rdf.sig" />
+	</foaf:FOAFWebDoc>
+
+	<foaf:Person rdf:about="http://holizz.com/Holizz/">
+		<foaf:name xml:lang="en-GB">Tom Adams</foaf:name>
+		<foaf:nick xml:lang="en-GB">Holizz</foaf:nick>
+		<foaf:homepage rdf:resource="http://holizz.com/"/>
+		<foaf:weblog rdf:resource="http://holizz.com/"/>
+		<foaf:mbox rdf:resource="mailto:viafoaf@holizz.com"/>
+		<srw:srw>en-GB</srw:srw>
+		<lang:masters>en-GB</lang:masters>
+		<lang:speaks>sgn-GB</lang:speaks>
+		<!-- (aka BSL). Not that well, but I do. There should be an RDF schema to describe proficiency -->
+
+		<!-- I want to learn the following languages -->
+		<!--<lang:masters>eo</lang:masters>-->
+
+		<!-- Eats: Fungi, Plantae, Protista, non-living -->
+		<!-- Doesn't eat: animalia or derivatives -->
+
+		<foaf:myersBriggs>INTJ</foaf:myersBriggs>
+		<!-- according to http://www.humanmetrics.com/cgi-win/JTypes1.htm -->
+		<wot:pubkeyAddress rdf:resource="http://holizz.com/Holizz/PublicKey"/>
+		<foaf:geekcode>GCS d-() s+:- a C+++ UL++ P+ L+++ E- W+++&gt;$ N o K !w O- M- V- PS+(+++) PE-() Y+ PGP+&gt;+++ t++@ 5 X R !tv b++ DI D+ G e h r z!</foaf:geekcode>
+
+		<!-- How can I sum myself up in one line? -->
+		<!--<bio:olb xml:lang="en-GB"></bio:olb>-->
+
+		<bio:event>
+			<bio:Birth>
+				<bio:date>1986-02-19</bio:date>
+				<bio:place>Bradford, West Yorkshire, United Kingdom</bio:place>
+			</bio:Birth>
+		</bio:event>
+		<foaf:img rdf:resource="http://holizz.com/Holizz/Depiction"/>
+
+		<foaf:schoolHomepage rdf:resource="http://www.brad.ac.uk/"/>
+
+		<foaf:interest rdf:resource="http://www.w3.org/MarkUp/"/>
+		<foaf:interest rdf:resource="http://www.w3.org/Style/CSS/"/>
+		<foaf:interest rdf:resource="http://www.w3.org/RDF/"/>
+		<foaf:interest rdf:resource="http://www.w3.org/XML/"/>
+		<foaf:interest rdf:resource="http://www.ruby-lang.org/"/>
+		<foaf:interest rdf:resource="http://www.wikipedia.org/"/>
+		<foaf:interest rdf:resource="http://www.bmezine.com/"/>
+		<foaf:interest rdf:resource="http://clisp.cons.org/"/>
+		<foaf:interest rdf:resource="http://en.wikipedia.org/wiki/Cooking"/>
+
+		<foaf:holdsAccount>
+			<foaf:OnlineAccount>
+				<foaf:accountServiceHomepage rdf:resource="http://messenger.msn.com/"/>
+				<foaf:accountName>passport@holizz.com</foaf:accountName>
+				<dc:description xml:lang="en-GB">This is my primary account as it's the only service people I know use.</dc:description>
+			</foaf:OnlineAccount>
+		</foaf:holdsAccount>
+		<!-- Yes, I have two accounts with no contacts -->
+		<foaf:holdsAccount>
+			<foaf:OnlineAccount>
+				<foaf:accountServiceHomepage rdf:resource="http://www.jabber.org/"/>
+				<foaf:accountName>holizz@jabber.at</foaf:accountName>
+				<dc:description xml:lang="en-GB">This is my secondary account. I think Jabber/XMPP is better than MSN but nobody else I know uses it.</dc:description>
+			</foaf:OnlineAccount>
+		</foaf:holdsAccount>
+		<foaf:holdsAccount>
+			<foaf:OnlineAccount>
+				<foaf:accountServiceHomepage rdf:resource="http://messenger.yahoo.com/"/>
+				<foaf:accountName>holizz</foaf:accountName>
+				<dc:description xml:lang="en-GB">This is my tertiary account. I used it for one person and now she uses MSN.</dc:description>
+			</foaf:OnlineAccount>
+		</foaf:holdsAccount>
+
+		<!-- People I foaf:knows -->
+		<!-- Only people who have URIs are listed -->
+		<foaf:knows>
+			<foaf:Person rdf:ID="adam-m">
+				<foaf:name>Adam</foaf:name>
+				<foaf:homepage rdf:resource="http://www.adammolloy.com/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="will-b">
+				<foaf:name>Buncey</foaf:name>
+				<foaf:weblog rdf:resource="http://buncimate.blogspot.com/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="erik-s">
+				<foaf:name>Erik</foaf:name>
+				<foaf:weblog rdf:resource="http://xinosnotes.blog.com/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="jen-m">
+				<foaf:name>Jen</foaf:name>
+				<foaf:weblog rdf:resource="http://jenkittenqt.blogspot.com/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="jenni-l">
+				<foaf:name>Jenni</foaf:name>
+				<foaf:weblog rdf:resource="http://www.deadjournal.com/~bluesilverfur/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="neil-t">
+				<foaf:name>Neil</foaf:name>
+				<foaf:weblog rdf:resource="http://neilturner.me.uk/"/>
+				<rdfs:seeAlso rdf:resource="http://neilturner.me.uk/foaf.rdf"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="niall-f">
+				<foaf:name>Niall</foaf:name>
+				<foaf:homepage rdf:resource="http://www.niallfleming.co.uk/"/>
+				<rdfs:seeAlso rdf:resource="http://niallfleming.co.uk/foaf.rdf"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="owen-g">
+				<foaf:name>Owen</foaf:name>
+				<foaf:weblog rdf:resource="http://robespiere.blogspot.com/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="summer-h">
+				<foaf:name>Summer</foaf:name>
+				<foaf:homepage rdf:resource="http://vampirefreaks.com/profile.php?user=So_popular"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="will-k">
+				<foaf:name>Will</foaf:name>
+				<foaf:homepage rdf:resource="http://quake.swe.net/~crimson/blog/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<!-- Other relations to people -->
+
+		<!-- rel:friendOf -->
+		<rel:friendOf rdf:resource="#adam-m"/>
+		<rel:friendOf rdf:resource="#will-b"/>
+		<rel:friendOf rdf:resource="#erik-s"/>
+		<rel:friendOf rdf:resource="#jen-m"/>
+		<rel:friendOf rdf:resource="#jenni-l"/>
+		<rel:friendOf rdf:resource="#niall-f"/>
+		<rel:friendOf rdf:resource="#owen-g"/>
+		<rel:friendOf rdf:resource="#summer-h"/>
+		<rel:friendOf rdf:resource="#will-k"/>
+
+		<!-- rel:acquaintanceOf -->
+		<rel:acquaintanceOf rdf:resource="#neil-t"/>
+
+		<!-- rel:knowsOf -->
+		<!-- rel:knowsByReputation -->
+
+		<!-- rel:closeFriendOf -->
+		<rel:closeFriendOf rdf:resource="#niall-f"/>
+		<rel:closeFriendOf rdf:resource="#summer-h"/>
+		<rel:closeFriendOf rdf:resource="#will-k"/>
+
+		<!-- rel:hasMet -->
+		<rel:hasMet rdf:resource="#adam-m"/>
+		<rel:hasMet rdf:resource="#jen-m"/>
+		<rel:hasMet rdf:resource="#niall-f"/>
+		<rel:hasMet rdf:resource="#owen-g"/>
+		<rel:hasMet rdf:resource="#summer-h"/>
+		<rel:hasMet rdf:resource="#will-k"/>
+
+		<!-- rel:colleagueOf -->
+		<rel:colleagueOf rdf:resource="#niall-f"/>
+		<rel:colleagueOf rdf:resource="#will-k"/>
+
+		<!-- rel:collaboratesWith -->
+
+		<!-- rel:livesWith -->
+		<!-- TODO: Uncomment this in August/September (?)
+		<rel:livesWith rdf:resource="#niall-f"/>-->
+
+		<!-- rel: -->
+		<!-- rel: -->
+
+	</foaf:Person>
+</rdf:RDF>
+
