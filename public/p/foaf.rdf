@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:wot="http://xmlns.com/wot/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:bio="http://purl.org/vocab/bio/0.1/"
+	xmlns:srw="http://purl.org/net/inkel/rdf/schemas/lang/1.0#"
+	xmlns:lang="http://purl.org/net/inkel/rdf/schemas/lang/1.1#"
+	xmlns:rel="http://purl.org/vocab/relationship">
+
+	<foaf:Person rdf:about="http://holizz.com/">
+		<foaf:name xml:lang="en">Tom Adams</foaf:name>
+		<foaf:name xml:lang="ja">アダムス富夢</foaf:name>
+		<foaf:nick xml:lang="en">Holizz</foaf:nick>
+		<foaf:homepage rdf:resource="http://holizz.com/"/>
+		<foaf:weblog rdf:resource="http://holizz.com/"/>
+		<foaf:mbox rdf:resource="mailto:viafoaf@holizz.com"/>
+		<srw:srw>en</srw:srw>
+		<srw:srw>ja</srw:srw>
+
+		<wot:pubkeyAddress rdf:resource="http://holizz.com/files/holizz.asc"/>
+
+		<!--<bio:olb xml:lang="en"></bio:olb>-->
+		<!--<bio:olb xml:lang="ja"></bio:olb>-->
+
+		<bio:event>
+			<bio:Birth>
+				<bio:date>1986-02-19</bio:date>
+				<bio:place>Bradford, West Yorkshire, United Kingdom</bio:place>
+			</bio:Birth>
+		</bio:event>
+		<foaf:img rdf:resource="http://holizz.com/files/me.jpg"/>
+
+		<!--<foaf:schoolHomepage rdf:resource="http://www.brad.ac.uk/"/>-->
+
+		<foaf:interest rdf:resource="http://www.w3.org/MarkUp/"/>
+		<foaf:interest rdf:resource="http://www.w3.org/XML/"/>
+		<foaf:interest rdf:resource="http://www.ruby-lang.org/"/>
+		<foaf:interest rdf:resource="http://python.org/"/>
+		<foaf:interest rdf:resource="http://www.wikipedia.org/"/>
+
+		<foaf:holdsAccount>
+			<foaf:OnlineAccount>
+				<foaf:accountServiceHomepage rdf:resource="http://www.jabber.org/"/>
+				<foaf:accountName>holizz@jabber.org</foaf:accountName>
+			</foaf:OnlineAccount>
+		</foaf:holdsAccount>
+		<foaf:holdsAccount>
+			<foaf:OnlineAccount>
+				<foaf:accountServiceHomepage rdf:resource="http://messenger.msn.com/"/>
+				<foaf:accountName>passport@holizz.com</foaf:accountName>
+			</foaf:OnlineAccount>
+		</foaf:holdsAccount>
+
+		<!-- People I foaf:knows -->
+		<!-- Only people who have URIs are listed -->
+		<foaf:knows>
+			<foaf:Person rdf:ID="adam-m">
+				<foaf:name>Adam</foaf:name>
+				<foaf:homepage rdf:resource="http://www.adammolloy.com/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="wil-b">
+				<foaf:name>Wil</foaf:name>
+				<foaf:weblog rdf:resource="http://buncimate.blogspot.com/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="erik-s">
+				<foaf:name>Erik</foaf:name>
+				<foaf:weblog rdf:resource="http://xinosnotes.blog.com/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="neil-t">
+				<foaf:name>Neil</foaf:name>
+				<foaf:weblog rdf:resource="http://neilturner.me.uk/"/>
+				<rdfs:seeAlso rdf:resource="http://neilturner.me.uk/foaf.rdf"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="niall-f">
+				<foaf:name>Niall</foaf:name>
+				<foaf:homepage rdf:resource="http://www.niallfleming.co.uk/"/>
+				<rdfs:seeAlso rdf:resource="http://niallfleming.co.uk/foaf.rdf"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="owen-g">
+				<foaf:name>Owen</foaf:name>
+				<foaf:weblog rdf:resource="http://robespiere.blogspot.com/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="summer-h">
+				<foaf:name>Summer</foaf:name>
+				<foaf:homepage rdf:resource="http://vampirefreaks.com/profile.php?user=So_popular"/>
+			</foaf:Person>
+		</foaf:knows>
+		<foaf:knows>
+			<foaf:Person rdf:ID="will-k">
+				<foaf:name>Will</foaf:name>
+				<foaf:homepage rdf:resource="http://quake.swe.net/~crimson/blog/"/>
+			</foaf:Person>
+		</foaf:knows>
+		<!-- Other relations to people -->
+
+		<!-- rel:friendOf -->
+		<rel:friendOf rdf:resource="#adam-m"/>
+		<rel:friendOf rdf:resource="#wil-b"/>
+		<rel:friendOf rdf:resource="#erik-s"/>
+		<rel:friendOf rdf:resource="#jen-m"/>
+		<rel:friendOf rdf:resource="#jenni-l"/>
+		<rel:friendOf rdf:resource="#niall-f"/>
+		<rel:friendOf rdf:resource="#owen-g"/>
+		<rel:friendOf rdf:resource="#summer-h"/>
+		<rel:friendOf rdf:resource="#will-k"/>
+
+		<!-- rel:acquaintanceOf -->
+		<rel:acquaintanceOf rdf:resource="#neil-t"/>
+
+		<!-- rel:knowsOf -->
+		<!-- rel:knowsByReputation -->
+
+		<!-- rel:closeFriendOf -->
+		<rel:closeFriendOf rdf:resource="#niall-f"/>
+		<rel:closeFriendOf rdf:resource="#summer-h"/>
+		<rel:closeFriendOf rdf:resource="#will-k"/>
+
+		<!-- rel:hasMet -->
+		<rel:hasMet rdf:resource="#adam-m"/>
+		<rel:hasMet rdf:resource="#jen-m"/>
+		<rel:hasMet rdf:resource="#niall-f"/>
+		<rel:hasMet rdf:resource="#owen-g"/>
+		<rel:hasMet rdf:resource="#summer-h"/>
+		<rel:hasMet rdf:resource="#will-k"/>
+
+		<!-- rel:colleagueOf -->
+		<rel:colleagueOf rdf:resource="#niall-f"/>
+		<rel:colleagueOf rdf:resource="#will-k"/>
+
+		<!-- rel:collaboratesWith -->
+
+		<!-- rel:livesWith -->
+		<!--<rel:livesWith rdf:resource="#niall-f"/>-->
+
+	</foaf:Person>
+</rdf:RDF>
+

@@ -1,0 +1,24 @@
+From 5b43f84864fd14223b4922ddc68ac9028237ffd7 Mon Sep 17 00:00:00 2001
+From: Tom Adams <tom@holizz.com>
+Date: Sat, 3 Jan 2009 14:13:48 +0000
+Subject: [PATCH] included stdlib.h to make make make
+
+---
+ src/joy2chord.cpp |    1 +
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+
+diff --git a/src/joy2chord.cpp b/src/joy2chord.cpp
+index d9898ef..109c0a5 100644
+--- a/src/joy2chord.cpp
++++ b/src/joy2chord.cpp
+@@ -21,6 +21,7 @@
+ // Uinput code based off example in January 2007 Dashboard Issue by Mehul Patel
+ // http://www.einfochips.com/download/dash_jan_tip.pdf
+ 
++#include <stdlib.h>
+ #include <string>
+ #include <iostream>
+ #include <stdio.h>
+-- 
+1.6.0.6
+

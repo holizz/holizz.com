@@ -1,0 +1,30 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<interface uri="http://holizz.com/software/0install/gajim" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Gajim</name>
+  <summary>Jabber instant messager</summary>
+  <description>
+    Gajim is a free software, instant messaging client for the Jabber (XMPP) protocol which uses the GTK+ toolkit.
+  </description>
+  <homepage>http://gajim.org/</homepage>
+  <icon href="http://holizz.com/software/icons/gajim.png" type="image/png"/>
+
+  <group main="gajim-0.10.1/launch.sh">
+    <requires interface="http://holizz.com/software/0install/pysqlite2">
+      <environment name="PYTHONPATH" insert="."/>
+    </requires>
+    <implementation id="sha1=cfda630449a95b4a906cdfab5aa960b4a61cf60a" released="2006-06-06" version="0.10.1">
+      <archive href="http://gajim.org/downloads/gajim-0.10.1.tar.bz2" size="2066396"/>
+    </implementation>
+  </group>
+</interface>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEv6lZ4YOTBq6D5+IRAhgXAJ9PHegNYQguQHERnmfYN1b4Bnzt9QCdH7IM
+xB00JTDOJo9Y4ytYzcyK/eA=
+=get/
+-----END PGP SIGNATURE-----

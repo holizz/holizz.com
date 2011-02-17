@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<title>klookup</title>
+<h1>klookup</h1>
+<h2>High Priority</h2>
+<ol>
+<li>Replace private :foo with private and public blocks
+<li>Change module ...; class ... into class ...::...
+<li>Type checking (don't be explicit, just make sure there's a to_s, to_i, etc.)
+<li>Add test for (Database::Data.method_defined?(:foo))
+<li>Check for The Blob (AntiPatterns)
+</ol>
+<h2>Done</h2>
+<ol>
+<li>Create a Rakefile with automated tests
+<li>Add a YAML-based TODO list
+<li>Speeded up KANJIDIC initialisation by a factor of about 10 by moving most initilasiation code into other places (i.e. from process_line to get_reading, get_meaning, get_stroke).
+<li>Get the presentation done!
+<li>Remove silly require dances
+<li>Add central file opening system
+<li>Use open() {}
+<li>Make final UTF-8 test pass
+<li>Make the KLOOKUP_PATH work more sensibly
+<li>Replace silly Exception.new('') with Exception, ''
+</ol>
+<h2>Low Priority</h2>
+<ol>
+<li>Add code stats to Rakefile's generated HTML
+<li>Add tests to Rakefile's generated HTML
+<li>Replace RUnicode with ActiveSupport::Multibyte::Chars ($KCODE must still be set)
+<li>See if Multibyte can handle SJIS input files and give Unicode codepoints
+<li>Look at thisActiveSupport::Multibyte::Chars.handler = MyHandler
+<li>Add Rakefile target for checking in which takes last section from ChangeLog as a --file (also reorganise ChangeLog to be reverse chronological order)
+<li>Add installation facility (Add facility to include installed equivilant to data/klookup and unhardcode '../data/klookup')
+<li>Move test/lookup_test.rb to test/klookup_test.rb
+<li>Consider moving the flatfile stuff into database_flatfile
+<li>Read the ToDo list and put good things on here
+<li>Sort out TODOs littered about
+<li>Consider using a Struct instead of a hash for the readings
+<li>Consider moving KLookup::Lookup::Kanji and KLookup::Lookup::Radical into KLookup
+<li>Add exclusive sets of radicals (i.e. 日と月→明)
+<li>Use GetText properly
+<li>Clean up source
+<li>Code audit
+<li>Add tests for installation when that's done
+</ol>

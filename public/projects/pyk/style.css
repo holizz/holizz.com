@@ -1,0 +1,11 @@
+
+
+td { vertical-align: top;
+     border: solid 1px black }
+
+/* Hidden */
+.character { background: white; color: white; }
+
+/* Highlighted */
+.break { background: black; color: white; font-weight: bold }
+thead td { background: black; color: white; font-weight: bold }

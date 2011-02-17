@@ -1,0 +1,1212 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:redfoot="http://redfoot.net/2005/redfoot#"
+        xmlns:handler="http://redfoot.net/2005/01/handler#"
+        xmlns:recipe="http://donnafales.com/2002/07/28/recipe-schema#"
+>
+
+  <rdf:Description rdf:about="#">
+    <rdfs:label>Recipe Schema</rdfs:label>
+    <rdfs:comment>A (small) start on a recipe schema</rdfs:comment>
+  </rdf:Description>
+
+  <rdfs:Property rdf:ID="recipe">
+    <rdfs:label>ingredients</rdfs:label>
+    <rdfs:comment>An unordered group of ingredients</rdfs:comment>
+    <rdfs:domain rdf:resource="#Recipe"/> <!-- TODO: change to resource-->
+    <rdfs:range rdf:resource="#Recipe"/>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:ID="ingredient">
+    <rdfs:label>ingredient</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+<!--
+    <rdfs:domain rdf:resource="#Recipe"/>
+    <rdfs:range rdf:resource="#Recipe"/>
+  -->  
+  </rdfs:Property>
+
+
+  <rdfs:Class rdf:ID="IngredientListItem">
+    <rdfs:label>IngredientListItem</rdfs:label>
+    <rdfs:comment>An item in the ingredient list... includes quantity unit adjectives ingredient</rdfs:comment>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:ID="Ingredient">
+    <rdfs:label>Ingredient</rdfs:label>
+    <rdfs:comment>An ingredient without a quantity unit etc... such as found in IngredientListItem</rdfs:comment>
+    <handler:content rdf:parseType="Resource">
+      <rdfs:label>KID template for displaying an Ingredient</rdfs:label>
+      <handler:kid>
+<![CDATA[
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:kid="http://purl.org/kid/ns#"
+     class="ingredient"
+>
+<?kid
+RECIPE = redfoot.namespace("http://donnafales.com/2002/07/28/recipe-schema#")
+format = redfoot.module("http://eikco.com/2005/03/simple_format#module").format
+
+ingredient = request.uri
+?>
+  <h2>${store.label(ingredient)}</h2>
+  <p>${XML(format(store.comment(ingredient)))}</p>
+
+  <h3>Recipes containing ${store.label(ingredient)}</h3>
+  <ul>
+    <li kid:for="recipe in store.subjects(RECIPE.ingredient, ingredient)">
+      <a href="${recipe}">${store.label(recipe)}</a>        
+    </li>    
+  </ul>
+
+</div>
+]]>
+      </handler:kid>
+    </handler:content>
+  </rdfs:Class>    
+
+  <rdfs:Class rdf:ID="Step">
+    <rdfs:label>Step</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+  </rdfs:Class>    
+
+  <rdfs:Property rdf:ID="date">
+    <rdfs:label>date</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:domain rdf:resource="#Recipe"/>
+<!--
+    <rdfs:range rdf:resource="#Recipe"/>
+  -->  
+  </rdfs:Property>
+
+  <rdfs:Property rdf:ID="modified">
+    <rdfs:label>modified</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:domain rdf:resource="#Recipe"/>
+<!--
+    <rdfs:range rdf:resource="#Recipe"/>
+  -->  
+  </rdfs:Property>
+
+
+  <rdfs:Property rdf:ID="original">
+    <rdfs:label>original</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <rdfs:domain rdf:resource="#Recipe"/>
+<!--    
+    <rdfs:range rdf:resource="#Recipe"/>
+  -->  
+  </rdfs:Property>
+
+
+  <rdfs:Class rdf:ID="Recipe">
+    <rdfs:label>Recipe</rdfs:label>
+    <rdfs:comment></rdfs:comment>
+    <handler:text rdf:parseType="Resource">
+      <rdfs:label>KID template for displaying a Recipe</rdfs:label>
+      <redfoot:codestr>
+<![CDATA[
+response.write("""
+%s
+
+%s
+""" % (store.label(request.uri), store.comment(request.uri)))
+]]>
+      </redfoot:codestr>
+    </handler:text>
+
+    <handler:content rdf:parseType="Resource">
+      <rdfs:label>KID template for displaying a Recipe</rdfs:label>
+      <handler:kid>
+<![CDATA[
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:kid="http://purl.org/kid/ns#"
+     class="recipe"
+>
+<?kid
+# import some stuff
+# TODO: push to redfoot using datatype plugin
+format = redfoot.module("http://eikco.com/2005/03/simple_format#module").format
+
+RECIPE = redfoot.namespace("http://donnafales.com/2002/07/28/recipe-schema#")
+
+recipe = request.uri
+?>
+
+  <h2>${store.label(recipe)}</h2>
+  <p>${XML(format(store.comment(recipe)))}</p>
+
+ <div class="ingredients"
+      kid:for="ingredients in store.objects(recipe, RECIPE.ingredients)">
+  <h3>${' | '.join(store.objects(ingredients, RDFS.label)) + ' Ingredients'}</h3>
+  <ul>
+    <li kid:for="ingredient in store.items(ingredients)">    
+        ${XML(format(store.label(ingredient)))}
+    </li>    
+  </ul>
+ </div>
+
+ <div class="directions"
+       kid:for="steps in store.objects(recipe, RECIPE.directions)">
+  <h3>Directions</h3>
+  <ol>
+    <li kid:for="item in store.items(steps)">
+        ${XML(format(store.label(item)))}
+    </li>    
+  </ol>
+ </div>
+ <div class="footer"></div>
+</div>
+]]>
+      </handler:kid>
+    </handler:content>
+  </rdfs:Class>
+
+  <rdfs:Property rdf:ID="ingredients">
+    <rdfs:label>ingredients</rdfs:label>
+    <rdfs:comment>An unordered group of ingredients</rdfs:comment>
+    <rdfs:domain rdf:resource="#Recipe"/>
+    <rdfs:range rdf:resource="#Ingredients"/>
+  </rdfs:Property>
+
+  <rdfs:Property rdf:ID="directions">
+    <rdfs:label>directions</rdfs:label>
+    <rdfs:comment>An ordered list of steps</rdfs:comment>
+    <rdfs:domain rdf:resource="#Recipe"/>
+    <rdfs:range rdf:resource="#Directions"/>
+  </rdfs:Property>
+
+  <redfoot:Python rdf:ID="module">
+    <rdfs:label>update a recipe from a string</rdfs:label>      
+    <redfoot:codestr>
+<![CDATA[
+  
+from rdflib.URIRef import URIRef
+from rdflib.BNode import BNode
+from rdflib.Literal import Literal
+
+from rdflib import RDF, RDFS
+from datetime import datetime
+
+RECIPE = redfoot.namespace("http://donnafales.com/2002/07/28/recipe-schema#")
+HANDLER = redfoot.namespace("http://redfoot.net/2005/01/handler#")
+
+parse_ingredient = redfoot.module("http://donnafales.com/2002/07/28/recipe-schema#ingredient_parser").parse_ingredient
+
+def line_generator(s):
+    for l in s.split("\n"):
+        yield l.strip()
+
+def is_blank(line):
+    if line.strip()=="":
+        return 1
+    else:
+        return 0
+
+def non_blank(lines):
+    """Returns the next non blank line"""
+    while 1:
+        l = lines.next()
+        if not is_blank(l):
+            return l
+    
+def non_blank_lines(lines):
+    """Generates non blank lines until a blank line is reached"""
+    while 1:
+        l = lines.next()
+        if is_blank(l):
+            break
+        else:
+            yield l
+
+def para(lines):
+    s = non_blank(lines)
+    more = " ".join(non_blank_lines(lines))
+    if more:
+        s = " ".join((s, more))
+    return s
+
+def paras(lines):
+    while 1:
+        yield para(lines)
+
+
+def parse(string, store, uri=None):
+    """Parse the recipe in string updating store accordingly.
+
+    The store is updated if recipe already exists -- creation time
+    does not change if recipe already exists.
+
+    uri - uri to use for recipe.
+    """
+
+    recipe = uri
+    lines = line_generator(string)
+
+    # First paragraph is the name
+    name = para(lines)
+
+    # Second paragraph is the description
+    description = para(lines)
+    
+    while 1:
+        l = lines.next()
+        if "Ingredients" in l:
+            break
+
+    ingredients = list()
+    ingredients.append(non_blank(lines))
+    ingredients.extend(non_blank_lines(lines))
+
+    while 1:
+        l = lines.next()
+        if "Directions" in l:
+            break
+
+    directions = list(paras(lines))
+
+    
+    def remove_all(r):
+        if isinstance(r, Literal):
+            return
+        for s, p, o in store.triples((r, None, None)):
+            store.remove((s, p, o))
+            if not isinstance(o, Literal):
+                remove_all(o)
+    def remove(r):
+	for p in [RDFS.label, RDFS.comment, RECIPE.original,
+                  RECIPE.ingredients, RECIPE.directions, RECIPE.modified]:
+            for s, p, o in store.triples((r, p, None)):
+                store.remove((s, p, o))
+                remove_all(o)
+    remove(recipe)        
+
+    store.prefix_mapping("recipe", RECIPE.NS)
+    store.add((recipe, RDF.type, RECIPE.Recipe))
+    store.add((recipe, RECIPE.original, Literal(string)))
+    store.add((recipe, RDFS.label, Literal(name)))
+    store.add((recipe, RDFS.comment, Literal(description)))
+
+    orig = URIRef(recipe + "orig/")
+    store.add((orig, RDF.type, RECIPE.RecipeOriginal))
+    store.add((recipe, HANDLER.alternate, orig))
+
+    now = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    if not (recipe, RECIPE.date, None) in store:
+        store.add((recipe, RECIPE.date, Literal(now)))
+    store.add((recipe, RECIPE.modified, Literal(now)))
+
+    def make_list(source, type):
+        items = list()
+        for item in source:
+            b = BNode()
+            store.add((b, RDFS.label, Literal(item)))
+            store.add((b, RDF.type, type))
+            items.append(b)
+        items.reverse()
+        rest = RDF.nil
+        for item in items:
+            l = BNode()
+            store.add((l, RDF.type, RDF.List))
+            store.add((l, RDF.first, item))
+            store.add((l, RDF.rest, rest))
+            rest = l
+        return l
+        
+    ni = []
+    for line in ingredients:
+        r = parse_ingredient(line)
+        if r:
+            i = URIRef("http://donnafales.com/ingredients/%s/" % r.replace(" ", "_"))
+            store.add((i, RDF.type, RECIPE.Ingredient))
+            store.add((i, RDFS.label, Literal(r)))
+            store.add((recipe, RECIPE.ingredient, i))
+            ni.append(line.replace(r, i))
+        else:
+            ni.append(line)
+    ingredients = ni
+    
+    b = make_list(ingredients, RECIPE.IngredientListItem)
+    store.add((recipe, RECIPE.ingredients, b))
+
+    l = make_list(directions, RECIPE.Step)
+    store.add((recipe, RECIPE.directions, l))
+
+def recipes(uri=None):
+    recipe_list = []
+    for recipe in store.objects(uri, RECIPE.recipe):
+        date = first(store.objects(recipe, RECIPE.date))
+        recipe_list.append((date, recipe))
+    recipe_list.sort()
+    recipe_list.reverse()
+    for date, recipe in recipe_list:
+        yield recipe
+
+]]>
+    </redfoot:codestr>
+  </redfoot:Python>
+
+
+
+  <rdf:Description rdf:ID="xhtml_dl"> <!-- TODO: type-->
+    <rdfs:label>Recipes for request.uri in reverse chron as xhtml dl list</rdfs:label>      
+    <handler:kid>
+<![CDATA[
+
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:kid="http://purl.org/kid/ns#"
+>
+<?kid
+# TODO: better way to import redfoot modules
+recipes = redfoot.module("http://donnafales.com/2002/07/28/recipe-schema#module").recipes
+format = redfoot.module("http://eikco.com/2005/03/simple_format#module").format
+?>
+  <h2>${store.label(request.uri)}</h2>
+  <dl>
+   <span kid:omit="" 
+         kid:for='recipe in recipes(uri=request.uri)'>
+    <dt>
+      <a href="${recipe}">${store.label(recipe)}</a>
+    </dt>
+    <dd>
+      ${XML(format(store.comment(recipe)))}
+    </dd>
+   </span>
+  </dl>
+</div>
+
+]]>
+
+    </handler:kid>
+  </rdf:Description>
+      
+  <redfoot:Page rdf:ID="atom_0.3">
+    <rdfs:label>Recipes (Atom feed)</rdfs:label>
+    <handler:content_type>application/x.atom+xml</handler:content_type>    
+    <handler:kid>
+<![CDATA[
+
+<feed version="0.3"
+      xmlns="http://purl.org/atom/ns#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:kid="http://purl.org/kid/ns#">
+<?kid
+#
+from rdflib import RDF
+from rdflib.URIRef import URIRef
+from rdflib.util import first
+
+from datetime import datetime
+
+RECIPE = redfoot.namespace("http://donnafales.com/2002/07/28/recipe-schema#")
+HANDLER = redfoot.namespace("http://redfoot.net/2005/01/handler#")
+
+format = redfoot.module("http://eikco.com/2005/03/simple_format#module").format
+recipe_module = redfoot.module("http://donnafales.com/2002/07/28/recipe-schema#module")
+
+recipe_list = first(store.subjects(HANDLER.alternate, request.uri))
+recipes = recipe_module.recipes(recipe_list)
+
+now = datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+
+?>
+  <title>${store.label(request.uri) or store.label(recipe_list)}</title>
+  <link rel="alternate" type="text/html" href="${recipe_list}"/>
+  <modified>${now}</modified>
+  <author>
+    <name>${store.label(request.host)}</name>
+  </author>
+  <dc:subject>recipes</dc:subject>
+ <span kid:for="recipe in recipes" kid:omit="">
+  <entry>
+    <title>${store.label(recipe)}</title>
+    <link rel="alternate" type="text/html" href="${recipe}"/>
+    <id>${recipe}</id>
+    <issued>${first(store.objects(recipe, RECIPE.date))}</issued>
+    <modified>${first(store.objects(recipe, RECIPE.modified)) or now}</modified>    
+    <content type="text/html" mode="escaped">
+      ${format(store.comment(recipe))}
+    </content>
+    <dc:subject>recipe</dc:subject>
+  </entry>
+ </span>
+</feed>                      
+
+]]>
+    </handler:kid>
+  </redfoot:Page>
+
+
+  <rdfs:Class rdf:ID="RecipeOriginal">
+    <rdfs:label>Recipe Original</rdfs:label>
+    <rdfs:comment>Alternative view of recipe, namely, the original</rdfs:comment>
+    <handler:page rdf:parseType="Resource">
+      <handler:content_type>text/plain</handler:content_type>            
+      <redfoot:codestr>
+<![CDATA[
+RECIPE = redfoot.namespace("http://donnafales.com/2002/07/28/recipe-schema#")
+recipe = first(store.subjects(HANDLER.alternate, request.uri))
+response.write(first(store.objects(recipe, RECIPE.original)))
+]]>
+      </redfoot:codestr>
+    </handler:page>
+  </rdfs:Class>
+
+
+
+  <redfoot:Python rdf:ID="ingredient_parser">
+    <rdfs:label>update a recipe from a string</rdfs:label>      
+    <redfoot:codestr>
+<![CDATA[
+  
+# Started from the following after jtauber pointed me to it.
+#
+# ChartParser.py, version 1.0
+#
+# Released to the public domain 10 August 1999 by Oliver Steele.
+#"""Module ChartParser -- a simple chart parser
+#"""
+#__author__  = 'Oliver Steele', 'steele@cs.brandeis.edu'
+#__version__ = '1.0'
+
+
+import string
+import re
+
+_quantity_rest = re.compile(ur"([\d/\s\xbc-\xbe]*)(.*)", re.UNICODE)
+_parens = re.compile(r"\([^\)]*\)")
+
+def parens(match):
+    return ""
+
+def ignore_parens(line):
+    line = re.sub(_parens, parens, line)
+    return line
+
+# Simple tokenizer: split at whitespace, and separate out leading quotes and
+# trailing quotes and punctuation.
+def tokenize(str):
+    str = str.replace(".", "")
+    str = ignore_parens(str)
+    str = str.strip()
+    m = _quantity_rest.match(str)
+    if m:
+        quantity, rest = m.groups()
+        str = rest        
+    else:
+        raise Exception("could not split:", str)
+
+    tokens = string.split(str, ' ')
+    i = 0
+    while i < len(tokens):
+        token = tokens[i]
+        if len(token) > 1 and token[0] in '\'"':
+            tokens[i:i+1] = [token[0], token[1:]]
+        elif len(token) > 1 and token[-1] in '.?,!;:\'"':
+            tokens[i:i+1] = [token[:-1], token[-1]]
+        else:
+            i = i + 1
+    return tokens
+
+# Simple tagger.
+def tags(token):
+    token = token.lower()
+    val = TAGS.get(token)
+    if val is None:
+        pass #print "unknown token:", token
+    if isinstance(val, list):
+        return val + [token]
+    else:
+        return [val] + [token]
+    #return [TAGS.get(token) or TAGS.get(string.lower(token))]
+
+class Rule:
+    """A rule represents a phrase-structure production rule of the form:
+            A => B C
+    where A expands to B followed by C (and therefore, B followed by
+    C can be composed into an A).  In this example, the left-hand-side
+    (lhs) is A, and the right-hand-side (rhs) is [B, C]."""
+        
+    def __init__(self, spec):
+            """spec is of the form [A, B, C], where A is the lhs and the remaining
+            items are the rhs.  In other words, [A, B, C] represents A => B C"""
+            self.lhs = spec[0]
+            self.rhs = spec[1:]
+
+    def __repr__(self):
+            return '%s => %s' % (string.join(self.lhs, ' '), self.rhs)
+
+    def matches(self, category):
+            return self.rhs[0] == category
+
+# Define some basic syntactic categories, as variables bound to their own names.
+#for name in string.split('V VP VBAR N NBAR NP PRON PN S DET PREP PP'):
+for name in string.split('NP AP ADV ADJ ADJP N QUANTITY NUMBER UNIT'):
+    globals()[name] = name
+del name
+
+class Constituent:
+    def __init__(self, type, children, left, right):
+        self.type = type
+        self.children = children
+        self.left = left
+        self.right = right
+
+    def __repr__(self):
+        return '%s%s' % (self.type, `self.children`)
+
+    def tree(self):
+        return [self.type] + self.children
+
+    def terminals(self):
+        return(reduce(lambda a,b:a+b, map(lambda c:c.terminals(), self.children)))
+
+    def tokens(self):
+        return(reduce(lambda a,b:a+b, map(lambda c:c.tokens(), self.children)))
+
+class PreTerminal(Constituent):
+    def __init__(self, tag, token, left):
+        Constituent.__init__(self, tag, None, left, left+1)
+        self.token = token
+        
+    def __repr__(self):
+        return '%s(%s)' % (self.type, self.token)
+        
+    def tree(self):
+        return self
+        
+    def terminals(self):
+        return [self]
+
+    def tokens(self):
+        return [self.token]
+
+class Edge:
+    def __init__(self, rule, left, right=None, index=0, children=None):
+        self.rule = rule
+        self.left = left
+        self.right = right or left
+        self.index = index
+        self.children = children or []
+
+    def __repr__(self):
+        str = []
+        for i in range(len(self.rule.rhs)):
+                if i == self.index:
+                        str.append('^')
+                str.append(self.rule.rhs[i] + ' ')
+        return '<%s => %s at %s:%s>' % (self.rule.lhs, string.join(str, '')[:-1], self.left, self.right)
+
+    def advanceOver(self, chart, constituent):
+        rule = self.rule
+        if self.right == constituent.left and rule.rhs[self.index] == constituent.type:
+                if chart.TRACE:
+                        print 'advancing', self, 'over', constituent
+                chart.addEdge(Edge(rule, self.left, constituent.right, self.index + 1, self.children + [constituent]))
+
+    def active(self):
+        return self.index < len(self.rule.rhs)
+
+class Chart:
+    TRACE = 0
+
+    def __init__(self, rules=None):
+        self.rules = rules
+
+    def init(self, n):
+        self.edges = map(lambda n:[], range(n))
+        self.constituents = map(lambda n:[], range(n))
+            
+    def parse(self, string):
+        tokens = tokenize(string)
+        self.init(len(tokens))
+        for i in range(len(tokens)):
+            token = tokens[i]
+            if token not in ["", ".", "?", ","]:
+                self.addToken(token, i)
+        return self.spans()
+
+    def spans(self):
+        return filter(lambda c, len=len(self.edges):c.right == len, self.constituents[0])
+
+    def addToken(self, token, position):
+        for tag in tags(token):
+            self.addConstituent(PreTerminal(tag, token, position))
+
+    def addConstituent(self, constituent):
+        if self.TRACE:
+            print 'adding', constituent,
+            print 'at', constituent.left, '[]', constituent.left
+        self.constituents[constituent.left].append(constituent)
+        for edge in self.edges[constituent.left]:
+            edge.advanceOver(self, constituent)
+        for rule in self.rules:
+            if rule.matches(constituent.type):
+                Edge(rule, constituent.left).advanceOver(self, constituent)
+
+    def addEdge(self, edge):
+        if self.TRACE:
+            print 'adding', edge
+        if edge.active():
+            if edge.right < len(self.edges):
+                self.edges[edge.right].append(edge)
+                for constituent in self.constituents[edge.right]:
+                    edge.advanceOver(self, constituent)
+        else:
+            self.addConstituent(Constituent(edge.rule.lhs, edge.children, edge.left, edge.right))
+
+
+TAGS = {
+    '1': NUMBER,
+    
+    'teaspoon': UNIT,
+    'teaspoons': UNIT,
+    'tablespoon': UNIT,
+    'tablespoons': UNIT,
+    'cup': UNIT,
+    'cups': UNIT,
+    'strip': UNIT,    
+    'strips': UNIT,
+    'piece': UNIT,
+    'pieces': UNIT,
+    'lbs': UNIT,
+    'oz': UNIT,
+    'oz.': UNIT,
+    'ounce': ADJ,
+    'ounces': UNIT,    
+    'quarts': UNIT,
+    'whole': UNIT,
+    'each': UNIT,
+    'can': UNIT,
+    'slice': UNIT,
+    'slices': UNIT,    
+    'tsp': UNIT,
+    'package': UNIT,
+    'tbsp': UNIT,
+    'bunch': UNIT,    
+    'lb': UNIT,
+    'carton': UNIT,
+    'dash': UNIT,    
+    'recipe': UNIT,
+    'pkg': UNIT,
+    'jar': UNIT,
+    'bag': UNIT,
+    'pound': UNIT,
+    'cans': UNIT,
+    'inch': UNIT,
+    'bottle': ADJ,
+    'pounds': ADJ,
+    'inches': ADJ,
+
+    'freshly': ADV,
+    'finely': ADV,
+    'thinly': ADV,
+    'thickly': ADV,
+    'lightly': ADV,
+    'coarsely': ADV,
+    'roughly': ADV,
+    'vertically': ADV,
+    
+    'sliced': ADJ,
+    'ground': ADJ,
+    'chopped': ADJ,
+    'halved': ADJ,
+    'fresh': ADJ,
+    'babby': ADJ,
+    'torn': ADJ,
+    'red': [ADJ],
+    'cooking': ADJ,    
+    'black': ADJ,
+    'unflavored': ADJ,
+    'yellow': ADJ,
+    'mild': ADJ,
+    'parmesan': ADJ,
+    'quartered': ADJ,
+    'brown': ADJ,
+    'baking': ADJ,
+    'button': ADJ,
+    'large': ADJ,
+    'all-purpose': ADJ,
+    'small': ADJ,
+    'uncooked': ADJ,
+    'porterhouse': ADJ,
+    'dried': ADJ,
+    'picked': ADJ,
+    'port': ADJ,
+    'blue': ADJ,
+    'sesame': ADJ,
+    'kalamata': ADJ,
+    'peeled': ADJ,
+    'dry': ADJ,
+    'white': ADJ,
+    'cinnamon': N,
+    'peanut': ADJ,
+    'golden': ADJ,
+    'canola': ADJ,
+    'nonalcoholic': ADJ,
+    'creamy': ADJ,
+    'non-latex': ADJ,
+    'flat': ADJ,
+    'baby': ADJ,
+    'warm': ADJ,
+    'thin': ADJ,
+    'shoulder': ADJ,
+    'purchased': ADJ,
+    'sharp': ADJ,
+    'flat-leaf': ADJ,
+
+    'drained': ADJ,
+    'hot': ADJ,
+    'feta': ADJ,
+    'goat': ADJ,
+    'pizza': N,
+    'sandwich': N,
+    'lump': ADJ,
+    'light': ADJ,
+    'serrano': ADJ,
+    'green': ADJ,
+    'divided': ADJ,
+    'mexican': ADJ,
+    'roquefort': ADJ,
+    'low-sodium': ADJ,
+    'paper': ADJ,
+    'pequin': ADJ,
+    'cold': ADJ,
+    'merlot': ADJ,
+    'bread-and-butter': ADJ,
+    'sandwich-cut': ADJ,
+
+    'sun-dried': ADJ,
+    'bottled': ADJ,
+    'boneless': ADJ,
+    'alpine': ADJ,
+
+    'lite': ADJ,
+    'refrigerated': ADJ,
+
+    'presliced': ADJ,
+    'chuck': ADJ,
+    'trimmed': ADJ,
+    'rock': ADJ,
+    'flavored': ADJ,
+    'heavy': ADJ,
+    'hard': ADJ,
+    'farfalle': N,
+
+    'precooked': ADJ,
+    'washed': ADJ,
+    'extrasharp': ADJ,
+    'romano': ADJ,
+    'american': ADJ,
+    'virgin': ADJ,
+    'bouquet': ADJ,
+
+    'spanish': ADJ,
+    'thick': ADJ,
+    'quality': ADJ,
+    'provolone': ADJ,
+    'pitted': ADJ,
+
+    'cubed': ADJ,
+    'part': ADJ,
+    'cream-style': ADJ,
+    '1%': ADJ,
+    'evaporated': ADJ,
+
+    'skinless': ADJ,
+    'peppercorns': N,
+
+    'Asiago': N,
+    'balsamic': N,
+    'meatballs': N,
+    'yogurt': N,
+    'sole': N,
+    'cubes': N,    
+    'noodles': N,
+    'juice': N,
+    'sherry': N,
+    'zucchini': N,
+    'eggs': N,
+    'salmon': N,
+    'shallots': N,
+    'duckling': N,
+    'radicchio': N,
+    'currants': N,
+    'tequila': N,
+    'fennel': N,
+    'seeds': N,    
+    'madeira': N,
+    'coriander': N,
+    'chicken': N,
+    'celery': N,
+    'pumpkin': N,
+    'jelly': N,
+    'arugula': N,
+    'oregano': N,
+    'olives': N,
+    'beef': N,
+    'parsley': N,
+    'beer': N,
+    'relish': N,
+    'cumin': N,
+    'steak': N,
+    'manicotti': N,
+    'enchilada': N,
+    'barbecue': N,
+    'soy': N,
+    'powder': N,
+
+    'cleaned': ADJ,
+    'sourdough': ADJ,
+    'herbes': ADJ,
+    'seedless': ADJ,
+    'skinned': ADJ,
+    'medium-sized': ADJ,
+    'swiss': ADJ,
+    'parmigiano-reggiano': ADJ,
+    'romaine': ADJ,
+    'stewed': ADJ,
+    'whole-kernel': ADJ,
+    'extra-virgin': ADJ,
+    'gold': ADJ,
+    'fine': ADJ,
+    'chipotle': ADJ,
+    'rice': [N, ADJ],
+    'asiago': ADJ,
+    'gruyere': ADJ,
+    'flank': ADJ,
+    'firm-fleshed': ADJ,
+    'spicy': ADJ,
+    'domestic': ADJ,
+    'brine-packed': ADJ,
+    'dijon': ADJ,
+    'low-fat': ADJ,
+    'tube-shaped': ADJ,
+    'reduced-sodium': ADJ,
+    'sea': ADJ,
+    'italian-seasoned': ADJ,
+    'de-veined': ADJ,
+    'seeded': ADJ,
+    'striped': ADJ,
+    'ancho': ADJ,
+    'rinsed': ADJ,
+    'balsamic': ADJ,
+    'kosher': ADJ,
+    'part-skim': ADJ,
+    'julienne-cut': ADJ,
+    'sweet': ADJ,
+    'yukon': ADJ,
+    'angel': ADJ,
+    '2%': ADJ,
+    'shiitake': ADJ,
+    'fat-free': ADJ,
+    'basmati': ADJ,
+    'buttermilk': [N, ADJ],
+
+    'seasoned': ADJ,
+    'bbq': ADJ,
+    'firm': ADJ,
+    'short-grain': ADJ,
+
+    'frozen': ADJ,
+    'plain': ADJ,
+    'fontina': ADJ,
+    'melted': ADJ,
+    'squeezed': ADJ,
+    'cracked': ADJ,
+    'ripe': ADJ,
+    'queso': ADJ,
+
+    'kidney': ADJ,
+
+    'crumbled': ADJ,
+
+    'extrafirm': ADJ,
+    'toasted': ADJ,
+
+    'poblano': ADJ,
+
+
+    'cilantro': N,
+    'swordfish': N,
+    'cannellini': N,
+    'peppers': N,
+    'mushroom': N,
+    'ginger': N,
+    'pitas': N,
+    'broth': N,
+    'crusts': N,
+    'tomatoes': N,
+    'tuna': N,
+    'butter': N,
+    'tapenade': N,
+    'margarine': N,
+    'ham': N,
+    'chives': N,    
+    'fettuccine': N,
+    'yolk': N,
+
+    'crushed': ADJ,
+    'garlic': N,
+    'stone-ground': ADJ,
+
+    'canned': ADJ,
+    'block-style': ADJ,
+    'ranch': ADJ,
+    'english': ADJ,
+
+    'smoked': ADJ,
+    'less-sodium': ADJ,
+    'cheddar': N,
+    'roasted': ADJ,
+    'cherry': N,
+    'jarred': ADJ,
+    'cayenne': ADJ,
+    'tawny': ADJ,
+    'enchilada': ADJ,
+
+    'dark': ADJ,
+    'snipped': ADJ,
+
+    'minced': ADJ,
+    'soft': ADJ,
+    'reduced': ADJ,
+    'italian': ADJ,
+    'old': ADJ,
+
+
+    'reduced-fat': ADJ,
+
+    'pickles': N,
+    'lentils': N,
+    'peas': N,
+    'pasta': N,
+    'paste': N,
+    'breadsticks': N,
+    'beans': N,
+    'shrimp': N,
+    'tofu': N,
+    'tenderloin': N,
+    'mushrooms': N,
+    
+    'leaf': ADJ,
+
+    'lean': ADJ,
+    'ice': ADJ,
+    'lime': [ADJ, N],
+
+    'diced': ADJ,
+    'wheat': ADJ,
+
+    'corn': ADJ,
+    
+    'plum': ADJ,
+
+    'cranberry': ADJ,
+    'mixed': ADJ,
+
+    'block': ADJ,
+
+    'unsalted': ADJ,
+
+    'soy': ADJ,
+    'leeks': N,
+    'extravirgin': ADJ,
+    'lasagna': [N, ADJ],
+    'shells': N,
+    'deveined': ADJ,
+    'marsala': ADJ,
+    'long': ADJ,
+    'grated': ADJ,
+    'homemade': ADJ,
+    'medium': ADJ,
+
+    'basil': N,
+    'cottage': ADJ,
+
+    'center-cut': ADJ,
+    'paprika': N,
+    'almonds': N,
+    'cornmeal': N,
+    'jumbo': ADJ,
+    'rotisserie': ADJ,
+    'sirloin': ADJ,
+
+    'pie': ADJ,
+    'boboli': ADJ,
+    'penne': N,
+
+    'marinated': ADJ,
+    'lemon': N,
+    'rubbed': ADJ,
+
+    'cheese-crumbled': ADJ,
+    'undrained': ADJ,
+    'mustard': N,
+    'shredded': ADJ,
+
+    'prepared': ADJ,
+    'herbs': N,
+    'gorgonzola': ADJ,
+    'kaiser': ADJ,
+    'capers': N,
+
+    'caraway': N,
+    'jalapeno': N,
+    'potato': N,
+    'low-salt': ADJ,
+    'cooked': ADJ,
+    'five-spice': ADJ,
+    'fusilli': N,
+
+    'wine': N,
+    'sauce': N,
+    'pepper': N,    
+    'thyme': N,
+    'onion': N,
+    'salt': N,
+    'spinach': N,    
+    'olive': N,
+    'oil': N,
+    'spray': N,
+
+
+    'milk': N,
+    'blueberries': N,
+    'grape': [N, ADJ],
+    'couscous': N,
+    'sage': [N, ADJ],
+    'tortillas': N,
+    'limes': N,
+    'asparagus': N,
+    'orzo': N,
+    'pork': N,
+    'seasoning': N,
+    'bacon': N,
+    'spaghetti': N,
+    'sausage': N,
+    'sauerkraut': N,
+    'tarragon': N,
+    'scallops': N,
+    'chiles': N,
+    'water': N,
+    'mozzarella': N,
+    'vinegar': N,
+    'salami': N,
+    'breadcrumbs': N,
+    'apple': N,
+    'sugar': N,
+    'grouper': N,
+    'matchsticks': N,
+    'vodka': N,
+    'hamburger': N,
+    'cornflakes': N,
+    'honey': N,
+    'carrot': N,
+    'onions': N,
+    'chive': N,
+    'salsa': N,
+    'tomato': N,
+    'portobello': N,
+    'egg': N,
+    'eggplants': N,
+    'muffin': ADJ,
+    'artichoke': N,
+    'avocado': N,
+    'buns': N,
+    'cremini': N,
+    'orange': N,
+    'ricotta': N,
+    'pesto': N,
+    'flour': N,
+    'wasabi': N,
+    'vegetable': [N, ADJ],
+    'potatoes': N,
+    'cider': N,
+    'roast': N,
+    'stock': N,
+    'rosemary': N,
+    'crabmeat': N,
+    'fish': N,
+    'mayonnaise': N,
+    'linguini': N, # TODO
+    'linguine': N,
+    'nutmeg': N,
+    'cloves': N,
+    'cornstarch': N,
+    'grapes': N,
+    'cucumber': N,
+    'horseradish': N,
+    'cheese': N,
+    'tilapia': N,
+    'lettuce': N,
+    'banana': N,
+    'vermicelli': N,
+    'tortellini': N,
+    'coconut': N,
+    
+        }
+
+RULES = map(Rule, [
+    [QUANTITY, NUMBER, UNIT],
+    [QUANTITY, UNIT],
+
+    [AP, ADV, ADJP],
+
+    [ADJP, ADJ],
+    [ADJP, ADJP, ADJ],        
+
+    [NP, N],
+    [NP, AP, N],
+    [NP, ADJP, N],
+
+    [NP, QUANTITY, N],
+    [NP, QUANTITY, AP, N],    
+    [NP, QUANTITY, ADJP, N],
+
+    [N, N, N],
+    [N, "red", "pepper"],
+    [N, "black", "pepper"],    
+    
+    ])
+
+
+def parse_ingredient(line):
+    result = Chart(rules=RULES).parse(line)
+    if result:
+        last = result[-1]
+        if last.type==NP:
+            for c in last.children:
+                if c.type==N:
+                    return " ".join(c.tokens())
+    
+def testing():
+    f = file("ingredient_list")
+    il = f.read()
+    for line in il.split("\n"):
+        if line:
+            r = parse_ingredient(line)
+            if r:
+                print r
+            #print "Input:", line
+                #print type(result[-1].children)
+                #    print i
+                #print result
+            #print "Output:", result
+
+        
+if __name__=="__main__":
+    testing()
+
+ 
+
+]]>
+    </redfoot:codestr>
+  </redfoot:Python>
+
+
+
+</rdf:RDF>

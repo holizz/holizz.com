@@ -1,0 +1,25 @@
+Order
+<p>Fill out this form then I shall bill you and send you a keyboard!</p>
+
+<!-- I made the order form... I just didn't make the CGI to process it because CGI.pm sucks -->
+
+<form action="/cgi-bin/SubmitOrder.cgi" method="post" accept-charset="UTF-8">
+
+<p><label for="name">Name: </label><input type="text" id="name" /></p>
+
+<p><label for="card-number">Credit card number: </label><input type="text" id="card-number" /> (with or without punctuation marks).</p>
+
+<p><label for="address">Address: </label><textarea id="address" rows="4" cols="20"></textarea></p>
+
+<p><label for="keyboard">Keyboard: </label>
+	<select id="keyboard">
+		<option id="kinesis-contoured">Kinesis Contoured</option>
+		<option id="kinesis-evolution">Kinesis Evolution</option>
+		<option id="maltron-ergonomic-3d">Maltron Ergonomic 3D</option>
+		<option id="handykey-twiddler-2">Handykey Twiddler 2</option>
+	</select>
+</p>
+
+<p><input type="submit" value="Submit!" /></p>
+
+</form>

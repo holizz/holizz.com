@@ -1,0 +1,424 @@
+<?xml version="1.0"?>
+<rdf:RDF 
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:r="http://donnafales.com/2002/07/28/recipe-schema#"
+>
+
+  <r:Recipe rdf:about="http://donnafales.com/2002/07/28/#recipe">
+    <rdfs:label>
+      Lentil-Rice Salad with Lemon-Basil Vinaigrette
+    </rdfs:label>
+    <rdfs:comment>
+      This is a great summer salad, and goes well with grilled fish of
+any kind or by itself.  I make this a few times a month in the summer
+when we grill out frequently--its very easy to prepare and is low in
+fat.  The lentil and rice mixture should marinate in the vinaigrette
+for at least 4 hours.  If you have the time, let it marinate for 24
+hours.
+    </rdfs:comment>
+
+    <r:ingredients rdf:parseType="Resource">
+        <r:ingredient rdf:parseType="Resource">
+          <rdfs:label>
+            1/2 cup dry lentils
+          </rdfs:label>
+        </r:ingredient>
+
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+	  1/2 cup long grain rice
+        </rdfs:label>
+      </r:ingredient>
+
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+	  1/2 cup chopped red pepper
+        </rdfs:label>
+      </r:ingredient>
+
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+	  1/2 cup shredded carrot
+        </rdfs:label>
+      </r:ingredient>
+
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+	  1/4 cup sliced green onion (2)
+        </rdfs:label>
+      </r:ingredient>
+
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+	  2 cups water
+        </rdfs:label>
+      </r:ingredient>
+    </r:ingredients>
+
+    <r:ingredients rdf:parseType="Resource">
+      <rdfs:label>Vinaigrette</rdfs:label>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+	  3 tablespoons olive oil          
+        </rdfs:label>
+      </r:ingredient>
+
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+	  1/2 teaspoon finely shredded lemon peel          
+        </rdfs:label>
+      </r:ingredient>
+
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+	  3 tablespoons fresh lemon juice          
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+	  1 1/2 teaspoons snipped fresh basil or 1/2 teaspoon dried crushed basil          
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+	  1/4 teaspoon salt          
+        </rdfs:label>
+      </r:ingredient>
+    </r:ingredients>
+
+    <r:directions rdf:parseType="Resource">
+      <r:first rdf:parseType="Resource">
+        <rdfs:label>
+          Rinse and drain lentils.  Transfer to medium saucepan; add water.  Bring to boiling; reduce heat.  Simmer, covered for 5 minutes.  Add uncooked rice.  Cover and simmer 15 minutes more.  Remove from heat.  Let stand, covered for about 10 minutes.  Drain, rinse with cold water and drain again.
+        </rdfs:label>
+      </r:first>
+      <r:rest rdf:parseType="Resource">
+        <r:first rdf:parseType="Resource">
+          <rdfs:label>
+            In large mixing bowl combine lentil mixture, red pepper, carrot, and green onions.  Set aside.
+          </rdfs:label>
+        </r:first>
+        <r:rest rdf:parseType="Resource">
+          <r:first rdf:parseType="Resource">
+            <rdfs:label>
+              For the vinaigrette, in a screw-top jar combine oil, lemon peel, lemon juice, basil, and salt.  Cover and shake well.  Pour over lentil mixture, and stir gently to coat.  Cover and chill for 4 to 24 hours.
+            </rdfs:label>
+          </r:first>
+          <r:rest rdf:parseType="Resource">
+            <r:first rdf:parseType="Resource">
+              <rdfs:label>
+                Serve with tomato wedges
+              </rdfs:label>
+            </r:first>
+          </r:rest>
+        </r:rest>
+      </r:rest>
+    </r:directions>
+  </r:Recipe>
+
+  <r:Recipe rdf:about="http://donnafales.com/2002/07/21/#recipe">
+    <rdfs:label>
+      Chicken Enchilada Bake with Spicy Mushroom Sauce
+    </rdfs:label>
+    <rdfs:comment>
+      I found this recipe in Cooking Light magazine, but modified it a
+bit. I added jalapeno peppers in place of the Anaheim chiles and used
+homemade chicken stock in place of the canned chicken broth. Using
+homemade stock really makes a difference in cooking sauces like this
+one -- or any recipe that calls for chicken broth. This dish takes
+some time to prepare, but it's worth the effort. I recommend wearing
+non-latex plastic gloves while chopping and pealing the jalapenos --
+you dont want to accidentally rub your eyes after touching the
+peppers.
+    </rdfs:comment>
+
+    <r:ingredients rdf:parseType="Resource">
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          2 poblano chiles (about 6 ounces) 
+        </rdfs:label>
+      </r:ingredient>
+
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          2 jalapeno peppers (about 4-1/2 ounces) 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1 red bell pepper 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1 tablespoon olive oil 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          3 cups sliced cremini mushrooms (about 8 ounces) 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1-1/2 cups sliced shiitake mushrooms (about 1 (3-1/2-ounce) package) 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1/2 cup sliced green onions 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          2 garlic cloves, minced 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          2 tablespoons all-purpose flour 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1/2 teaspoon dried rubbed sage 
+        </rdfs:label> 
+     </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1/4 teaspoon ground cumin 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1/4 teaspoon black pepper 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1-1/4 cups homemade chicken stock (or canned chicken broth) 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1/2 cup water 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          4 ounces block-style fat-free cream cheese (about 1/2 cup), softened 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1/2 cup (2 ounces) shredded Monterey Jack cheese 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          Cooking spray 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          9 (6-inch) corn tortillas, cut in half 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          2-1/4 cups chopped skinned roasted chicken breast (about 3/4 pound) 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1/4 cup (1 ounce) grated fresh Romano cheese 
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          Non-latex plastic gloves (for handling hot peppers) 
+        </rdfs:label>
+      </r:ingredient>
+    </r:ingredients>
+    <r:directions rdf:parseType="Resource">
+      <r:first rdf:parseType="Resource">
+        <rdfs:label>
+          Preheat broiler. 
+        </rdfs:label>
+      </r:first>
+      <r:rest rdf:parseType="Resource">
+        <r:first rdf:parseType="Resource">
+          <rdfs:label>
+            Cut the chiles and bell pepper in half lengthwise, and discard seeds and membranes. Place chile and bell pepper halves, skin sides up, on a foil-lined baking sheet, and flatten with hand. Broil for 5 minutes or until blackened, turning occasionally. Place in a zip-top plastic bag, and seal. Let stand 15 minutes; peel and chop chiles, jalapeno and bell pepper. 
+          </rdfs:label>
+        </r:first>
+        <r:rest rdf:parseType="Resource">
+          <r:first rdf:parseType="Resource">
+            <rdfs:label>
+Heat oil in a large nonstick skillet over medium heat. Add mushrooms, onions, and garlic; saut 5 minutes. Stir in flour, sage, cumin, and black pepper, and cook 2 minutes. Stir in chopped chiles and bell pepper, chicken stock, and water; simmer 5 minutes or until thick, stirring constantly. Stir in cream cheese. Remove from heat; stir in Jack cheese. 
+            </rdfs:label>
+          </r:first>
+          <r:rest rdf:parseType="Resource">
+            <r:first rdf:parseType="Resource">
+              <rdfs:label>
+Preheat oven to 350 degrees. 
+              </rdfs:label>
+            </r:first>
+            <r:rest rdf:parseType="Resource">
+              <r:first rdf:parseType="Resource">
+                <rdfs:label>
+                  Spoon 1 cup mushroom sauce into an 11 x 7-inch baking dish coated with cooking spray; top with 6 tortilla halves, 3/4 cup chicken, and 1 cup sauce. Repeat layers twice, ending with sauce. Sprinkle with Romano. Cover and bake at 350 degrees for 35 minutes or until bubbly. Let stand 10 minutes.
+                </rdfs:label>
+              </r:first>
+            </r:rest> 
+          </r:rest>
+        </r:rest>
+      </r:rest>
+    </r:directions>
+  </r:Recipe>
+
+  <r:Recipe rdf:about="http://donnafales.com/2002/07/14/#recipe">
+    <rdfs:label>Champagne-Feta Risotto</rdfs:label>
+
+    <r:ingredients rdf:parseType="Resource">
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>
+          1/3 cup water
+        </rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1/2 teaspoon dried basil</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>2 (16-ounce) cans fat-free, less-sodium chicken broth</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1 tablespoon olive oil</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1 cup chopped onion</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1 cup Arborio rice or other short-grain rice</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1/2 cup Champagne or white wine</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>2/3 cup (about 2-1/2 ounces) crumbled feta cheese</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1/4 cup (1 ounce) grated fresh Parmesan cheese</rdfs:label>
+      </r:ingredient>
+    </r:ingredients>  
+
+
+    <r:directions rdf:parseType="Resource"> 
+      <r:first rdf:parseType="Resource">
+        <rdfs:label>
+          Bring the first 3 ingredients to a simmer in a medium saucepan (do not boil). Keep warm over low heat.
+        </rdfs:label>
+      </r:first>
+      <r:rest rdf:parseType="Resource">  
+        <r:first rdf:parseType="Resource">
+          <rdfs:label>
+            Heat oil in a large saucepan over medium-high heat. Add onion, and saut 3 minutes. Add rice; saut 2 minutes. Stir in Champagne; cook 1 minute or until the liquid is absorbed. Stir in 1 cup broth mixture; cook for 5 minutes or until liquid is nearly absorbed, stirring constantly. Reduce heat to medium. Add remaining broth mixture, 1/2 cup at a time, stirring constantly until each portion of broth is absorbed before adding the next (about 25 minutes total). Stir in feta. Sprinkle each serving with Parmesan cheese.
+          </rdfs:label>
+        </r:first>
+      </r:rest>  
+    </r:directions>  
+  </r:Recipe>
+
+  <r:Recipe rdf:about="http://donnafales.com/2002/07/07/#recipe">
+    <rdfs:label>Fontina, Asparagus, and Leek Strata</rdfs:label>
+
+    <r:ingredients rdf:parseType="Resource">  
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1 tablespoon butter or stick margarine</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>5 cups (1-inch) sliced asparagus (about 1-1/2 pounds)</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>2 cups thinly sliced leeks (about 3 small)</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1/2 cup water</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>3 tablespoons chopped fresh parsley</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>2 teaspoons minced fresh or 1/2 teaspoon dried tarragon</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1 teaspoon grated lemon rind</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1/4 teaspoon salt</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1/4 teaspoon black pepper, divided</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>12 (1-ounce) thin slices firm white sandwich bread (such as Pepperidge Farm)</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>Cooking spray</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1 cup (4 ounces) shredded fontina cheese, divided</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>2-1/2 cups 1% low-fat milk</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>3 large eggs</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1 large egg white</rdfs:label>
+      </r:ingredient>
+      <r:ingredient rdf:parseType="Resource">
+        <rdfs:label>1-1/2 cups fresh breadcrumbs (about 3 slices)</rdfs:label>
+      </r:ingredient>
+    </r:ingredients>  
+
+    <r:directions rdf:parseType="Resource">
+      <r:first rdf:parseType="Resource">
+        <rdfs:label>
+          Melt butter in a large nonstick skillet over medium-high heat; add asparagus, leeks, and water. Bring to a boil; cover, reduce heat, and simmer for 10 minutes or until tender, stirring occasionally. Stir in parsley, tarragon, lemon rind, salt, and 1/8 teaspoon pepper.
+        </rdfs:label>
+      </r:first>
+      <r:rest rdf:parseType="Resource">
+        <r:first rdf:parseType="Resource">
+          <rdfs:label>
+            Arrange half of bread slices in a single layer in a 13 x 9-inch baking dish coated with cooking spray. Top bread slices with half of asparagus mixture, and sprinkle with 1/2 cup cheese. Repeat procedure with the remaining bread, asparagus mixture, and 1/2 cup cheese.
+          </rdfs:label>
+        </r:first>
+        <r:rest rdf:parseType="Resource">
+          <r:first rdf:parseType="Resource">
+            <rdfs:label>
+               Combine 1/8 teaspoon pepper, milk, eggs, and egg white, and stir with a whisk until well-blended. Pour the milk mixture over strata. Cover strata, and chill for 8 hours or overnight.
+            </rdfs:label>
+          </r:first>
+          <r:rest rdf:parseType="Resource">
+            <r:first rdf:parseType="Resource">
+              <rdfs:label>
+                Preheat oven to 400F.
+              </rdfs:label>
+            </r:first>
+            <r:rest rdf:parseType="Resource">
+              <r:first rdf:parseType="Resource">
+                <rdfs:label>
+                  Uncover strata; sprinkle with breadcrumbs. Bake at 400F for 40 minutes or until set.                
+                </rdfs:label>
+              </r:first>              
+            </r:rest>
+          </r:rest>
+        </r:rest>
+      </r:rest>
+    </r:directions>  
+  </r:Recipe>
+</rdf:RDF>

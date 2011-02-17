@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:rec="http://donnafales.com/2002/07/28/recipe-schema#"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	xmlns:wot="http://xmlns.com/wot/0.1/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<rec:Recipe rdf:about="http://holizz.com/Testing/egg-replacer">
+	<dc:title>Egg-replacer</dc:title>
+	<dc:description>This is a common ingredient in vegan recipes that acts as a binding agent in cakes and such.</dc:description>
+	<rec:ingredients>
+		<rec:ingredient><rdfs:label>1 tbsp soy flour</rdfs:label></rec:ingredient>
+	</rec:ingredients>
+	<rec:ingredients>
+		<rec:ingredient><rdfs:label>2 tbsp water</rdfs:label></rec:ingredient>
+	</rec:ingredients>
+	<rec:directions>
+		<rec:first><rdfs:label>Mix all ingredients</rdfs:label></rec:first>
+	</rec:directions>
+</rec:Recipe>
+
+</rdf:RDF>

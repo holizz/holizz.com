@@ -1,0 +1,76 @@
+1 Goals
+1.1 AltKeys sells alternative keyboards and keyers.
+1.2 AltKeys' website is their only store. Without the web, AltKeys would find it next-to-impossible to break even since alternate keyboards are such a nieche market
+1.2.1 What? TODO
+1.2.2 Of course! They shall add new keyboards to the line already offered
+1.2.3 Sure! The goal of any start-up is to sell themselves to somebody, right?
+1.3 Ideally, everybody who uses a keyboard; realistically, disabled people and those who think ahead and don't want to be disabled by RSI. There are no members. To attract new customers. The affluent type who like keyboards. No, anybody is welcome to buy from us.
+1.4 Because they want a good keyboard. Duh.
+2 User Experience
+2.1 TODO
+2.2 TODO
+2.3 Competition
+3 Content and Functionality
+3.1 There's no content available so I made the site from scratch.
+3.1.1
+3.2 They just want a site. They don't care about anything.
+4 Site Structure
+4.1 Okay, done that.
+4.2
+4.3 There's a navigation bar on the left on every page. I'm not stupid enough to leave pages with no navigation.
+4.3.1 Done.
+4.3.2 Only top-level nav.
+4.3.3 It's just fine as it is.
+5 Visual Design
+5.1 What?
+5.2 Sure...
+5.3 Right
+5.4 Yes.
+
+A Competitive Analysis
+
+http://kinesis-ergo.com/
+http://www.maltron.com/
+http://www.handykey.com/
+
+Mi malamas paperovorko; la desegno estas la kodo.
+
+B Content Inventory
+
+Your specification and design document
+
+   1. Goals
+         1. Company mission & purpose. What do your clients do? How do they operate as an organisation? What are their reasons for existing?
+         2. Site goals. What do your clients hope to achieve by having a web site? Is it just a replication of their paper brochure/leaflets? Do they have a reason at all - or are they just trying to keep up with the trends and the competition?
+               1. Short term (0-3 months).
+               2. Mid term (4-12 months). Do they intend on updating their site regularly? Do they have ideas for adding content at a later stage?
+               3. Long term (13-24 months). Do they have any long term goals? 
+         3. Intended audience(s)? Is the site just for existing members of the organisation? To attract new members? What types of visitors do they want to attract? Is there anyone they don't want to attract?
+         4. Why will visitors bother? Why will people come to the site? 
+   2. User Experience
+         1. Audience Definition. Categorise and rank each type of intended audience. What are the most important goals and needs of each audience type? Rank each of their goals and requirements.
+         2. Scenarios. These are stories of users potential experiences with the site. From your audience definitions, work out a set (or sets) of users that represent the majority of visitors. For each user write a scenario, creating a character (name, background and task to accomplish on the site) along with a story of how they will be able to use the site to achieve their requirement.
+         3. Competitive Analysis. Make a list of the competition. Your client should be able to give you a list, but also search on the web for other organisations that are aiming at similar audiences. Create a list of competitors web sites and detail their strengths and weaknesses, both in design/layout as well as functionality and implementation. If possible include some screenshots with your descriptions. 
+   3. Content and functionality
+         1. Content available. What text and images do they want on their site? Is it available immediately? What format is it in (paper, Word, disks?) Do they have a logo and corporate style? Colour schemes? Don't forget to include the "policy" documents such as copyright notices, membership conditions, privacy policy etc. You will also need to address any interstitial pages such as section indexes and introductions.
+               1. Group and Label Content. Describe different ways of organising the content available. Give short descriptive labels to each type (group) of content. Put yourself in the scenarios from the previous section (2.b) and see if the labels are intuitive. There is no right or wrong way of grouping content, but if you don't pay enough thought to it the end result (your site) may be unusable to your key audiences. 
+         2. Functional requirements. The site will be fairly basic, but you should find out how they want people to be able to use the site. Do they want to include links to other sites? Do they want their contact information including? Do they have an email address they want to use? What else would they like their visitors to be able to do? Bear in mind it may not be possible on this occasion to develop some features not covered in this course. 
+   4. Site Structure
+         1. Site structure listing. This is where you start mapping out how the site contents are going to fit together. Use your content inventory (3.a & Appendix B), and your ideas on Grouping and Labeling Content (3.i) to work out the best structure for your site contents. A well designed site structure will make it easier to define your navigation elements.
+         2. Architectural blueprints. Put your Site Structure listing into pictures. Draw digram that is a visual representation of the intended site structure showing the hierarchies of different sections of content.
+         3. Navigation elements. How will the defined audiences find their way around the site? If they enter the site via a search engine they won't see the main home page. You need to make sure that every page on the site has some form of navigation which will enable the user to access the rest of the site.
+               1. Global navigation. Take a look at your Site Structure Listing. The major sections you defined are probably good candidates for the global navigation. It is also a good idea to include the company logo as a link back to the main homepage.
+               2. Local navigation. This is not always necessary, particularly for small sites. However usually it takes the form of a list of topics within that section of the site, or a list of related items on the site.
+               3. Additional navigational facilities 
+   5. Visual Design
+         1. Layout grids
+         2. Design sketches
+         3. Page mockups
+         4. Web based prototype 
+
+Appendix A: Competitive Analysis
+
+You should summarise your competitive analysis in section 2.c above and then use this appendix to display your full results.
+Appendix B:Content Inventory
+
+Section 3.a above should be a summary of this entire content inventory. Include names and descriptions of all forms of content supplied, including printed and verbal material as well as files supplied on disk.

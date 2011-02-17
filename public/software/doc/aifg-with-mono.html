@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang=en>
+<title>AIFG with Mono</title>
+
+<!-- AIFG with Mono is
+     Copyright (C) 2006 Tom Adams
+
+     This program is free software; you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation; either version 2 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program; if not, write to the Free Software
+     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+-->
+
+<h1>AIFG with Mono</h1>
+<p>This short <a href="http://en.wikipedia.org/wiki/HOWTO">HOWTO</a> is for students of the AI for Games course at the <a href="http://www.brad.ac.uk/">University of Bradford</a> who wish to use <a href="http://www.mono-project.com/">Mono</a>.
+
+<p>I'll assume you already know <em>why</em> you'd want to do this course, or use Mono, so I won't attempt to convince you on either point.
+
+<h2>Notes</h2>
+
+<ul>
+<li>This document is available at the following locations:
+  <ul>
+  <li><a href="http://www.comp.brad.ac.uk/~tadams2/aifg-with-mono.html">www.comp.brad.ac.uk</a>
+  <li><a href="http://holizz.com/software/doc/aifg-with-mono.html">holizz.com</a>
+  </ul>
+<li>Throughout this HOWTO I'll assume you're doing AIFG, have a computer at your disposal, can install software, and have a vague idea about what you're doing most of the time.
+<li>AIFG uses .NET 2.0.
+<li>Mono's WinForms implementation (at the time of writing) does not support the pretty GUI that Peter Cowling will give you. Do not despair, for you can use <code>GameForFastTesting</code> to run games for you. And if you're awfully smart you can write a player that queries a human for instructions.
+</ul>
+
+<h2>Requirements</h2>
+
+<p>You will need:
+<ul>
+<li>The libraries provided with each assignment
+<li><code>gmcs</code> (<code>mcs</code> doesn't support .NET 2.0)
+<li><code>mono</code>, if you intend to execute anything
+</ul>
+
+<p>In <a href="http://www.debian.org/">Debian</a> (or derivatives, like <a href="http://www.ubuntu.com/">Ubuntu</a>): <code>apt-get install mono-gmcs mono</code> as root should do the trick.
+
+<h2>Compilation</h2>
+
+<p>Let's start with a simple example from the Tanks game (2006/7, second assignment):
+
+<pre>
+namespace GridWorld
+{
+    public class UpTank : BasePlayer {
+        public UpTank() : base() {
+            Name = "UpTank";
+        }
+        public override ICommand GetTurnCommands(IPlayerWorldState igrid) {
+            return new Command(Command.Move.Up, false);
+        }
+    }
+}
+</pre>
+
+<p>I named the file <code>UpTank.cs</code> because it's a tank that moves up.
+
+<p>If you stick the provided libraries in a directory called <code>lib</code>, the command to build our tank should look like this:
+
+<p><code>gmcs -r:lib/Tanks.dll,lib/GridWorldEngine.dll,lib/GameInterface.dll -target:library UpTank.cs</code>
+
+<dl>
+<dt><code>-r:lib/Tanks.dll,lib/GridWorldEngine.dll,lib/GameInterface.dll</code>
+<dd>The <code>-r</code> option tells <code>gmcs</code> where the extra libraries are. One or more of these will probably need changing for each assignment.
+
+<dt><code>-target:library</code>
+<dd>This tells <code>gmcs</code> that we're making a library. Otherwise it would whine about an entry point.
+</dl>
+
+<p>After that you should have <code>UpTank.dll</code> sitting next to <code>UpTank.cs</code>. Try running it in the GUI thing in the lab, or upload it to the server.
+
+<h2>Execution</h2>
+
+<p>Let's say you want to make a nice little executable to make use of <code>GameForFastTesting</code>, which is a class in the GridWorld namespace that plays games for you.
+
+<p><code>Game.cs</code> is a little file containing a class called <code>Game</code> inside the <code>GridWorld</code> namespace. I won't give you it because it requires a lot of setting up, but here's a snippet:
+
+<pre>
+namespace GridWorld {
+    class Game {
+	public static void Main() {
+            ...
+        }
+    }
+}
+</pre>
+
+<p>Compilation is pretty much the same process, except you end up with something that's executable:
+
+<p><code>gmcs -r:lib/Tanks.dll,lib/GridWorldEngine.dll,lib/GameInterface.dll,UpTank.dll -main:GridWorld.Game Game.cs</code>
+
+<dl>
+<dt><code>-r:lib/Tanks.dll,lib/GridWorldEngine.dll,lib/GameInterface.dll,UpTank.dll</code>
+<dd>Same as before, although you should also include any players you wish to use (like our protagonist, <code>UpTank</code>).
+
+<dt><code>-main:GridWorld.Game</code>
+<dd>This tells <code>gmcs</code> where the entry point is - we want to enter our piece of software in the <code>Main</code> method of the <code>Game</code> class of the <code>GridWorld</code> namespace.
+</dl>
+
+<p>Now we should have <code>Game.exe</code> sitting next to <code>Game.cs</code>. Now let's execute it with one of the following commands:
+
+<ul>
+<li><code>MONO_PATH=lib mono Game.exe
+<li><code>MONO_PATH=lib ./Game.exe
+</ul>
+
+<dl>
+<dt><code>MONO_PATH=lib</code>
+<dd>Before we <q>linked</q> to some stuff in the <code>lib</code> directory, and now we have to make reference to that once more so it can find its stuff. This is a normal environmental variable so you can run <code>MONO_PATH=lib; mono Game.exe</code> as two separate commands. Multiple paths in the variable should be separated by colons.
+</dl>
+
+<p>Now you should have some running code (or a load of exceptions). Rejoice, for you have broken free of Microsoft's monoculture just a little (Mono, monoculture, get it?).
+
+<p>And now a thanks to the course's sponsors, Microsoft, without whom this course would not have been possible. We love you and all of your products (we just don't want to use them).
+
+<h2>Feedback</h2>
+
+<p>Did you find this helpful? Yeah, no? Did I make stupid mistakes?
+
+<p>Email me: <a href="mailto:tom@holizz.com">tom@holizz.com</a> (I'd use my Bradford address, only I'm graduating soon - I hope).
+
+<p>This HOWTO is <a href="http://www.gnu.org/licenses/gpl.html">GPL</a>ed (see source). Copy and improve.

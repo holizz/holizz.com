@@ -1,0 +1,36 @@
+Keyboards
+<p>We have a wide range of alternate keyboards and keyers. But <a href="Why.html">why</a> would you want one?</p>
+
+<table>
+<tr>
+	<th>Keyboard</th>
+	<th>Price</th>
+</tr>
+
+<tr>
+	<td><p><a href="kinesis-contoured.jpg"><img src="kinesis-contoured.jpg" alt="Kinesis Contoured" /></a></p><p>Kinesis Contoured</p></td>
+	<td>&#163;194</td>
+</tr>
+
+<tr>
+	<td><p><a href="kinesis-evolution.jpg"><img src="kinesis-evolution.jpg" alt="Kinesis Evolution" /></a></p><p>Kinesis Evolution</p></td>
+	<td>&#163;156</td>
+</tr>
+
+<!-- hello, I am a comment -->
+
+<tr>
+	<td><p><a href="maltron-ergonomic-3d.jpg"><img src="maltron-ergonomic-3d.jpg" alt="Maltron Ergonomic 3D" /></a></p><p>Maltron Ergonomic 3D</p></td>
+	<td>&#163;375</td>
+</tr>
+
+<tr>
+	<td><p><a href="handykey-twiddler2.jpg"><img src="handykey-twiddler2.jpg" alt="Handykey Twiddler2" /></a></p><p>Handykey Twiddler2</p></td>
+	<td>&#163;108</td>
+</tr>
+
+<!-- and I am an evil comment!!!!!! -->
+
+</table>
+
+<!-- muahahahahahahahahahahaha!!!!!one -->

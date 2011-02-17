@@ -1,0 +1,10 @@
+#!/bin/sh
+# This file is licensed under GPL v2, and copyright (C) Tom Adams 2006.
+
+# Place this file in York's main directory (the same place as York.py).
+# Now you can run "/path/to/york/york"
+#   rather than "cd /path/to/york && ./York.py"
+# This allows easy inclusion of York in menus and launchers.
+
+cd $(echo $0 | sed 's/[^\/]*$//')
+exec ./York.py

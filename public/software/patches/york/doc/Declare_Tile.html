@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<title>Declare_Tile() - York developer documentation</title>
+<p><a href="index.html">Back to contents</a>
+<h1>Declare_Tile()</h1>
+<p>Let's start with a simple example, a T-junction. With any luck you'll recognise it.
+<p><img alt="tjunction" src="basic.tjunction_tilepic.png">
+<p>And this is the tilemask version:
+<p><img alt="tjunction tilemask" src="basic.tjunction_tilemask.png">
+<p><pre>Declare_Tile('basic.tjunction',
+            [Field(0), Road(0,1,2), Road(2,3,4), Road(4,5,0)],
+             None, None,
+             [("hfield", 0), ("qfield", 0)] +
+             [("roadend", x) for x in [0,2,3] ] + [("roaddiv", 0)])</pre>
+<p>Looks a bit complicated, eh what? Let's examine the method's type definition:
+<p><pre>def Declare_Tile(self, name, edges, flags, extra_regions, autogen_data)</pre>
+<dl>
+<dt><code>self</code>
+<dd>If you're familiar with Python, you will know that the first variable in all methods is the object. When you call a method as in <code>obj.poke()</code>, there's no need to provide the <code>self</code> - that's automagically set to <code>obj</code>. It's called <code>this</code> in Java, and you don't have to declare it manually. In fact you don't have to declare it in most languages. Python's a little funny.
+<dt><code>name = 'basic.tjunction'</code>
+<dd>That's a name you give to something. It could be meeplezilla, tom (that's a great name, by the way), or even basic.tjunction. The convention followed in most mods at the moment is modname.feature.feature.feature.etc.etc.
+<dt><code><a href="#edges">edges</a> = [Field(0), Road(0,1,2), Road(2,3,4), Road(4,5,0)]</code>
+<dd>A list of length four. That would be: <code>[North, East, South, West]</code>. It's easy to remember because it's the same way CSS does it. Each item refers to what's on that particular edge, like a road or a field.
+<dt><code>flags = None</code>
+<dd>If you want to put a penant on a city, make sure to add a flag here. It's a list, so ['s'] would give a city a bonus. This would make all city pieces bonused, but maybe shouldn't.
+<dt><code>extra_regions = None</code>
+<dd>This is super-extra confusing. Just keep your distance from this.
+<dt><code><a href="#autogen_data">autogen_data</a> = [("hfield", 0), ("qfield", 0)] + [("roadend", x) for x in [0,2,3] ] + [("roaddiv", 0)]</code>
+<dd>Well… follow the link.
+</dl>
+<h2 id=edges><code>edges</code></h2>
+<p>This item describes the edges of the tile logically - this must match the mask (see <a href="#autogen_data">autogen_data</a>).
+<p>This is best described by a pretty diagram. I used the tilemask version for clarity (and its rainbow-like quality).
+<p><img alt="tjunction explanation" src="basic.tjunction_explanation.png">
+<p>Hopefully you can see how everything fits together. Clockwise! Always clockwise!
+<h2 id="autogen_data"><code>autogen_data</code></h2>
+<p><code>[("hfield", 0), ("qfield", 0)] + [("roadend", x) for x in [0,2,3] ] + [("roaddiv", 0)]</code>
+<p>Let's break it down. A whale sandwitch as one of my lecturers would say. The plusses concatenate in this context. Gotta love operator overloading.
+<dl>
+<dt><code>[("hfield", 0), ("qfield", 0)]</code>
+<dd>The first tuple (fancy word for an immutable list) says to use the hfield (<code>autogen/hfield.fig</code>) to the mask in orientation 0 (i.e. no rotation). The second adds a qfield mask. These two together have the effect of creating one field in the North, and two fields in the South. Funnily enough, they look a lot like the tilemask but without the roads. If we didn't do this, the whole field would be red on the mask, and if the masked edges don't match the logical edges, we'll get a big exception.
+<dt><code>[("roadend", x) for x in [0,2,3] ]</code>
+<dd>If you're familiar with Python, I won't have to tell you that this is an example of list comprehension (pretty useful). It's identical to writing the tuple out thrise with the values in <code>[0,2,3]</code> in place of x.
+<p>This gives us three roadend masks. Funnily enough, they cover the field joins perfectly.
+<dt><code>[("roaddiv", 0)]</code>
+<dd>This is the roaddiv graphic. It's to show you that the roads end.
+</dl>

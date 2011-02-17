@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:fa="http://holizz.com/2005/03/08/fa#"
+	xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+	<fa:FA rdf:about="#fa1">
+		<fa:initial rdf:resource="#s1"/>
+		<fa:state>
+			<fa:State rdf:ID="s1">
+				<fa:next>
+					<fa:NextState>
+						<fa:goto rdf:resource="#s2"/>
+						<fa:string>a</fa:string>
+					</fa:NextState>
+				</fa:next>
+				<fa:next>
+					<fa:NextState>
+						<fa:goto rdf:resource="#s2"/>
+						<fa:string>b</fa:string>
+					</fa:NextState>
+				</fa:next>
+			</fa:State>
+		</fa:state>
+		<fa:state>
+			<fa:State rdf:ID="s2">
+				<fa:type>final</fa:type>
+				<fa:next>
+					<fa:NextState>
+						<fa:goto rdf:resource="#s1"/>
+						<fa:string>a</fa:string>
+					</fa:NextState>
+				</fa:next>
+				<fa:next>
+					<fa:NextState>
+						<fa:goto rdf:resource="#s1"/>
+						<fa:string>b</fa:string>
+					</fa:NextState>
+				</fa:next>
+			</fa:State>
+		</fa:state>
+	</fa:FA>
+</rdf:RDF>
+

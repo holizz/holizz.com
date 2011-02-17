@@ -1,0 +1,13 @@
+These are patches and mods related to York, the free tile placement game (a
+Carcassonne-inspired networkable and hotseatable game).
+
+York: http://www.jwhitham.org.uk/york/
+Carcassonne: http://en.wikipedia.org/wiki/Carcassonne_%28board_game%29
+
+Directories:
+  doc/		    Docementation of York's developer interface
+
+Files:
+  pubs.dat          Pubs & Mosques expansion
+  Makefile	    Grabs the official York sources and applies my patches
+  		      (just run make)

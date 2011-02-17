@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="en-GB" xmlns="http://www.w3.org/1999/xhtml" xmlns:xf="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events">
+  <head profile="http://gmpg.org/xfn/1 http://dublincore.org/documents/dcq-html/">
+    <title>Holizz versus the Web</title>
+    <link href='/Style/TR/' title='TR' rel='stylesheet' media='screen' />
+    <style type="text/css">
+@namespace xf url(http://www.w3.org/2002/xforms);
+xf|label
+{
+	display: block;
+}
+    </style>
+	<xf:model>
+		<xf:instance>
+			<hr xmlns="">
+				<eid/>
+				<tname/>
+				<fname/>
+				<gname/>
+				<mname/>
+				<dep>acc</dep>
+				<add/>
+				<count>yorks</count>
+				<tel/>
+				<emdate/>
+				<comm/>
+				<vaco>vacy</vaco>
+			</hr>
+		</xf:instance>
+		<xf:submission id="hr" method="get" action="" />
+	</xf:model>
+  </head>
+  <body>
+    <div id="container">
+      <ul id="skip">
+        <li>
+          <a href="#content">Skip to content</a>
+        </li>
+      </ul>
+      <div id="header">
+        <h1>
+          <a href="/">Holizz versus the Web</a>
+        </h1>
+        <p id="tagline">How can I trust you when you&#8217;ve got a fucking dolphin on your T-shirt?</p>
+      </div>
+      <ul id="main-nav">
+        <li>
+          <a href="/">Journal</a>
+        </li>
+        <li>
+          <a href="/Holizz/">Holizz</a>
+        </li>
+        <li>
+          <a href="/About/">About</a>
+        </li>
+      </ul>
+    </div>
+    <div id="content">
+      <div class="entry">
+        <h2>
+          <a href="/Testing/IWT/LabFive/XForm">HR XForms</a>
+        </h2>
+        <div class="entrycontent">
+
+<fieldset style="background: #ddd;">
+<legend>Human Resources Form</legend>
+
+<p>
+<xf:input ref="/hr/eid"><xf:label>Employee ID: </xf:label></xf:input>
+</p>
+<p>
+<xf:input ref="/hr/tname"><xf:label>Title: </xf:label></xf:input>
+</p>
+<p>
+<xf:input ref="/hr/fname"><xf:label>Family name: </xf:label></xf:input>
+</p>
+<p>
+<xf:input ref="/hr/gname"><xf:label>Given name: </xf:label></xf:input>
+</p>
+<p>
+<xf:input ref="/hr/mname"><xf:label>Middle name(s): </xf:label></xf:input>
+</p>
+<p>
+<xf:select1 ref="/hr/dep" appearance="full">
+	<xf:label>Department: </xf:label>
+	<xf:choices>
+		<xf:item>
+			<xf:label>Accounting</xf:label>
+			<xf:value>acc</xf:value>
+		</xf:item>
+		<xf:item>
+			<xf:label>Pie-management</xf:label>
+			<xf:value>pie</xf:value>
+		</xf:item>
+		<xf:item>
+			<xf:label>Logistics</xf:label>
+			<xf:value>log</xf:value>
+		</xf:item>
+		<xf:item>
+			<xf:label>Solutions</xf:label>
+			<xf:value>sol</xf:value>
+		</xf:item>
+	</xf:choices>
+</xf:select1>
+</p>
+<p>
+<xf:textarea ref="/hr/add"><xf:label>Address: </xf:label></xf:textarea>
+</p>
+<p>
+<xf:select1 ref="/hr/count" appearance="full">
+	<xf:label>County: </xf:label>
+	<xf:choices>
+		<xf:item>
+			<xf:label>London</xf:label>
+			<xf:value>lond</xf:value>
+		</xf:item>
+		<xf:item>
+			<xf:label>The Moon</xf:label>
+			<xf:value>moon</xf:value>
+		</xf:item>
+		<xf:item>
+			<xf:label>Tofu Pie</xf:label>
+			<xf:value>tofu</xf:value>
+		</xf:item>
+		<xf:item>
+			<xf:label>Yorkshire</xf:label>
+			<xf:value>yorks</xf:value>
+		</xf:item>
+	</xf:choices>
+</xf:select1>
+</p>
+<p>
+<xf:input ref="/hr/tel"><xf:label>Middle name(s): </xf:label></xf:input>
+</p>
+<p>
+<xf:input ref="/hr/emdate"><xf:label>Employment date: </xf:label></xf:input>
+</p>
+<p>
+<xf:textarea ref="/hr/comm"><xf:label>Address: </xf:label></xf:textarea>
+</p>
+<p>
+<xf:select1 ref="/hr/vaco" appearance="compact">
+	<xf:label>Vacation owed: </xf:label>
+	<xf:choices>
+		<xf:item>
+			<xf:label>Yes</xf:label>
+			<xf:value>vacy</xf:value>
+		</xf:item>
+		<xf:item>
+			<xf:label>No</xf:label>
+			<xf:value>vacn</xf:value>
+		</xf:item>
+	</xf:choices>
+</xf:select1>
+</p>
+<p>
+<xf:submit submission="hr">
+	<xf:label>Submit</xf:label>
+</xf:submit>
+</p>
+
+</fieldset>
+
+</div>
+<div class="meta">
+<p>2005-02-20T01:28:09+00:00</p>
+</div>
+</div>
+</div>
+<div id="meta">
+<address>
+<a href="/About/Copyright">Copyright</a> &#169; <a href="/Holizz/">Holizz</a> 2005. <a href="http://validator.w3.org/check/referer">Valid XHTML</a>, <a href="http://jigsaw.w3.org/css-validator/check/referer">valid CSS</a>, <a href="http://feedvalidator.org/check.cgi?url=http%3A%2F%2Fholizz.com%2FIndex.rss">valid RSS</a>, <a href="http://feedvalidator.org/check.cgi?url=http%3A%2F%2Fholizz.com%2FIndex.atom">valid Atom</a>.</address>
+</div>
+</body>
+</html>
+

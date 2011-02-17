@@ -1,0 +1,29 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface" uri="http://holizz.com/software/0install/firefox">
+  <name>Firefox</name>
+  <summary>Web browser</summary>
+  <description>
+    Note: This is the British English version, but the British English dictionary is not included.
+
+    The award-winning, free Web browser is better than ever. Browse the Web with confidence - Firefox protects you from viruses, spyware and pop-ups. Enjoy improvements to performance, ease of use and privacy. It's easy to import your favorites and settings and get started. Download Firefox now and get the most out of the Web.
+  </description>
+  <homepage>http://www.mozilla.com/firefox/</homepage>
+  <icon href="http://holizz.com/software/icons/firefox.png" type="image/png"/>
+
+  <group main="firefox/firefox">
+    <implementation id="sha1=7583f265d6d4ad63b1dc6c5223f804a36d0b595c" released="2006-07-12" version="2.0" arch="Linux-i686">
+      <archive href="http://ftp.mozilla.org/pub/mozilla.org/firefox/releases/2.0b1/linux-i686/en-GB/firefox-2.0b1.tar.gz" size="9385841" type="application/x-compressed-tar"/>
+    </implementation>
+  </group>
+</interface>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEv6TV4YOTBq6D5+IRAh2uAJ4+TRkkSo6+IGVoXRkQfvc4FtBC4QCfWdN4
+LwNzoZiypgB6Ho9lqb0UXDw=
+=4UsH
+-----END PGP SIGNATURE-----

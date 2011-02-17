@@ -1,0 +1,48 @@
+html
+{ margin: 0;
+  padding: 0;
+  color: white;
+  background: #445;}
+
+body
+{ margin: 0;
+  padding: 0;}
+
+#main-nav
+{ display: block;
+  background: black;
+  margin: 0 1em 0 0;
+  padding: 0;
+  float: left;
+  border: 3px pink;
+  border-style: solid solid solid none}
+
+#main-nav li
+{ display: block;
+  list-style: none;
+  list-style-position: inside;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;}
+
+#main-nav a
+{ display: block;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.5em 0.3em 0.5em 0.6em;
+  color: white;}
+#main-nav a:link
+{ text-decoration: underline; }
+#main-nav a:visited
+{ text-decoration: none; }
+#main-nav a:hover, #main-nav a:focus
+{ background-color: darkred; }
+
+a
+{ text-decoration: underline; }
+a:link
+{ color: lightpink; }
+a:visited
+{ color: pink; }
+a:hover, a:focus
+{ text-decoration: none; }

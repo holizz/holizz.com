@@ -1,0 +1,190 @@
+% Resume styles: http://everything2.com/index.pl?node_id=1075934
+% resume: http://everything2.com/index.pl?node_id=1478840
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{url}
+\usepackage{supertabular}
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry} 
+
+% Header and footer
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\pagestyle{fancyplain}
+\fancyhf{}
+\lhead{}
+\chead{}
+\rhead{}
+\cfoot{\me -- \thepage/\pageref{LastPage}}
+
+% Allow for the easy creation of a privacy-maintaining CV
+\newcommand{\secret}[1]{\textit{---Withheld---}}
+%\renewcommand{\secret}[1]{#1}
+
+% Helpful commands
+\newcommand{\iri}[1]{\url{#1}}
+\newcommand{\tabsection}[1]{\\\ {\kern -1.5em \textit{\textbf{#1}}}}
+\newcommand{\org}[1]{\textit{#1}}
+
+% Information
+\newcommand{\me}{Tom Adams}
+\newcommand{\thetitle}{Curriculum Vitæ}
+\newcommand{\phone}{\secret{(+44) 07786908022}}
+\newcommand{\email}{\iri{tomadams@holizz.com}}
+\newcommand{\address}{
+  \secret{20 Hugill Street}\\
+  \secret{Thornton}\\
+  Bradford\\
+  West Yorkshire\\
+  United Kingdom\\
+  \secret{BD13 3JW}}
+\renewcommand{\address}{
+  \secret{11 Northfield Road}\\
+  Sheffield\\
+  South Yorkshire\\
+  United Kingdom\\
+  \secret{S10 1QP}}
+
+\title{\thetitle}
+\author{\me}
+
+% Pretty title
+\renewcommand{\maketitle}{
+  \begin{center}
+    \begin{tabular}{lr}
+      \parbox{2in}{
+        {\Huge \me}
+        \par\rule{0pt}{0pt}\par
+                 {\Large \thetitle}
+      }
+      &
+      \parbox{2in}{
+        \begin{flushright}
+          \address\\\ \\
+          \phone\\
+          \email
+        \end{flushright}
+      }
+    \end{tabular}
+  \end{center}
+}
+
+% 1. No numbered sections
+\setcounter{secnumdepth}{0}
+
+\begin{document}
+
+\maketitle
+
+\section{Employment}
+\newcommand{\ecolw}{3.0in}
+\tablefirsthead{\textbf{Organisation} & \textbf{Role} & \textbf{Date}\\\hline}
+\tablelasttail{\\\hline}
+\tablehead{}
+\tabletail{}
+\begin{supertabular}{p{\ecolw}ll}
+New Roots, 347 Glossop Road, Sheffield, S10 2HP, Tel: 0114 272 1971 & Voluntary shop work & June 2008 onward\\\\
+
+Childminding Network, South Square, Thornton, Bradford, BD13 3LD, Tel: 01274 435288 & Temporary office work & 2004\\\\
+
+South Square Centre, South Square, Thornton, Bradford, BD13 3LD, Tel: 01274 834747 & Webmaster, voluntary & 2003/4\\\\
+
+Hayton \& Associates, Thornton & One-off Web programming & 2004%\\\\
+
+%Alphabet Zoo, Girlington, Bradford & Staff & 2004
+\end{supertabular}
+
+% Important things employers will be interested in
+\section{Other roles}
+\begin{itemize}
+\item President of University of Bradford's Anime and Cult TV society 2006/7 (and member of the committee 2005/6).
+\item Course representative at University of Bradford 2006/7.
+\item Treasurer of University of Sheffield's Capoeira society 2008/9.
+\end{itemize}
+
+\break
+
+\section{Qualifications}
+\newcommand{\colw}{3.9in}
+\tablefirsthead{
+  \textbf{Qualification} & \textbf{Result} & \textbf{Completed}\\\hline}
+\tablelasttail{\\\hline}
+\tablehead{}
+\tabletail{}
+\begin{supertabular}{p{\colw}cr}
+
+\tabsection{Ongoing}\\
+
+\\\parbox{\colw}{MSc Human Language Technology\\\org{University of Sheffield}}
+& ? & January 2010\\
+
+\tabsection{Completed}\\
+
+\\\parbox{\colw}{Japanese Language Skills level 3\\\org{Bradford College}}
+& Pass & August 2007\\
+
+\\\parbox{\colw}{Japanese Language Skills level 2\\\org{Bradford College}}
+& Pass & August 2007\\
+
+\\\parbox{\colw}{BSc Computer Science Hons.\\\org{University of Bradford}}
+& 2:1 & July 2007\\
+
+\\\parbox{\colw}{Japanese Language Skills level 1\\\org{Bradford College}}
+& Pass & May 2006\\
+
+% UCAS points: 200
+\\A-Level Physics & D & 2004\\
+A-Level Psychology & E & 2004\\
+AS Mathematics & C & 2003\\
+AS Sociology & U & 2004\\
+\org{Thornton Grammar School}\\
+
+\\\parbox{\colw}{Introduction to Mendhi/Henna Skin Decoration\\
+\org{Bradford College}}
+& Pass & 2004\\
+
+\\\parbox{\colw}{Take 5 for Play\\\org{Bradford Area Play Association}}
+& Pass & 2003\\
+
+\\\parbox{\colw}{10 GCSEs including As in Maths and Double Science, Cs in English and German\\
+\org{Thornton Grammar School}}
+& & 2002\\
+
+\\\parbox{\colw}{Coding and Programming in C level 2 (City \& Guilds)\\
+\org{Bradford College}}
+& Pass & 2001\\
+
+\end{supertabular}
+
+\section{References}
+\newcommand{\rcolw}{3in}
+\tablefirsthead{}
+\tablelasttail{}
+\tablehead{}
+\tabletail{}
+\begin{supertabular}{p{\rcolw}p{\rcolw}}
+\parbox{\rcolw}{
+Grace Vincent\\
+Tel: (+44) 0114 2721971\\
+New Roots\\
+347 Glossop Road\\
+Sheffield\\
+South Yorkshire\\
+S10 2HP
+} &
+\parbox{\rcolw}{
+Dr Gil Harel\\
+Tel: (+44) 01274 234012\\
+University of Bradford\\
+Bradford\\
+West Yorkshire\\
+United Kingdom\\
+BD7 1DP
+}
+\end{supertabular}
+
+\end{document}

@@ -1,0 +1,26 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='http://0install.net/2006/stylesheets/interface.xsl'?>
+<interface uri="http://holizz.com/software/0install/pysqlite2" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>pysqlite2</name>
+  <summary>interface for the SQLite embedded relational database engine</summary>
+  <description>
+    pysqlite is a Python DB-API 2.0 interface for the SQLite embedded relational database engine.
+  </description>
+  <homepage>http://pysqlite.org/</homepage>
+
+  <group>
+    <implementation id="sha1=838c0d993140fc520ff0af4d16463770202a0990" released="2006-07-02" version="2.3.2">
+      <archive href="http://holizz.com/software/0install/archives/pysqlite2.tar.bz2" size="64314"/>
+    </implementation>
+  </group>
+</interface>
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.2 (GNU/Linux)
+
+iD8DBQFEv6UG4YOTBq6D5+IRAk3jAJ9LJx47PTWIzczj8iJKK3pMVfVoogCePfd0
+rPtMSjmIqajeDyJEzYzbF9A=
+=6c5t
+-----END PGP SIGNATURE-----

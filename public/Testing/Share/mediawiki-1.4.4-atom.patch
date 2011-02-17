@@ -1,0 +1,12 @@
+diff -Naur mediawiki-1.4.4/includes/Feed.php mediawiki-1.4.4-atom-patch/includes/Feed.php
+--- mediawiki-1.4.4/includes/Feed.php	2005-04-29 14:17:57.000000000 +0100
++++ mediawiki-1.4.4-atom-patch/includes/Feed.php	2005-05-30 00:33:00.684735344 +0100
+@@ -289,7 +289,7 @@
+ 		<issued><?php print $this->formatTime( $item->getDate() ) ?></issued>
+ 		<created><?php print $this->formatTime( $item->getDate() ) ?>Z</created><?php } ?>
+ 	
+-		<summary type="text/plain"><?php print $item->getDescription() ?></summary>
++		<summary type="text/html"><?php print $item->getDescription() ?></summary>
+ 		<?php if( $item->getAuthor() ) { ?><author><name><?php print $item->getAuthor() ?></name><!-- <url></url><email></email> --></author><?php }?>
+ 		<comment>foobar</comment>
+ 	</entry>

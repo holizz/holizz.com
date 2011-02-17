@@ -1,0 +1,26 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://holizz.com/software/0install/Firefox/tr.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>Firefox</name>
+  <summary>Web browser</summary>
+  <description>
+    The award-winning, free Web browser is better than ever. Browse the Web with confidence - Firefox protects you from viruses, spyware and pop-ups. Enjoy improvements to performance, ease of use and privacy. It's easy to import your favorites and settings and get started. Download Firefox now and get the most out of the Web.
+  </description>
+  <homepage>http://www.mozilla.com/firefox/</homepage>
+  <category>Network</category>
+  <icon href="http://holizz.com/software/icons/firefox.png" type="image/png"/>
+
+  <group main="firefox/firefox">
+    <implementation arch="Linux-i686" id="sha1new=357fd457ea58b93eecab7779ea64b5014cf77989" released="2007-07-17" stability="stable" version="2.0.0.5">
+      <archive href="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0.0.5/linux-i686/tr/firefox-2.0.0.5.tar.gz" size="9427142"/>
+    </implementation>
+    <implementation arch="Linux-i686" id="sha1new=767ea7366cd0801c0e0acceff0c1eeae5d9b008e" released="2007-07-27" stability="stable" version="2.0.0.6">
+      <archive href="http://releases.mozilla.org/pub/mozilla.org/firefox/releases/2.0.0.6/linux-i686/tr/firefox-2.0.0.6.tar.gz" size="9427996"/>
+    </implementation>
+  </group>
+</interface>
+<!-- Base64 Signature
+iD8DBQBGsc9J4YOTBq6D5+IRAuuWAJsFLTpw2DjWKe9F0tS4crd33ipZjwCcCFZm2+vAhXY2MUFv
+h20SBhjFb6A=
+
+-->

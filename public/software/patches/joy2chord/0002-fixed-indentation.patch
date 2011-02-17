@@ -1,0 +1,25 @@
+From bc768550e18b9bbb88e630d8c196d153c6a16844 Mon Sep 17 00:00:00 2001
+From: Tom Adams <tom@holizz.com>
+Date: Sat, 3 Jan 2009 16:49:57 +0000
+Subject: [PATCH] fixed indentation
+
+---
+ src/joy2chord.cpp |    2 +-
+ 1 files changed, 1 insertions(+), 1 deletions(-)
+
+diff --git a/src/joy2chord.cpp b/src/joy2chord.cpp
+index 109c0a5..6833beb 100644
+--- a/src/joy2chord.cpp
++++ b/src/joy2chord.cpp
+@@ -983,7 +983,7 @@ void joy2chord::process_events(js_event js)
+ 				{
+ 					printf("Pressed: %i\n",js.number);
+ 				}
+-			for ( int allbuttons = 0; allbuttons < total_chorded_buttons; allbuttons++)
++				for ( int allbuttons = 0; allbuttons < total_chorded_buttons; allbuttons++)
+ 				{
+ 					
+ 					if( js.number == chord_values[allbuttons])
+-- 
+1.6.0.6
+

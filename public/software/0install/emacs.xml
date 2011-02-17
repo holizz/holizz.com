@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://holizz.com/software/0install/emacs.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface" xmlns:compile="http://zero-install.sourceforge.net/2006/namespaces/0compile">
+  <name>Emacs</name>
+  <summary>GNU Emacs</summary>
+  <description>
+Emacs is the extensible, customizable, self-documenting real-time display
+editor.</description>
+  <homepage>http://www.gnu.org/software/emacs/emacs.html</homepage>
+  <icon href="http://holizz.com/software/icons/emacs.png" type="image/png"/>
+  <category>Utility</category>
+  <implementation arch="*-i386" id="sha1new=db846cf69a39959a8525641e726e5939f2427ddc" license="OSI Approved :: GNU General Public License (GPL)" main="bin/emacs" released="2007-08-03" stability="stable" version="22.1">
+    <archive extract="emacs-22.1" href="http://holizz.com/software/0install/archives/emacs-22.1.tar.bz2" size="28988659" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+  <implementation arch="*-src" compile:binary-main="bin/emacs" compile:command="&quot;$SRCDIR/configure&quot; --prefix=&quot;$DISTDIR&quot; &amp;&amp; make install" id="sha1new=ac37ab820fc840161220eec0216dfe895dae74e7" license="OSI Approved :: GNU General Public License (GPL)" released="2007-08-03" stability="stable" version="22.1">
+    <archive extract="emacs-22.1" href="http://ftp.gnu.org/pub/gnu/emacs/emacs-22.1.tar.gz" size="38172226" type="application/x-compressed-tar"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBGs3gG4YOTBq6D5+IRAmAXAJ9vj4kn14RCUdjyJyGTmwWmrCs/iwCfVyF8OpuAEsd0jp53
+fHI/Pc89bT4=
+
+-->

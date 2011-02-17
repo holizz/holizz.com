@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/*@import "/s/ruby.css"; Doesn't work with HTML5 */
+
+html
+{
+  font-family: sans-serif;
+}
+
+img
+{
+  border: 0;
+}
+
+:link[hreflang]::after,
+:visited[hreflang]::after,
+:hover[hreflang]::after,
+:active[hreflang]::after {
+    content: " [" attr(hreflang) "]";
+    font-size: xx-small;
+    font-weight: 100;
+    vertical-align: super;
+}
+
+:link[hreflang=ja]::after,
+:visited[hreflang=ja]::after,
+:hover[hreflang=ja]::after,
+:active[hreflang=ja]::after {
+    content: " [日本語]" }
+
+:link[hreflang=en]::after,
+:visited[hreflang=en]::after,
+:hover[hreflang=en]::after,
+:active[hreflang=en]::after {
+    content: " [English]" }
+
+
+/* 日本語 has no spaces between words. We don't want to have no spaces between table columns either.
+
+Too many negatives. I don't understand this comment anymore, but I understand the CSS. */
+td, th
+{
+  padding: .5em;
+}
+
+*:lang(en)
+{ quotes: "‘" "’" "“" "”"; }
+
+*:lang(ja)
+{ quotes: "「" "」" "『" "』"; }
+
+q:before
+{ content: open-quote; }
+q:after
+{ content: close-quote; }
+
+#feeds h2
+{
+  margin-bottom: 40px;
+}
+
+#feeds ul li
+{
+  list-style-type: none;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+#posts-feed a
+{
+  padding-top: 36px;
+  background: transparent url("/wp-content/themes/all/feed/feed-icon-32x32.png") no-repeat top center;
+}
+
+#comments-feed
+{
+  margin-top: 10px;
+  font-size: 1.1em;
+}
+
+#comments-feed a
+{
+  margin: 0 .3em;
+  padding-left: 20px;
+  background: transparent url("/wp-content/themes/all/feed/feed-icon-16x16.png") no-repeat center left;
+  font-size: 0.7em;
+}

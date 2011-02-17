@@ -1,0 +1,46 @@
+login as root
+
+(the # indicates it's a command to type in as root ($ indicates it's a command for the normal user), don't type it)
+
+# vi /etc/apt/sources.list
+
+(no, emacs isn't included by default)
+
+insert the following line:
+deb http://amd64.debian.org/debian-amd64/ testing main
+
+(type i to enter insert mode, type it in, press Escape to get back to normal mode, type :wq to write and quit)
+
+# apt-get update
+
+to update your packages list
+
+This searches for packages:
+
+# apt-cache search term
+
+This tells you more about a package once it's installed:
+
+# apt-cache show package-name
+
+This installs a package:
+
+# apt-get install package-name
+
+(for which you can give a list of packages seperated by spaces)
+
+I recommend installing:
+
+xserver-xfree86 (the GUI that KDE and other things run on)
+kdm (the thing you log into when X starts)
+kdebase (KDE)
+synaptic (a GUI front-end to APT)
+
+And then rebooting:
+
+# reboot
+
+(you could do it without rebooting but the next time you boot it should run X and kdm without you having to spend much time in bash)
+
+You should now have KDE which you can login to, and synaptic from which you can install packages.
+

@@ -1,0 +1,9 @@
+function doQuote()
+{
+  quote("Hola!");
+}
+function quote(text)
+{
+  q = document.getElementById("quote");
+  q.appendChild(document.createTextNode(text));
+}

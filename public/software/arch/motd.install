@@ -1,0 +1,15 @@
+# vim: set ft=sh:
+
+install ()
+{
+    BINARIES=""
+    FILES="/etc/motd.boot"
+    SCRIPT="motd"
+}
+
+help ()
+{
+cat<<HELPEOF
+  This hook shows an MOTD.
+HELPEOF
+}

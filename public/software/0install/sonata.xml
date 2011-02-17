@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="http://holizz.com/software/0install/sonata.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>sonata</name>
+  <summary>An elegant music client for MPD</summary>
+  <description>
+Sonata is an elegant GTK+ music client for the Music Player Daemon (MPD).</description>
+  <homepage>http://sonata.berlios.de/</homepage>
+  <category>Audio</category>
+  <icon href="http://holizz.com/software/icons/sonata.png" type="image/png"/>
+  <implementation id="sha1new=1becd12870f9ae3de9db8b6eafac5dfdf5436775" license="OSI Approved :: GNU General Public License (GPL)" main="sonata" released="2007-08-03" stability="stable" version="1.2.2">
+    <archive extract="sonata-1.2.2" href="http://download.berlios.de/sonata/sonata-1.2.2.tar.bz2" size="200498" type="application/x-bzip-compressed-tar"/>
+  </implementation>
+</interface>
+<!-- Base64 Signature
+iD8DBQBGs18E4YOTBq6D5+IRAvM4AJ4nWC79dBg86X6Lwrqp6MptNXZUGQCfd35fFsIHi2P0aT70
+MWhEcwkGzrY=
+
+-->

@@ -1,0 +1,176 @@
+body
+{
+  color: black;
+  background: white;
+}
+
+h1, h2
+{
+  border-bottom: solid black 2px;
+}
+
+ul
+{
+  padding-left: 1em;
+}
+
+a
+{
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:link
+{
+  color: black;
+}
+
+a:visited
+{
+  color: gray;
+}
+
+a:hover, a:focus
+{
+  color: white;
+  background: #a9a9a9;
+  text-decoration: none;
+}
+
+a:active
+{
+  background: #d3d3d3;
+}
+
+.sec
+{
+  margin: auto 2em;
+  padding: .5em;
+}
+
+.ineffectual
+{
+  text-decoration: underline line-through;
+}
+
+#container
+{
+  margin: 1em;
+}
+
+.home #header
+{
+  float: left;
+  margin-right: 1em;
+}
+
+#meet
+{
+}
+
+#monday, #tuesday, #other, #contact
+{
+  width: 48%;
+}
+
+#monday
+{
+  clear: both;
+  float: left;
+}
+
+#tuesday
+{
+  float: right;
+}
+
+#other
+{
+  clear: both;
+  float: left;
+}
+
+#contact
+{
+  float: right;
+}
+
+#footer
+{
+  clear: both;
+  margin-top: 2.5em;
+  text-align: center;
+}
+
+#footer p:before
+{
+  content: "(";
+  font-size: 1.5em;
+}
+
+#footer p:after
+{
+  content: ")";
+  font-size: 1.5em;
+}
+
+@media screen,projection
+{
+  .sec
+  {
+    background: #ddd;
+  }
+
+  .home #header
+  {
+  /* http://www.pumpkinpatch.biz/images/tvc_icon_LARGE.jpg */
+    background: transparent url("culttv_tv.jpg") no-repeat top right;
+    height: 0px;
+    width: 320px;
+    padding-top: 208px;
+    overflow: hidden;
+   }
+
+  #meet
+  {
+  }
+
+  #monday .body
+  {
+  /* http://strek.hp.infoseek.co.jp/archer01.jpg */
+    background: transparent url("archer.jpg") no-repeat left top;
+    padding-left: 129px;
+    min-height: 195px;
+  }
+
+  * html #monday .body
+  {
+    height: 195px;
+  }
+
+  #tuesday .body
+  {
+  /* http://www.ferricorp.com/anime/excel/bw05.jpg */
+    background: transparent url("excel.jpg") no-repeat right top;
+    padding-right: 160px;
+    min-height: 210px;
+  }
+
+  * html #tuesday .body
+  {
+    height: 210px;
+  }
+
+  #contact .body
+  {
+  /* original */
+    background: transparent url("envelope.jpg") no-repeat top left;
+    padding-left: 180px;
+    min-height: 92px;
+  }
+
+  * html #contact .body
+  {
+    height: 92px;
+  }
+}
