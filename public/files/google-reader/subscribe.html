@@ -1,0 +1,55 @@
+<title>Subscribe!</title>
+<link rel="stylesheet" title="Style" type="text/css" href="http://holizz.com/style">
+<link rel="alternate" title="Feed" type="application/atom+xml" href="http://holizz.com/feed/">
+<link rel="alternate" title="Comments Feed" type="application/atom+xml" href="http://holizz.com/comments/feed/">
+<script type="application/x-javascript">
+
+function preview()
+{
+  var readerp = 'http://www.google.com/reader/preview/*/feed/'
+  var links = document.getElementsByTagName('link')
+  var feeds = []
+
+  for(var n=0; n<links.length; n++)
+  {
+    var link = links[n]
+
+    if (link.getAttribute('rel')=='alternate')
+    {
+      switch (link.getAttribute('type'))
+      {
+        case 'application/atom+xml':
+        case 'application/rss+xml':
+        case 'application/rdf+xml':
+        case 'text/xml':
+          feeds.push([link.getAttribute('href'),link.getAttribute('title'),link.getAttribute('type')])
+        break
+      }
+    }
+  }
+  if (feeds.length>0)
+  {
+    if (feeds.length==1)
+      location.href=readerp+feeds[0][0]
+    else
+    {
+      selfeed='data:text/html,<title>Select feed</title><ul>'
+      for (var n=0; n<feeds.length; n++)
+      {
+        var feed = feeds[n]
+        selfeed+='<li><a href="'+readerp+feed[0]+'">'+feed[1]+'</a>'
+      }
+      location.href=selfeed
+    }
+  }
+
+}
+
+</script>
+
+<p>Some JavaScript for getting feeds into <a href="http://reader.google.com/">Google Reader</a>:
+
+<ul>
+<li><a href="javascript:l=document.getElementsByTagName('link');for(n=0;n<l.length;n++){if(l[n].getAttribute('rel')=='alternate'){location.href='http://www.google.com/reader/preview/*/feed/'+l[n].getAttribute('href');break}}">→ GReader</a> bookmarklet (<a href="http://holizz.com/2005/10/08/google-reader" title="Google Reader">see also</a>).
+<li><a href="javascript:preview()">preview()</a> function: a lengthy function for previewing any feed in a page. (Uses the data: schema).
+</ul>
