@@ -19,6 +19,7 @@ title: Lenovo ThinkPad Edge 13"
   %li The light on the top of the machine goes out when you shut it - thus giving you no indication of whether or not it's on when it's closed
   %li The area above the left and right cursor keys is occupied by PgUp and PgDn keys - meaning you can't rest your fingers over the cursor keys
   %li It has a Windows key
+  %li The microphone doesn't work (soundcard/kernel issue)
 
 %h2 Not problems
 
@@ -30,4 +31,4 @@ title: Lenovo ThinkPad Edge 13"
 
 %h2 Conclusion
 
-%p Since the Edge line was the only brand of Lenovo that didn't have the horrendous-looking CapsLock key, I had to go with it. I only went with them because they're so well-respected in the Linux/OSS community. I probably won't buy another one due to this one being so terrible.
+%p Since the Edge line was the only brand of Lenovo that didn't have the horrendous-looking CapsLock key, I had to go with it. I only went with them because they're so well-respected in the Linux/OSS community. Despite the problems, it is mostly pleasant to use - though I probably won't buy a Lenovo again.
