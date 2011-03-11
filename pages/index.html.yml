@@ -5,7 +5,7 @@ title: Tom Adams
 %header
   %h1 Tom Adams
 
-  %p Web development is a hobby and a career. Other hobbies include knots, firearms, politics, street art, and TV.
+  %p Web development is a hobby and a career. Other hobbies include knots, firearms, politics, and street art.
 
 %nav
   %h2 Blogs and <abbr title="Social Networking Site">SNS</abbr>
@@ -27,9 +27,9 @@ title: Tom Adams
       %a{href: 'mailto:tom@holizz.com'} tom@holizz.com
     %li
       XMPP:
-      %a{href: 'xmpp:holizz@jabber.org'} holizz@jabber.org
-      +
       %a{href: 'xmpp:holizz@gmail.com'} holizz@gmail.com
+      +
+      %a{href: 'xmpp:holizz@jabber.org'} holizz@jabber.org
 
 %nav
   %h2 Bits and bobs
