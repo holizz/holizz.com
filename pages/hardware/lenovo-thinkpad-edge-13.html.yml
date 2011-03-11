@@ -1,0 +1,33 @@
+---
+# vim: ft=haml
+title: Lenovo ThinkPad Edge 13"
+---
+%h1 Lenovo ThinkPad Edge 13"
+
+%h2 Problems
+
+%ul
+  %li Completely freezes for no apparent reason
+  %li Wifi stops working completely after it gets to the appropriate temperature
+  %li Wifi often starts to waver after it's been switched on for a while (10 minutes sometimes), and will eventually die (presumably from overheating)
+  %li On boot it often warns me that third party batteries are not supported - destpite the fact that I'm using the official Lenovo battery that came with the machine
+  %li I had to pay the Windows tax
+  %li Close the laptop - carry it using the battery bump as a handle - OOPS! You just disconnected the battery! (Yes, both the battery locks are in place)
+  %li The nipple sometimes wanders like any pointing device will
+  %li The trackpad is so esoteric Ubuntu can't recognise it by default
+  %li The screen is glossy
+  %li The light on the top of the machine goes out when you shut it - thus giving you no indication of whether or not it's on when it's closed
+  %li The area above the left and right cursor keys is occupied by PgUp and PgDn keys - meaning you can't rest your fingers over the cursor keys
+  %li It has a Windows key
+
+%h2 Not problems
+
+%ul
+  %li It's generally comfortable to use
+  %li The CapsLock key doesn't have a dip in the edge of the key to make it hard to press (I use CapsLock as Ctrl)
+  %li The function keys along the top work like a Mac (i.e. you don't need to hold the "Fn" key to adjust the volume)
+  %li The "Fn" key sends an XF86WakeUp (like a Mac)
+
+%h2 Conclusion
+
+%p Since the Edge line was the only brand of Lenovo that didn't have the horrendous-looking CapsLock key, I had to go with it. I only went with them because they're so well-respected in the Linux/OSS community. I probably won't buy another one due to this one being so terrible.
