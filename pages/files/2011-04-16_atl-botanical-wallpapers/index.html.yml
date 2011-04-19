@@ -1,0 +1,12 @@
+---
+# vim: ft=haml
+title: Atlanta Botanical Gardens Wallpapers
+---
+%h1 Atlanta Botanical Gardens Wallpapers
+%p Photos by Tom &amp; Jerri (@<a href="http://twitter.com/holizz">holizz</a> &amp; @<a href="http://twitter.com/jerricurrl">jerricurrl</a>)
+
+%ol
+  - (1..4).each do |n|
+    %li{style:'margin-bottom:20px'}
+      %a{href:"atl-botanical#{n}.jpg"}
+        %img{alt:'',src:"atl-botanical#{n}_thumb.jpg",width:'400',height:'267',style:'vertical-align:top'}
